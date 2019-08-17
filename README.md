@@ -59,17 +59,17 @@ HTML5的离线储存怎么使用，工作原理能不能解释一下？
 
 #### 应用
 
-页面可见性（Page Visibility API） 可以有哪些用途？
+1. **页面可见性（Page Visibility API）可以有哪些用途？**<br/>如果页面最小化了或者隐藏在了其他标签页后面，那么有些功能是可以停下来的。目前，只有IE 10和Chrome支持这个API。《JS高级程序设计（第三版）》P686
 
-如何在页面上实现一个圆形的可点击区域？
+1. 如何在页面上实现一个圆形的可点击区域？
 
-实现不使用 border 画出1px高的线，在不同浏览器的Quirksmode和CSSCompat模式下都能保持同一效果。
+1. 实现不使用 border 画出1px高的线，在不同浏览器的Quirksmode和CSSCompat模式下都能保持同一效果。
 
-网页验证码是干嘛的，是为了解决什么安全问题？
+1. 网页验证码是干嘛的，是为了解决什么安全问题？
 
-如何实现浏览器内多个标签页之间的通信? (阿里)
+1. 如何实现浏览器内多个标签页之间的通信? (阿里)
 
-webSocket如何兼容低浏览器？(阿里)
+1. webSocket如何兼容低浏览器？(阿里)
 
 ## CSS
 
@@ -236,7 +236,7 @@ DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
 
 ###BOM
 
-什么是window对象? 什么是document对象?
+什么是window对象? 什么是document对象?[BOM部分基础知识总结](https://www.cnblogs.com/2010master/p/5824215.html)，[BOM和DOM详解](https://www.jb51.net/article/55851.htm)。
 
 ##### documen.write和 innerHTML的区别？
 
@@ -248,25 +248,15 @@ document.write是直接写入到页面的内容流，会导致页面被重写。
 
 ### 应用
 
-写一个通用的事件侦听器函数(机试题)。
-
-关于事件，IE与火狐的事件机制有什么区别？ 如何阻止冒泡？
-
-<a href="https://blog.csdn.net/JustJavaC/article/details/19473199">["1", "2", "3"].map(parseInt) 答案是多少？</a>parseInt的进制不能为1，没意义。<a href="https://www.w3school.com.cn/jsref/jsref_obj_global.asp">JavaScript 全局对象</a>，全局对象可重定义。`map(callbackfn, thisArg)`的回调`classbackfn`接收3个参数。
-
-对JSON的了解？
-
-[].forEach.call($$(""),function(a){ a.style.outline="1px solid #"+(~~(Math.random()(1<<24))).toString(16) })能解释一下这段代码的意思吗？
-
-js延迟加载的方式有哪些？
-
-Ajax 是什么? 如何创建一个Ajax？
-
-同步和异步的区别?
-
-异步加载的方式有哪些？
-
-如何解决跨域问题?
+1. 写一个通用的事件侦听器函数(机试题)。
+2. 关于事件，IE与火狐的事件机制有什么区别？ 如何阻止冒泡？
+3. <a href="https://blog.csdn.net/JustJavaC/article/details/19473199">["1", "2", "3"].map(parseInt) 答案是多少？</a>parseInt的进制不能为1，没意义。<a href="https://www.w3school.com.cn/jsref/jsref_obj_global.asp">JavaScript 全局对象</a>，全局对象可重定义。`map(callbackfn, thisArg)`的回调`classbackfn`接收3个参数。
+4. [].forEach.call($$(""),function(a){ a.style.outline="1px solid #"+(~~(Math.random()(1<<24))).toString(16) })能解释一下这段代码的意思吗？
+5. js延迟加载的方式有哪些？共有6种，参考[关于js延迟加载（异步操作）的方式](https://www.cnblogs.com/songForU/p/10905031.html)。[defer和async的区别是什么？](https://www.jianshu.com/p/a5e56f7a00b4)，并且defer属性解决了async引起的脚本顺序问题（见async的缺点），使用defer属性，脚本将按照在页面中出现的顺序加载和运行。js延迟加载是为了加快js的获取速度，也可以通过设置缓存来省略网络请求，http状态码由304到200。性能优化的核心思想就是快，可以预先准备数据（如缓存的使用），可以按需获取，可以分段、异步获取等都是常见的优化手段。
+6. 对JSON的了解？
+7. [Ajax是什么? 如何创建一个Ajax？](https://blog.csdn.net/lxcao/article/details/52745743)，用window.XMLHttpRequest或newActiveXObject()来创建ajax对象，open方法有3个参数：method、url、async。
+8. 什么是阻塞与非阻塞？
+9. 如何解决跨域问题?
 
 ### JQuery
 
@@ -393,6 +383,8 @@ ECMAScript6 怎么写class，为什么会出现class这种东西?
 ## React前端框架
 
 #### 通用
+
+[必须要会的50个React面试题](https://segmentfault.com/a/1190000018604138)
 
 React 使用场景？
 
