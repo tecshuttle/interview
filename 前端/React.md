@@ -33,7 +33,12 @@
 
 1. React-router 路由的实现原理？
 2. 用过 React 技术栈中哪些数据流管理库？
+3. [React中的路由系统](https://www.bbsmax.com/A/B0zqmWP8zv/)
+4. [简单谈谈React中的路由系统](http://www.10qianwan.com/articledetail/22653.html)
+5. [React Router 4 简介及其背后的路由哲学](http://reactpeixun.com/reactganhuo/2018-01-28/335.html)
+6. [react-native路由反向传值](https://www.jianshu.com/p/a5287a6f3f01)
 
 ### 其它
 
 1. 说说React Native、Weex框架的实现原理？
+2. [React高频面试题，值得珍藏！](http://www.lucklnk.com/godaddy/details/aid/690502212)
