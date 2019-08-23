@@ -83,6 +83,14 @@ sudo ~/Library/Android/sdk/tools/bin/sdkmanager --licenses
 - 双击R：reload
 - Cmd + M：无法弹出debug menu。
 
+#### 其它
+
+##### 为什么IOS Simulator动画速度特别慢？
+
+我怀疑你是不是在模拟器上面不小心按到了command + T，然后打开了这个：Debug -> Slow Animations。
+
+我居然也是打开了这个。
+
 ### 打包
 
 
@@ -153,5 +161,204 @@ https://reactnative.cn/docs/running-on-device/
 ### 系统结构
 
 ### 路由
+
+##### 什么是react-navigation?
+
+react-native从开源至今，一直存在几个无法解决的毛病，偶尔就会复发让人隐隐作痛，提醒你用的不是原生，其中包括列表的复用问题，导航跳转不流畅的问题等等。终于facebook坐不住了，在前一段时间开始推荐使用react-navigation，并且在0.44发布的时将之前一直存在的`Navigator`废弃了。
+
+`react-navigation`是致力于解决导航卡顿，数据传递，Tabbar和navigator布局，支持`redux`。虽然现在功能还不完善，但基本是可以在项目中推荐使用的。
+
+react-navigation分为三个部分。
+
+- StackNavigator类似顶部导航条，用来跳转页面和传递参数。
+- TabNavigator类似底部标签栏，用来区分模块。
+- DrawerNavigator抽屉，类似从App左侧滑出一个页面，在这里不做讲解。
+
+##### 安装react-navigation
+
+```bash
+npm install react-navigation --save
+npm install react-native-gesture-handler --save
+react-native link react-native-gesture-handler
+```
+
+报错_RNGestureHandlerModule.default.Direction如何解决？
+
+**for android**: 这个没试。
+
+1. install https://github.com/mikehardy/jetifier
+2. npx jetify
+
+**for ios**: 这个试了，有效。
+
+1. cd ios
+2. pod install
+
+##### createStackNavigator
+
+```javascript
+import React, {Component} from 'react';
+import {AppRegistry, View, Text} from 'react-native';
+import {name as appName} from './app.json';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
+
+class HomeScreen extends React.Component {
+    render() {
+        return (
+            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                <Text>Home Screen</Text>
+            </View>
+        );
+    }
+}
+
+class DetailsScreen extends React.Component {
+    render() {
+        return (
+            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                <Text>Details Screen</Text>
+            </View>
+        );
+    }
+}
+
+const RootStack = createStackNavigator(
+    {
+        Home: HomeScreen,
+        Details: DetailsScreen,
+    },
+    {
+        initialRouteName: 'Home',
+    }
+);
+
+const AppContainer = createAppContainer(RootStack);
+
+class App extends React.Component {
+    render() {
+        return <AppContainer/>;
+    }
+}
+
+AppRegistry.registerComponent(appName, () => App);
+```
+
+##### createBottomTabNavigator
+
+```javascript
+import React, {Component} from 'react';
+import {AppRegistry, View, Text, Button, Platform} from 'react-native';
+import {name as appName} from './app.json';
+import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
+class StatusScreen extends React.Component {
+    render() {
+        return (
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Text>动态！</Text>
+            </View>
+        );
+    }
+}
+
+class MessagesScreen extends React.Component {
+    render() {
+        return (
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Text>消息列表!</Text>
+            </View>
+        );
+    }
+}
+
+
+class FriendsScreen extends React.Component {
+    render() {
+        return (
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Text>好友列表!</Text>
+            </View>
+        );
+    }
+}
+
+class SettingsScreen extends React.Component {
+    render() {
+        return (
+            <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                <Text>设置！</Text>
+            </View>
+        );
+    }
+}
+
+const TabNavigator = createBottomTabNavigator(
+    {
+        Messages: {
+            screen: MessagesScreen,
+            navigationOptions: () => ({
+                title: '消息',
+                headerBackTitle: null
+            }),
+        },
+        Friends: {
+            screen: FriendsScreen,
+            navigationOptions: () => ({
+                title: '好友',
+                headerBackTitle: null
+            }),
+        },
+        Status: {
+            screen: StatusScreen,
+            navigationOptions: () => ({
+                title: '我',
+                headerBackTitle: null
+            }),
+        },
+        Settings: {
+            screen: SettingsScreen,
+            navigationOptions: () => ({
+                title: '设置',
+                headerBackTitle: null
+            }),
+        },
+    },
+    {
+        defaultNavigationOptions: ({navigation}) => ({
+            tabBarIcon: ({focused, horizontal, tintColor}) => {
+                const {routeName} = navigation.state;
+                let iconName;
+                if (routeName === 'Messages') {
+                    iconName = `ios-information-circle${focused ? '' : '-outline'}`;
+                } else if (routeName === 'Settings') {
+                    iconName = `ios-options`;
+                } else if (routeName === 'Status') {
+                    iconName = `ios-compass`;
+                } else if (routeName === 'Friends') {
+                    iconName = `ios-person`;
+                }
+
+                // You can return any component that you like here!
+                return <Ionicons name={iconName} size={25} color={tintColor}/>;
+            },
+        }),
+        tabBarOptions: {
+            activeTintColor: 'tomato',
+            inactiveTintColor: 'gray',
+        },
+    }
+);
+
+const AppContainer = createAppContainer(TabNavigator);
+
+class App extends React.Component {
+    render() {
+        return <AppContainer/>;
+    }
+}
+
+AppRegistry.registerComponent(appName, () => App);
+```
 
 ### 组件
