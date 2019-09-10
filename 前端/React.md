@@ -2,7 +2,6 @@
 
 ### 通用
 
-1. [必须要会的50个React面试题](https://segmentfault.com/a/1190000018604138)
 2. React 使用场景？
 3. 描述一下React 生命周期。
 4. 应该在React生命周期的什么阶段发出ajax请求，为什么？
@@ -42,3 +41,4 @@
 
 1. 说说React Native、Weex框架的实现原理？
 2. [React高频面试题，值得珍藏！](http://www.lucklnk.com/godaddy/details/aid/690502212)
+3. [必须要会的50个React面试题](https://segmentfault.com/a/1190000018604138)
