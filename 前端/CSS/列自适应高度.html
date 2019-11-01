@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Equal height(DIV+CSS布局中自适应高度的解决方法)</title>
+<style type="text/css">
+body{
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 140%;
+	text-align: center;
+	background:#E7DFD3;
+}
+/*
+关建点：
+1、wrap                       overflow:hidden
+2、sideleft sideright         padding-bottom:正值   margin-botton:负值     值相同
+*/
+
+#wrap{
+	width: 750px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#header{
+	background: #E8E8E8;
+}
+#sideleft{
+	width: 170px;
+	float: left;	
+	background: #F0F0F0;
+	text-align: left;
+}
+#sideright{
+	width: 580px;
+	float: left;
+	background: #FFF;
+	text-align: left;
+}
+#sideleft, #sideright {
+	padding-bottom: 32767px;
+	margin-bottom: -32767px; 
+}
+#footer{
+	background: #E8E8E8;
+	width: 100%;
+	float: left;
+}
+h1,h2,address,p{
+	margin: 0;
+	padding: .8em;
+}
+h1,h2{font-size: 20px;}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+  <div id="header">
+    <h1>Head</h1>
+  </div>
+  <div id="sideleft">
+  <h2>nav</h2>
+    <p> 要从固定的</p>
+    <p> 像素是计算机</p>
+    <p> 采用印刷式的固定</p>
+    <p> 也许你想你</p>
+  </div>
+
+  <div id="sideright">
+  <h2>sideright</h2>
+    <p> 要从固定的、基于像素的设计方法转到弹性的、相对的设计方法并不容易。但是如果恰当利用，就可以成为增强亲和力和易用性的一个自然选择，同时又无须做出设计上的牺牲。 </p>
+    <p> 像素是计算机屏幕上的不可缩放的点，而一个
+      h3 就是一个字大小的方块。由于字体大小的变化， h3
+      代表用户喜欢的文字大小的相对单位。 </p>
+    <p> 采用印刷式的固定设计方案或许要容易些，因为如果尺寸不变，则考虑的东西就相对较少。可是如果采用弹性的设计方法，就可以充分利用电脑的显示器和浏览器。 </p>
+    <p> 也许你想你的网站以某种特定的方式显示，但是你的用户想看到的可能不一样。任何强加于用户的东西都不利于易用性，从而对网站的成功造成损害。 </p>
+  </div>
+  <div id="footer">
+    <address> Footer </address>
+	<p>制作：<a href="http://www.forest53.com">forestgan</a></p>
+  </div>
+</div>
+</body>
+</html>
+

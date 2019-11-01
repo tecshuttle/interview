@@ -1,0 +1,5 @@
+﻿<li>在同一行显示，仅需  li { display:inline; } 就可以了。
+
+<th> <td> 属性 scope，不会产生视觉效果，但屏幕阅读器可能利用该属性。
+
+字体：Helvetica    Tahoma

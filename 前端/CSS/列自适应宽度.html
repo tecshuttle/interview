@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<style type="text/css">
+body{margin:0;padding:0px;text-align:center;}
+/*
+关键点：
+1、wrap_l    margin-right:负值
+2、wrap_m    margin-left:正值
+3、值相同
+*/
+#wrap{
+    margin:0 auto;
+    width:90%;
+    text-align:left;
+}
+.wrap_l{
+    float:left;
+    background:#FF0000;
+    margin-right:-150px;
+    width:150px;
+    border:1px solid #333;
+}
+.wrap_m {
+    width:auto;
+    background:#00FF00;
+    margin:0 0 0 150px;
+    border:1px solid #000;
+}
+</style>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div class="wrap_l">
+    这是左边部分
+    </div> 
+
+    <div class="wrap_m">
+    这是中间部分
+    aaaaaaaaaaaa
+    </div>
+</div>
+
+</body>
+</html>
+

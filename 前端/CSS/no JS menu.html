@@ -1,0 +1,59 @@
+<html>
+
+<style>
+
+#menu li {
+margin-top:5px;
+list-style:none;
+line-height:2;
+width:38px;
+height:38px;
+}
+
+#menu a {
+width:38px;
+height:38px;
+display:block;
+position:relative;
+border:1px solid gray;
+text-align:center;
+}
+
+#menu span {
+visibility:hidden;
+position:absolute;
+padding:0 20px;
+height:38px;
+left:38px;
+top:-1px;  /* shift up 1px because <li> had 1px border  */
+}
+
+#menu a:hover span {
+color:red;
+visibility:visible;
+display:inline-block;
+border-top:1px solid green;
+border-bottom:1px solid green;
+border-right:1px solid green;
+}
+
+#menu a:hover {
+border-top:1px solid green;
+border-bottom:1px solid green;
+border-left:1px solid green;
+border-right:0px solid green;
+}
+
+        
+</style>
+    
+<body>
+
+<ul id="menu">
+<li><a href="#">H<span>Home</span></a></li>
+<li><a href="#">A<span>About</span></a></li>
+</ul>
+
+</body>
+</html>
+

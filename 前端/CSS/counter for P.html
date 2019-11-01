@@ -1,0 +1,20 @@
+<html>
+<head>
+<style>
+body {
+    counter-reset:paragraph;
+}
+p:before { 
+    content: counter(paragraph) ' ';
+    counter-increment: paragraph; 
+} 
+</style>
+</head>
+
+<body> 
+<p>a
+<p>b
+<p>c
+<p>d 
+</body>
+</html> 
