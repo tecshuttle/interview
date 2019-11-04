@@ -43,3 +43,17 @@
 2. [React高频面试题，值得珍藏！](http://www.lucklnk.com/godaddy/details/aid/690502212)
 3. [必须要会的50个React面试题](https://segmentfault.com/a/1190000018604138)
 4. [React 328道最全面试题(持续更新)](https://juejin.im/post/5d310e8bf265da1bd261259d)
+
+
+
+• React——高阶组件(HOC)https://blog.csdn.net/qq_35534823/article/details/80566037
+
+• React Hooks https://www.jianshu.com/p/76901410645a
+
+• React Fiber 初探 https://www.cnblogs.com/qingmingsang/articles/9131512.html
+
+• Next.js
+
+• React 中 setState() 为什么是异步的？ https://www.jqhtml.com/15392.html
+
+• React 重要的一次重构：认识异步渲染架构 Fiber https://zhuanlan.zhihu.com/p/49954208
