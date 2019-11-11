@@ -2,7 +2,8 @@
 
 ### 通用
 
-2. React 使用场景？
+1. React 使用场景？
+
 3. 描述一下React 生命周期。
 4. 应该在React生命周期的什么阶段发出ajax请求，为什么？
 5. shouldComponentUpdate函数有什么作用？
@@ -44,16 +45,15 @@
 3. [必须要会的50个React面试题](https://segmentfault.com/a/1190000018604138)
 4. [React 328道最全面试题(持续更新)](https://juejin.im/post/5d310e8bf265da1bd261259d)
 
+### 附录
 
+- React——高阶组件(HOC)https://blog.csdn.net/qq_35534823/article/details/80566037
 
-• React——高阶组件(HOC)https://blog.csdn.net/qq_35534823/article/details/80566037
+- React Hooks https://www.jianshu.com/p/76901410645a
 
-• React Hooks https://www.jianshu.com/p/76901410645a
+- React Fiber 初探 https://www.cnblogs.com/qingmingsang/articles/9131512.html
+- React 重要的一次重构：认识异步渲染架构 Fiber https://zhuanlan.zhihu.com/p/49954208
 
-• React Fiber 初探 https://www.cnblogs.com/qingmingsang/articles/9131512.html
+- Next.js
 
-• Next.js
-
-• React 中 setState() 为什么是异步的？ https://www.jqhtml.com/15392.html
-
-• React 重要的一次重构：认识异步渲染架构 Fiber https://zhuanlan.zhihu.com/p/49954208
+- React 中 setState() 为什么是异步的？ https://www.jqhtml.com/15392.html
