@@ -36,7 +36,7 @@ ECMAScript3.1最终改名为ECMAScript5。
 
 - Boolean()、Number()、parseInt()、parseFloat()、isNaN()的使用和区别？
 
-- parseInt()的基数介于2-36之间，0为十进制，1返回NaN。为了避免错误的解析，建议无论在什么情况下都明确指定基数。parseFloat()只解析十进制，它没有第二个参数，只要有可能它也会返回整数。
+- parseInt()的基数介于2-36之间，0为十进制，1返回NaN，数字大于基数也返回NaN。为了避免错误的解析，建议无论在什么情况下都明确指定基数。parseFloat()只解析十进制，它没有第二个参数，只要有可能它也会返回整数。
 
 - `isNaN()`用于对象时，选调用对象的`valueOf()`，再调用对象的`toString()`。
 

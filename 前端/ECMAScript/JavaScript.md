@@ -89,3 +89,78 @@
 ### 面试题
 
 1. [一份 JavaScript 高级面试题](https://zhuanlan.zhihu.com/p/34273811)
+2. [BAT前端开发面试题]( https://www.jianshu.com/p/1d0b6e6aee90)
+3. [深入理解ES6箭头函数的this以及各类this面试题总结](https://blog.csdn.net/qq_39207948/article/details/79547743)
+4. [ES6系列40道基础题（含答案）](https://blog.csdn.net/qq_39207948/article/details/80678800)
+5. [前端开发面试题收集(css部分)](https://www.cnblogs.com/wj204/p/5813736.html)
+6. [前端开发面试题收集(html部分)](https://www.cnblogs.com/wj204/p/5814784.html)
+7. [前端开发面试题收集(js部分)](https://www.cnblogs.com/wj204/p/5816455.html)
+8. [面试常见ES6问题集锦]( https://zhuanlan.zhihu.com/p/61068657)
+
+### JS
+
+• 最详尽的 JS 原型与原型链终极详解，没有「可能是」 https://www.jianshu.com/p/dee9f8b14771
+
+• JS—特殊的对象~函数 https://www.jianshu.com/p/79c30b99f051
+
+• 一探前端开发中的JS调试技巧 http://seejs.me/2016/03/27/jsdebugger/
+
+• javascript中BOM部分基础知识总结 https://www.cnblogs.com/2010master/p/5824215.html
+
+• 数学运算
+
+• 取余：%
+
+• 开方：Math.pow()、 2**3
+
+### await了解吗？
+
+1. promise
+
+2. 了解ES各版本、着重学习ES6。
+
+3. New Function()
+
+4. Function.prototype 是函数对象，什么是函数对象？
+
+5. null 是一个独立的数据类型，为什么typeof(null)的值是object？
+
+6. prototype原型、原型链 => 继承
+
+7. prototype/ `__proto__`的区别
+
+8. 构造函数
+
+9. call / apply / bind
+
+10. js OOP
+
+11. clone / deepcopy
+
+12. 同步与异步、阻塞与非阻塞
+
+### ES6专题
+
+ES6、ES7、ES8、ES9、ES10新特性一览 https://juejin.im/post/5ca2e1935188254416288eb2#heading-26
+
+• promise、await 、async、异步。
+
+• Async/Await：比Promise更好的6个理由 http://caibaojian.com/asyncawait.html
+
+Generator与react状态机（14） https://zhuanlan.zhihu.com/p/60914496
+
+1.5万字概括ES6全部特性(看图就能记下，值得收藏) https://zhuanlan.zhihu.com/p/87699079
+
+• PhantomJs https://www.jianshu.com/p/80e984ef94d3
+
+• 如何编写轻量级 CSS 框架 https://www.cnblogs.com/nzbin/p/7073601.html
+
+• 个人的中小型项目前端架构浅谈 https://blog.csdn.net/qq20004604/article/details/70480932
+
+• 了解什么是微前端 https://juejin.im/post/5d1f19e3f265da1bab29ce5f
+
+• 微前端如何落地 https://www.infoq.cn/article/xm_AaiOTXmLpPgWvX9y9
+
+• 阻塞非阻塞与同步异步的区别是什么？ https://leetcode-cn.com/circle/discuss/uHGOZo
+
+• isset() defined()
