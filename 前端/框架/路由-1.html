@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+<h1>路由系统演示</h1>
+
+<div id="app">
+    <ul>
+        <li><a data-href="/" href="#">home</a></li>
+        <li><a data-href="/about" href="#">about</a></li>
+        <li><a data-href="/topics" href="#">topics</a></li>
+    </ul>
+    <div id="content"></div>
+</div>
+
+<script>
+    class Router {
+        constructor() {
+            this.routes = {};
+            this.currentUrl = '';
+        }
+
+        route(path, callback) {
+            this.routes[path] = callback || function () {
+            };
+        }
+
+        updateView(url) {
+            this.currentUrl = url;
+            this.routes[this.currentUrl] && this.routes[this.currentUrl]();
+        }
+
+        bindLink() {
+            const allLink = document.querySelectorAll('a[data-href]');
+            for (let i = 0, len = allLink.length; i < len; i++) {
+                const current = allLink[i];
+                current.addEventListener(
+                    'click',
+                    e => {
+                        e.preventDefault();
+                        const url = current.getAttribute('data-href');
+                        history.pushState({}, null, url);
+                        this.updateView(url);
+                    },
+                    false
+                );
+            }
+        }
+
+        init() {
+            this.bindLink();
+            window.addEventListener('popstate', e => {
+                this.updateView(window.location.pathname);
+            });
+            window.addEventListener('load', () => this.updateView('/'), false);
+        }
+    }
+
+    const router = new Router();
+    router.init();
+    router.route('/', function () {
+        document.getElementById('content').innerHTML = 'Home';
+    });
+    router.route('/about', function () {
+        document.getElementById('content').innerHTML = 'About';
+    });
+    router.route('/topics', function () {
+        document.getElementById('content').innerHTML = 'Topics';
+    });
+
+    router.route('/xx');
+</script>
+</body>
+</html>

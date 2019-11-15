@@ -44,13 +44,13 @@
 1. 什么是window对象? 什么是document对象?[BOM部分基础知识总结](https://www.cnblogs.com/2010master/p/5824215.html)，[BOM和DOM详解](https://www.jb51.net/article/55851.htm)。
 1. **documen.write和 innerHTML的区别？**<br/>document.write会将页面上的所有内容清除包括标题，innerHTML只会重写所属元素的内容。<br/>document.write是直接写入到页面的内容流，会导致页面被重写。innerHTML则是DOM页面元素的一个属性，代表该元素的html内容。你可以精确到某一个具体的元素来进行更改。<br/>两者都可动态包含外部资源如JavaScript文件。通过document.write插入`<script>`元素会自动执行其中的脚本；大多数浏览器中，通过innerHTML插入`<script>`元素并不会执行其中的脚本。
 1. 检测浏览器版本版本有哪些方式？
+1. [javascript中BOM部分基础知识总结]( https://www.cnblogs.com/2010master/p/5824215.html)
 
 ### 高级主题
 
 2. 那些操作会造成内存泄漏？
 3. 如何编写高性能的Javascript？
-6. 请介绍一下JS之事件节流？
-7. 什么是JS的函数防抖？
+6. 请介绍一下JS之事件节流？什么是JS的函数防抖？
 8. 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
 9. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
 10. What is a Polyfill?做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？
@@ -90,107 +90,40 @@
 
 1. [一份 JavaScript 高级面试题](https://zhuanlan.zhihu.com/p/34273811)
 2. [BAT前端开发面试题]( https://www.jianshu.com/p/1d0b6e6aee90)
-3. [深入理解ES6箭头函数的this以及各类this面试题总结](https://blog.csdn.net/qq_39207948/article/details/79547743)
-4. [ES6系列40道基础题（含答案）](https://blog.csdn.net/qq_39207948/article/details/80678800)
-5. [前端开发面试题收集(css部分)](https://www.cnblogs.com/wj204/p/5813736.html)
-6. [前端开发面试题收集(html部分)](https://www.cnblogs.com/wj204/p/5814784.html)
-7. [前端开发面试题收集(js部分)](https://www.cnblogs.com/wj204/p/5816455.html)
-8. [面试常见ES6问题集锦]( https://zhuanlan.zhihu.com/p/61068657)
+3. [前端开发面试题收集(js部分)](https://www.cnblogs.com/wj204/p/5816455.html)
+4. [10 个常问的 JS 面试题](https://juejin.im/post/5dc360bef265da4d307f193a)
+5. [7道简单的 JavaScript 面试题，三个月没招到一个人](https://juejin.im/post/5dbe818a6fb9a0203c34e4bb)
+6. [听说会做这道题的人后来都进了头条？](https://juejin.im/post/5dca5516f265da4d3429b003)
+7. [JS 原生面经从初级到高级【近1.5W字】](https://juejin.im/post/5daeefc8e51d4524f007fb15)
+8. [五分钟带你领略: 腾讯半年来出现最频繁的算法之一——字符串解码](https://juejin.im/post/5dc2a7cce51d4504f0726a00)
+9. [可能是最全的 “文本溢出截断省略” 方案合集](https://juejin.im/post/5dc15b35f265da4d432a3d10)
 
 ### JS
 
-• 最详尽的 JS 原型与原型链终极详解，没有「可能是」 https://www.jianshu.com/p/dee9f8b14771
+- [最详尽的 JS 原型与原型链终极详解，没有「可能是」]( https://www.jianshu.com/p/dee9f8b14771)
+- [JS—特殊的对象~函数]( https://www.jianshu.com/p/79c30b99f051)
+- [一探前端开发中的JS调试技巧]( http://seejs.me/2016/03/27/jsdebugger/)
+- 数学运算
+- 取余：%
+- 开方：Math.pow()、 2**3
+- [1.5万字概括ES6全部特性(看图就能记下，值得收藏)]( https://zhuanlan.zhihu.com/p/87699079)
+- PhantomJs https://www.jianshu.com/p/80e984ef94d3
+- 如何编写轻量级 CSS 框架 https://www.cnblogs.com/nzbin/p/7073601.html
+- 个人的中小型项目前端架构浅谈 https://blog.csdn.net/qq20004604/article/details/70480932
+- 了解什么是微前端 https://juejin.im/post/5d1f19e3f265da1bab29ce5f
+- 微前端如何落地 https://www.infoq.cn/article/xm_AaiOTXmLpPgWvX9y9
+- [阻塞非阻塞与同步异步的区别是什么？]( https://leetcode-cn.com/circle/discuss/uHGOZo)
+- isset() defined()
 
-• JS—特殊的对象~函数 https://www.jianshu.com/p/79c30b99f051
-
-• 一探前端开发中的JS调试技巧 http://seejs.me/2016/03/27/jsdebugger/
-
-• javascript中BOM部分基础知识总结 https://www.cnblogs.com/2010master/p/5824215.html
-
-• 数学运算
-
-• 取余：%
-
-• 开方：Math.pow()、 2**3
-
-### await了解吗？
-
-1. promise
-
-2. 了解ES各版本、着重学习ES6。
-
-3. New Function()
-
-4. Function.prototype 是函数对象，什么是函数对象？
-
-5. null 是一个独立的数据类型，为什么typeof(null)的值是object？
-
-6. prototype原型、原型链 => 继承
-
-7. prototype/ `__proto__`的区别
-
-8. 构造函数
-
-9. call / apply / bind
-
-10. js OOP
-
-11. clone / deepcopy
-
-12. 同步与异步、阻塞与非阻塞
-
-### ES6专题
-
-ES6、ES7、ES8、ES9、ES10新特性一览 https://juejin.im/post/5ca2e1935188254416288eb2#heading-26
-
-• promise、await 、async、异步。
-
-• Async/Await：比Promise更好的6个理由 http://caibaojian.com/asyncawait.html
-
-Generator与react状态机（14） https://zhuanlan.zhihu.com/p/60914496
-
-1.5万字概括ES6全部特性(看图就能记下，值得收藏) https://zhuanlan.zhihu.com/p/87699079
-
-• PhantomJs https://www.jianshu.com/p/80e984ef94d3
-
-• 如何编写轻量级 CSS 框架 https://www.cnblogs.com/nzbin/p/7073601.html
-
-• 个人的中小型项目前端架构浅谈 https://blog.csdn.net/qq20004604/article/details/70480932
-
-• 了解什么是微前端 https://juejin.im/post/5d1f19e3f265da1bab29ce5f
-
-• 微前端如何落地 https://www.infoq.cn/article/xm_AaiOTXmLpPgWvX9y9
-
-• 阻塞非阻塞与同步异步的区别是什么？ https://leetcode-cn.com/circle/discuss/uHGOZo
-
-• isset() defined()
-
-
-
-- [「译」ES5, ES6, ES2016, ES.Next: JavaScript 的版本是怎么回事？](https://huangxuan.me/2015/09/22/js-version/)
-
-- [10 个常问的 JS 面试题](https://juejin.im/post/5dc360bef265da4d307f193a)
-- [7道简单的 JavaScript 面试题，三个月没招到一个人](https://juejin.im/post/5dbe818a6fb9a0203c34e4bb)
-- [听说会做这道题的人后来都进了头条？](https://juejin.im/post/5dca5516f265da4d3429b003)
-- [可能是最全的 “文本溢出截断省略” 方案合集](https://juejin.im/post/5dc15b35f265da4d432a3d10)
-- [35 道咱们必须要清楚的 React 面试题](https://juejin.im/post/5dc20a4ff265da4d4e30040b)
 - [(建议精读)原生JS灵魂之问(中)，检验自己是否真的熟悉JavaScript？](https://juejin.im/post/5dbebbfa51882524c507fddb)
-- [JS 原生面经从初级到高级【近1.5W字】](https://juejin.im/post/5daeefc8e51d4524f007fb15)
-- [五分钟带你领略: 腾讯半年来出现最频繁的算法之一——字符串解码](https://juejin.im/post/5dc2a7cce51d4504f0726a00)
 - [前端开发中79条不可忽视的知识点汇总](https://juejin.im/post/5d8989296fb9a06b1f147070)
 - [Lodash](https://juejin.im/post/5c134de65188250918135eb6)
 - [快看，前端开发者都收藏了这几张图表！](https://juejin.im/post/5dc43b6b6fb9a04a945dd6b2)
-- [React 中获取数据的 3 种方法：哪种最好？](https://juejin.im/post/5dc4ada5f265da4cfb51303e)
 - [微服务架构~BFF和网关是如何演化出来的](https://www.cnblogs.com/dadadechengzi/p/9373069.html)
 - [HTTP缓存是如何实现](http://caibaojian.com/http-cache.html)
 - [首页白屏优化实践](https://segmentfault.com/a/1190000020383064)
 - [Webview加载界面白屏解决方法总结](https://blog.csdn.net/qq_34584049/article/details/78280815)
 - [awesome-javascript](https://github.com/sorrycc/awesome-javascript)
-- [Javascript中的async await](https://www.cnblogs.com/cpselvis/p/6344122.html)
 - [Kafka，Mq和Redis作为消息队列使用时的差异有哪些](https://www.jianshu.com/p/a4319755c6da)
 - [Immutable.js了解一下？](https://www.jianshu.com/p/0fa8c7456c15)
-- [ES6、ES7、ES8、ES9、ES10新特性一览](https://juejin.im/post/5ca2e1935188254416288eb2#heading-25)
 - [package-lock.json的作用](https://www.cnblogs.com/cangqinglang/p/8336754.html)
-
-
-

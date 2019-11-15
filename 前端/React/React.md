@@ -9,6 +9,7 @@
 5. shouldComponentUpdate函数有什么作用？
 6. 当组件的setState函数被调用之后，发生了什么？
 7. 为什么循环产生的组件中要利用上key这个特殊的prop？
+6. 说说React Native、Weex框架的实现原理？
 
 ### 组件
 
@@ -38,22 +39,24 @@
 5. [React Router 4 简介及其背后的路由哲学](http://reactpeixun.com/reactganhuo/2018-01-28/335.html)
 6. [react-native路由反向传值](https://www.jianshu.com/p/a5287a6f3f01)
 
-### 其它
-
-1. 说说React Native、Weex框架的实现原理？
-2. [React高频面试题，值得珍藏！](http://www.lucklnk.com/godaddy/details/aid/690502212)
-3. [必须要会的50个React面试题](https://segmentfault.com/a/1190000018604138)
-4. [React 328道最全面试题(持续更新)](https://juejin.im/post/5d310e8bf265da1bd261259d)
-
 ### 附录
 
-- React——高阶组件(HOC)https://blog.csdn.net/qq_35534823/article/details/80566037
+- [React——高阶组件(HOC)](https://blog.csdn.net/qq_35534823/article/details/80566037)
 
-- React Hooks https://www.jianshu.com/p/76901410645a
+- [React Hooks]( https://www.jianshu.com/p/76901410645a)
 
-- React Fiber 初探 https://www.cnblogs.com/qingmingsang/articles/9131512.html
-- React 重要的一次重构：认识异步渲染架构 Fiber https://zhuanlan.zhihu.com/p/49954208
+- [React Fiber 初探]( https://www.cnblogs.com/qingmingsang/articles/9131512.html)
+- [React 重要的一次重构：认识异步渲染架构 Fiber]( https://zhuanlan.zhihu.com/p/49954208)
 
 - Next.js
 
-- React 中 setState() 为什么是异步的？ https://www.jqhtml.com/15392.html
+- [React 中 setState() 为什么是异步的？]( https://www.jqhtml.com/15392.html)
+- [Generator与react状态机（14）]( https://zhuanlan.zhihu.com/p/60914496)
+
+### 面试题
+
+- [35 道咱们必须要清楚的 React 面试题](https://juejin.im/post/5dc20a4ff265da4d4e30040b)
+- [React 中获取数据的 3 种方法：哪种最好？](https://juejin.im/post/5dc4ada5f265da4cfb51303e)
+- [React高频面试题，值得珍藏！](http://www.lucklnk.com/godaddy/details/aid/690502212)
+- [必须要会的50个React面试题](https://segmentfault.com/a/1190000018604138)
+- [React 328道最全面试题(持续更新)](https://juejin.im/post/5d310e8bf265da1bd261259d)

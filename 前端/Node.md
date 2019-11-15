@@ -10,8 +10,7 @@
 
 - [NodeJS框架Express与Koa](https://www.jianshu.com/p/6f7930687835)
 - [redux, koa, express 中间件实现对比解析](https://segmentfault.com/a/1190000016386740)
-
-
+- 对Node的优点和缺点提出了自己的看法？
 
 ### Koa 还是 Express？
 
