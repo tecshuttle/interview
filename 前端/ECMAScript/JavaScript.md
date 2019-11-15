@@ -164,3 +164,33 @@ Generator与react状态机（14） https://zhuanlan.zhihu.com/p/60914496
 • 阻塞非阻塞与同步异步的区别是什么？ https://leetcode-cn.com/circle/discuss/uHGOZo
 
 • isset() defined()
+
+
+
+- [「译」ES5, ES6, ES2016, ES.Next: JavaScript 的版本是怎么回事？](https://huangxuan.me/2015/09/22/js-version/)
+
+- [10 个常问的 JS 面试题](https://juejin.im/post/5dc360bef265da4d307f193a)
+- [7道简单的 JavaScript 面试题，三个月没招到一个人](https://juejin.im/post/5dbe818a6fb9a0203c34e4bb)
+- [听说会做这道题的人后来都进了头条？](https://juejin.im/post/5dca5516f265da4d3429b003)
+- [可能是最全的 “文本溢出截断省略” 方案合集](https://juejin.im/post/5dc15b35f265da4d432a3d10)
+- [35 道咱们必须要清楚的 React 面试题](https://juejin.im/post/5dc20a4ff265da4d4e30040b)
+- [(建议精读)原生JS灵魂之问(中)，检验自己是否真的熟悉JavaScript？](https://juejin.im/post/5dbebbfa51882524c507fddb)
+- [JS 原生面经从初级到高级【近1.5W字】](https://juejin.im/post/5daeefc8e51d4524f007fb15)
+- [五分钟带你领略: 腾讯半年来出现最频繁的算法之一——字符串解码](https://juejin.im/post/5dc2a7cce51d4504f0726a00)
+- [前端开发中79条不可忽视的知识点汇总](https://juejin.im/post/5d8989296fb9a06b1f147070)
+- [Lodash](https://juejin.im/post/5c134de65188250918135eb6)
+- [快看，前端开发者都收藏了这几张图表！](https://juejin.im/post/5dc43b6b6fb9a04a945dd6b2)
+- [React 中获取数据的 3 种方法：哪种最好？](https://juejin.im/post/5dc4ada5f265da4cfb51303e)
+- [微服务架构~BFF和网关是如何演化出来的](https://www.cnblogs.com/dadadechengzi/p/9373069.html)
+- [HTTP缓存是如何实现](http://caibaojian.com/http-cache.html)
+- [首页白屏优化实践](https://segmentfault.com/a/1190000020383064)
+- [Webview加载界面白屏解决方法总结](https://blog.csdn.net/qq_34584049/article/details/78280815)
+- [awesome-javascript](https://github.com/sorrycc/awesome-javascript)
+- [Javascript中的async await](https://www.cnblogs.com/cpselvis/p/6344122.html)
+- [Kafka，Mq和Redis作为消息队列使用时的差异有哪些](https://www.jianshu.com/p/a4319755c6da)
+- [Immutable.js了解一下？](https://www.jianshu.com/p/0fa8c7456c15)
+- [ES6、ES7、ES8、ES9、ES10新特性一览](https://juejin.im/post/5ca2e1935188254416288eb2#heading-25)
+- [package-lock.json的作用](https://www.cnblogs.com/cangqinglang/p/8336754.html)
+
+
+
