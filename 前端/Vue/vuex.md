@@ -119,17 +119,173 @@ Action 类似于 mutation，不同在于：
 - Action 提交的是 mutation，而不是直接变更状态。
 - Action 可以包含任意异步操作。
 
+```js
+const store = new Vuex.Store({
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment (state) {
+      state.count++
+    }
+  },
+  actions: {
+    increment (context) {
+      context.commit('increment')
+    },
+    incrementES ({ commit }) { //实践中，我们会经常用到ES2015的“参数解构”来简化代码。
+      commit('increment')
+    }
+  }
+})
+```
+
+Action 函数接受一个与 store 实例具有相同方法和属性的 context 对象，因此你可以调用 `context.commit` 提交一个 mutation，或者通过 `context.state` 和 `context.getters` 来获取 state 和 getters。当我们在之后介绍到 Modules时，你就知道 context 对象为什么不是 store 实例本身了。
+
+#### 分发Action
+
+```js
+store.dispatch('increment')
+```
+
+乍一眼看上去感觉多此一举，我们直接分发 mutation 岂不更方便？实际上并非如此，还记得 **mutation 必须同步执行**这个限制么？Action 就不受约束！我们可以在 action 内部执行**异步**操作。
+
+#### 在组件中分发Action
+
+#### 组合Action
+
 ### Module
+
+由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。
+
+为了解决以上问题，Vuex 允许我们将 store 分割成**模块（module）**。每个模块拥有自己的 state、mutation、action、getter、甚至是嵌套子模块——从上至下进行同样方式的分割：
+
+```js
+const moduleA = {
+  state: { ... },
+  mutations: { ... },
+  actions: { ... },
+  getters: { ... }
+}
+
+const moduleB = {
+  state: { ... },
+  mutations: { ... },
+  actions: { ... }
+}
+
+const store = new Vuex.Store({
+  modules: {
+    a: moduleA,
+    b: moduleB
+  }
+})
+
+store.state.a // -> moduleA 的状态
+store.state.b // -> moduleB 的状态
+```
+
+#### 模块的局部状态
+
+#### 命名空间
+
+#### 模块动态注册
+
+#### 模块重用
 
 ## 项目结构
 
+Vuex 并不限制你的代码结构。但是，它规定了一些需要遵守的规则：
+
+1. 应用层级的状态应该集中到单个 store 对象中。
+2. 提交 **mutation** 是更改状态的唯一方法，并且这个过程是同步的。
+3. 异步逻辑都应该封装到 **action** 里面。
+
+只要你遵守以上规则，如何组织代码随你便。如果你的 store 文件太大，只需将 action、mutation 和 getter 分割到单独的文件。
+
+对于大型应用，我们会希望把 Vuex 相关代码分割到模块中。下面是项目结构示例：
+
+```sh
+├── index.html
+├── main.js
+├── api
+│   └── ... # 抽取出API请求
+├── components
+│   ├── App.vue
+│   └── ...
+└── store
+    ├── index.js          # 我们组装模块并导出 store 的地方
+    ├── actions.js        # 根级别的 action
+    ├── mutations.js      # 根级别的 mutation
+    └── modules
+        ├── cart.js       # 购物车模块
+        └── products.js   # 产品模块
+```
+
 ## 插件
+
+Vuex 的 store 接受 `plugins` 选项，这个选项暴露出每次 mutation 的钩子。Vuex 插件就是一个函数，它接收 store 作为唯一参数。
+
+### 在插件内提交Mutation
+
+### 生成State快照
+
+### 内置Logger插件
 
 ## 严格模式
 
+开启严格模式，仅需在创建 store 的时候传入 `strict: true`：
+
+```js
+const store = new Vuex.Store({
+  // ...
+  strict: true
+})
+```
+
+在严格模式下，无论何时发生了状态变更且不是由 mutation 函数引起的，将会抛出错误。这能保证所有的状态变更都能被调试工具跟踪到。
+
+### 开发环境与发布环境
+
+**不要在发布环境下启用严格模式**！严格模式会深度监测状态树来检测不合规的状态变更——请确保在发布环境下关闭严格模式，以避免性能损失。
+
+类似于插件，我们可以让构建工具来处理这种情况：
+
+```js
+const store = new Vuex.Store({
+  // ...
+  strict: process.env.NODE_ENV !== 'production'
+})
+```
+
 ## 表单处理
+
+### 双向绑定的计算属性
 
 ## 测试
 
+我们主要想针对 Vuex 中的 mutation 和 action 进行单元测试。
+
+### 测试Mutation
+
+### 测试Action
+
+### 测试Getter
+
+### 执行测试
+
+如果你的 mutation 和 action 编写正确，经过合理地 mocking 处理之后这些测试应该不依赖任何浏览器 API，因此你可以直接用 webpack 打包这些测试文件然后在 Node 中执行。换种方式，你也可以用 `mocha-loader` 或 Karma + `karma-webpack`在真实浏览器环境中进行测试。
+
+#### 在 Node 中执行测试
+
+#### 在浏览器中测试
+
+#### 使用Karma + karma-webpack在浏览器中执行测试
+
 ## 热重载
 
+使用 webpack 的 [Hot Module Replacement API](https://webpack.js.org/guides/hot-module-replacement/)，Vuex 支持在开发过程中热重载 mutation、module、action 和 getter。你也可以在 Browserify 中使用 [browserify-hmr](https://github.com/AgentME/browserify-hmr/) 插件。
+
+对于 mutation 和模块，你需要使用 `store.hotUpdate()` 方法。
+
+结束
