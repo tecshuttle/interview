@@ -278,6 +278,8 @@ Spring Cloud Gateway 作为 Spring Cloud 生态系统中的网关，目标是替
 ### 特征
 
 - 基于 Spring Framework 5，Project Reactor 和 Spring Boot 2.0
+- 非阻塞API
+- 支持 WebSockets
 - 动态路由
 - Predicates 和 Filters 作用于特定路由
 - 集成 Hystrix 断路器
@@ -286,7 +288,155 @@ Spring Cloud Gateway 作为 Spring Cloud 生态系统中的网关，目标是替
 - 限流
 - 路径重写
 
-### 服务化和过滤器
+### 相关概念
+
+- Route（路由）：这是网关的基本构建块。它由一个 ID，一个目标 URI，一组断言和一组过滤器定义。如果断言为真，则路由匹配。
+- Predicate（断言）：这是一个 Java 8 的 Predicate。输入类型是一个 ServerWebExchange。我们可以使用它来匹配来自 HTTP 请求的任何内容，例如 headers 或参数。
+- Filter（过滤器）：这是`org.springframework.cloud.gateway.filter.GatewayFilter`的实例，我们可以使用它修改请求和响应。
+
+### 快速上手
+
+Spring Cloud Gateway 网关路由有两种配置方式：
+
+- 在配置文件 yml 中配置
+- 通过`@Bean`自定义 RouteLocator，在启动主类 Application 中配置
+
+这两种方式是等价的，建议使用 yml 方式进配置。
+
+```yaml
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: neo_route
+        uri: http://www.ityouknow.com
+        predicates:
+        - Path=/spring-cloud
+```
+
+各字段含义如下：
+
+- id：我们自定义的路由 ID，保持唯一。
+- uri：目标服务地址。
+- predicates：路由条件，Predicate 接受一个输入参数，返回一个布尔值结果。
+- filters：过滤规则，本示例暂时没用。
+
+上面这段配置的意思是，配置了一个id为neo_route的路由规则，当访问地址 `http://localhost:8080/spring-cloud`时会自动转发到地址：`http://www.ityouknow.com/spring-cloud`。
+
+### Predicate使用示例
+
+```yaml
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: neo_route
+        uri: http://www.ityouknow.com
+        predicates:
+        - Path=/spring-cloud
+        - Host=**.foo.org
+        - Method=GET
+        - Header=X-Request-Id, \d+
+        - Query=foo, ba.
+        - Query=baz
+        - Cookie=chocolate, ch.p
+        - After=2018-01-20T06:06:06+08:00[Asia/Shanghai]
+```
+
+各种 Predicates 同时存在于同一个路由时，请求必须同时满足所有的条件才被这个路由匹配。
+
+> 一个请求满足多个路由的谓词条件时，请求只会被首个成功匹配的路由转发
+
+### 服务化
+
+在实际的工作中，服务的相互调用都是依赖于服务中心提供的入口来使用，服务中心往往注册了很多服务，如果每个服务都需要单独配置的话，这将是一份很枯燥的工作。Spring Cloud Gateway 提供了一种默认转发的能力，只要将 Spring Cloud Gateway 注册到服务中心，Spring Cloud Gateway 默认就会代理服务中心的所有服务。
+
+```yaml
+server:
+  port: 8888
+spring:
+  application:
+    name: cloud-gateway-eureka
+  cloud:
+    gateway:
+     discovery:
+        locator:
+         enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+```
+
+修改完成后启动 cloud-gateway-eureka 项目，访问注册中心地址 `http://localhost:8000/` 即可看到名为 `CLOUD-GATEWAY-EUREKA`的服务。
+
+### Filter过滤器
+
+Spring Cloud Gateway 的 Filter 的生命周期不像 Zuul 的那么丰富，它只有两个：“pre” 和 “post”。
+
+- **PRE**： 这种过滤器在请求被路由之前调用。我们可利用这种过滤器实现身份验证、在集群中选择请求的微服务、记录调试信息等。
+- **POST**：这种过滤器在路由到微服务以后执行。这种过滤器可用来为响应添加标准的 HTTP Header、收集统计信息和指标、将响应从微服务发送给客户端等。
+
+Spring Cloud Gateway 的 Filter 分为两种：GatewayFilter 与 GlobalFilter。GlobalFilter 会应用到所有的路由上，而 GatewayFilter 将应用到单个路由或者一个分组的路由上。
+
+Spring Cloud Gateway 内置了9种 GlobalFilter，比如 Netty Routing Filter、LoadBalancerClient Filter、Websocket Routing Filter 等，根据名字即可猜测出这些 Filter 的作者，具体大家可以参考官网内容：[Global Filters](http://cloud.spring.io/spring-cloud-gateway/single/spring-cloud-gateway.html#_global_filters)
+
+利用 GatewayFilter 可以修改请求的 Http 的请求或者响应，或者根据请求或者响应做一些特殊的限制。 更多时候我们会利用 GatewayFilter 做一些具体的路由配置，下面我们做一些简单的介绍。
+
+### 快速上手Filter使用
+
+我们以 AddRequestParameter GatewayFilter 来演示一下，如何在项目中使用 GatewayFilter，AddRequestParameter GatewayFilter 可以在请求中添加指定参数。
+
+**application.yml配置示例**
+
+```yaml
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: add_request_parameter_route
+        uri: http://example.org
+        filters:
+        - AddRequestParameter=foo, bar
+```
+
+这样就会给匹配的每个请求添加上`foo=bar`的参数和值。
+
+我们将以上配置融入到 cloud-gateway-eureka 项目中，完整的 `application.yml` 文件配置信息如下：
+
+```yaml
+server:
+  port: 8888
+spring:
+  application:
+    name: cloud-gateway-eureka
+  cloud:
+    gateway:
+     discovery:
+        locator:
+         enabled: true
+     routes:
+     - id: add_request_parameter_route
+       uri: http://localhost:9000
+       filters:
+       - AddRequestParameter=foo, bar
+       predicates:
+         - Method=GET
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+```
 
 ### 熔断、限流、重试
 
