@@ -178,7 +178,7 @@
 
 ## 第3部分　后端中的Spring
 
-### 第10章　通过Spring和JDBC征服数据库　285
+### 第10章 通过Spring和JDBC征服数据库
 
 10.1　Spring的数据访问哲学　286
 10.1.1　了解Spring的数据访问异常体系　287
@@ -189,27 +189,30 @@
 10.2.3　基于JDBC驱动的数据源　294
 10.2.4　使用嵌入式的数据源　295
 10.2.5　使用profile选择数据源　296
-10.3　在Spring中使用
-JDBC　298
+10.3　在Spring中使用JDBC　298
 10.3.1　应对失控的JDBC代码　299
 10.3.2　使用JDBC模板　302
 10.4　小结　307
 
-### 第11章　使用对象-关系映射持久化数据　309
+### 第11章 使用对象-关系映射持久化数据
 
-11.1　在Spring中集成Hibernate　310
-11.1.1　声明Hibernate的Session工厂　311
-11.1.2　构建不依赖于Spring的Hibernate代码　313
-11.2　Spring与Java持久化API　315
-11.2.1　配置实体管理器工厂　315
-11.2.2　编写基于JPA的Repository　320
-11.3　借助Spring Data实现自动化的JPA　Repository　322
-11.3.1　定义查询方法　325
-11.3.2　声明自定义查询　328
-11.3.3　混合自定义的功能　329
-11.4　小结　330
+#### 1 在Spring中集成Hibernate
 
-### 第12章　使用NoSQL数据库　333
+声明Hibernate的Session工厂　311
+构建不依赖于Spring的Hibernate代码　313
+
+#### 2 Spring与Java持久化API
+
+配置实体管理器工厂　315
+编写基于JPA的Repository　320
+
+#### 3 借助Spring Data实现自动化的JPA Repository
+
+定义查询方法　325
+声明自定义查询　328
+混合自定义的功能
+
+### 第12章 使用NoSQL数据库
 
 12.1　使用MongoDB持久化文档数据　334
 12.1.1　启用MongoDB　335
@@ -411,19 +414,21 @@ JSR-250的@RolesAllowed注解　387
 2．5 选择视图模板库 49
 2．6 小结 52
 
-### 第 3 章 使用数据 53
+### 第 3 章 使用数据
 
-3．1 使用JDBC 读取和写入数据 53
-3．1．1 调整领域对象以适应持久化 55
-3．1．2 使用JdbcTemplate 56
-3．1．3 定义模式和预加载数据 61
-3．1．4 插入数据 63
-3．2 使用Spring Data JPA 持久化数据 72
-3．2．1 添加Spring Data JPA 到项目中 72
-3．2．2 将领域对象标注为实体 73
-3．2．3 声明JPA repository 76
-3．2．4 自定义JPA repository 77
-3．3 小结 80
+#### 使用JDBC 读取和写入数据
+
+1 调整领域对象以适应持久化 55
+2 使用JdbcTemplate 56
+3 定义模式和预加载数据 61
+4 插入数据 63
+
+#### 使用Spring Data JPA 持久化数据
+
+1 添加Spring Data JPA 到项目中
+2 将领域对象标注为实体
+3 声明JPA repository
+4 自定义JPA repository
 
 ### 第 4 章 保护Spring 81
 

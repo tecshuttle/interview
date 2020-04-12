@@ -83,6 +83,10 @@ https://www.jianshu.com/p/9c31a2a377e0
 
 ![](Spring Batch-1.webp)
 
+# Spring Boot下Spring Batch入门实例【可用】
+
+https://www.jianshu.com/p/305192ea4cb1
+
 # 《Spring Batch 批处理框架》
 
 ## 第1篇 入门篇
