@@ -16,6 +16,10 @@ Spring Boot教程
 
 [Spring Boot(四)：Thymeleaf 使用详解](http://www.ityouknow.com/springboot/2016/05/01/spring-boot-thymeleaf.html)
 
+
+
+
+
 # Spring Boot Jpa 的使用
 
 [Spring Boot(五)：Spring Boot Jpa 的使用](http://www.ityouknow.com/springboot/2016/08/20/spring-boot-jpa.html)
@@ -52,6 +56,26 @@ Spring Boot教程
 
 [Spring Boot (十九)：使用 Spring Boot Actuator 监控应用](http://www.ityouknow.com/springboot/2018/02/06/spring-boot-actuator.html)
 
+# Spring Boot 中如何解决跨域问题 ?
+
+https://blog.csdn.net/weixin_44259720/article/details/104900530
+
+```java
+@Configuration
+public class CorsConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("*")
+                .allowCredentials(true)
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .maxAge(3600);
+    }
+}
+```
+
+
+
 # 使用 spring-boot-admin 对 Spring Boot 服务进行监控
 
 [Spring Boot(二十)：使用 spring-boot-admin 对 Spring Boot 服务进行监控](http://www.ityouknow.com/springboot/2018/02/11/spring-boot-admin.html)
@@ -59,6 +83,40 @@ Spring Boot教程
 # 如何在 Spring/Spring Boot 中做参数校验？
 
 https://zhuanlan.zhihu.com/p/91823620
+
+
+
+# Spring-boot-devtools开发时热部署
+
+**POM**
+
+```xml
+<!-- 热部署模块 -->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-devtools</artifactId>
+  <optional>true</optional> <!-- 这个需要为 true 热部署才有效 -->
+</dependency>
+```
+
+**application.yaml**
+
+```yaml
+devtools:
+    restart:
+      additional-paths: src/main/java
+      exclude: static/**,public/**
+```
+
+**设置idea**
+
+1. 找到idea的`Preferences -> Build, Execution, Deployment -> Compiler`，勾选`Build project automatically`。
+
+2. 回到idea正常界面，Mac使用快捷键`shift+option+command+/`，window上的快捷键是`Shift+Ctrl+Alt+/`，打开Registry，勾选`compiler.automake.allow.when.app.running`
+
+通过以上的设置就可以在不重启服务的情况下加载html，但如果修改java文件，服务在几秒后会自动重启。
+
+
 
 结束
 
