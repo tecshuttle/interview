@@ -9,6 +9,7 @@
 - promise、await 、async、异步。
 - Async/Await：比Promise更好的6个理由 http://caibaojian.com/asyncawait.html
 - [Javascript中的async await](https://www.cnblogs.com/cpselvis/p/6344122.html)
+- [JS 异步(callback→Promise→async/await)](https://segmentfault.com/a/1190000013141641)
 - [「译」ES5, ES6, ES2016, ES.Next: JavaScript 的版本是怎么回事？](https://huangxuan.me/2015/09/22/js-version/)
 
 ### await了解吗？

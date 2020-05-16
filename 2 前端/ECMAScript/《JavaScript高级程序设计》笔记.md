@@ -1,5 +1,57 @@
 # 《JavaScript高级程序设计》笔记
 
+## 第1章 JavaScript简介
+
+### 小结
+
+JavaScript是一种专为与网页交互而设计的脚本语言，由下列三个不同的部分组成：
+
+- ECMAScript，提供核心语言功能；
+- 文档对象模型（DOM），提供访问和操作网页内容的方法和接口；
+- 浏览器对象模型（BOM），提供与浏览器交互的方法和接口。
+
+## 第2章 在HTML中使用JavaScript
+
+### `<script>`元素
+
+HTML 5为`<script>`定义了下列6个属性：
+
+1. async（可选）
+2. charset（可选）
+3. defer（可选）
+4. language（已废弃）
+5. src（可选）
+6. type（必选）
+
+在使用`<script>`嵌入JavaScript代码时，记住不要在代码中的任何地方出现“</script>”这符串。
+
+```js
+<script type="text/javascript">
+    function sayScript() {
+        alert("</script>"); //alert("<\/script>")
+    }
+</script>
+```
+
+带有src属性的`<script>`元素不应该在其`<script>`和`</script>`标签之间再包含额外的JavaScript代码。如果包含了嵌入的代码，则只会下载并执行外部脚本文件，嵌入的代码会被忽略。
+
+通过`<script>`元素的src属性还可以包含来自外部域的JavaScript文件，与`<img>`元素非常相似。这一点即让它倍显强大，又让它备受争议。
+
+无论如何包含代码，只要不存在defer和async属性，浏览器都会按照`<script>`元素在页面中出现的先后顺序对它们依次进行解析。换句话说，在第一个`<script>`元素包含的代码解析完成后，第二个`<script>`包含的代码才会被解析，然后才是第三个、第四个……
+
+### 延迟脚本（defer）
+
+立即下载，但延迟执行。
+
+### 异步脚本（async）
+
+立即下载，不保证执行顺序。
+
+### 小结
+
+- 所有`<script>`元素都会按照它们在页面中出现的先后顺序依次被解析。
+- 使用`<noscript>`元素可以指定在不支持脚本的浏览器中显示的替代内容。
+
 ## 第3章 基本概念
 
 ECMAScript3.1最终改名为ECMAScript5。
@@ -313,6 +365,7 @@ ECMAScript3.1最终改名为ECMAScript5。
   - [[Writable]]
   - [[Value]]
 - 要修改属性的默认特性，使用Object.defineProperty()、Object.defineProperties()方法。
+- 使用Object.getOwnPropertyDescriptor()方法，可以取得给定属性的描述符，这个方法接收2个参数。
 - 在调用Object.defineProperty()方法创建一个新属性时，如果不指定，configurable、enumerable和writable特性的默认值都是false。
 - 访问器属性：
   - [[Configurable]]
@@ -321,7 +374,6 @@ ECMAScript3.1最终改名为ECMAScript5。
   - [[Set]]
 - `_year`前面的下划线是一种常用的记号，用于表示只能通过对象方法访问的属性。
 - 使用访问器属性的常见方式，即设置一个属性的值会导致其他属性发生变化。
-- 使用Object.getOwnPropertyDescriptor()方法，可以取得给定属性的描述符，这个方法接收2个参数。
 
 ### 创建对象
 
@@ -392,6 +444,8 @@ var factorial = (function f(num) {
 
 ## 第8章 BOM
 
+![](BOM.png)
+
 BOM提供了很多对象，用于访问浏览器的功能，这些功能与任何网页内容无关。
 
 ### window对象
@@ -461,6 +515,23 @@ JavaScript中有几个对象在编程中用处不大，而screen对象就是其�
 - 动态样式
 - 操作表格
 - 使用NodeList
+
+#### 删除节点removeChild() 
+
+removeChild() 方法从子节点列表中删除某个节点。如删除成功，此方法可返回被删除的节点，如失败，则返回 NULL。
+
+**注意：** 把删除的子节点赋值给 x，这个子节点不在DOM树中，但是还存在内存中，可通过 x 操作。如果要完全删除对象，给 x 赋 null 值。
+
+```js
+for(var i = nodelist.length-1;i>=0;i--) {
+    var x = content.removeChild(nodelist[i]);
+    if(x.nodeType == 1) {
+        x = null;
+    }
+}
+```
+
+
 
 ## 第11章 DOM扩展
 
@@ -548,4 +619,6 @@ Web计时机制的核心是window.performance对象。
 
 ### Web Workers
 
-关于Web Workder，最重要的是要知道它所执行的JavaScript代码完全在另一个作用域中，与当前网页中的代码不共享作用域。
+随着Web应用复杂性的与日俱增，越来越复杂的计算在所难免。长时间运行的JavaScript进程会导致浏览器冻结用户界面，让人感觉屏幕“冻结”了。Web Workers规范通过让JavaScript在后台运行解决了这个问题。浏览器实现Web Workers规范的方式有很多种，可以使用线程、后台进程或者运行在其他处理器核心上的进程，等等。具体的实现细节其实没有那么重要，重要的是开发人员现在可以放心地运行JavaScript，而不必担心会影响用户体验了。
+
+关于Web Worker，最重要的是要知道它所执行的JavaScript代码完全在另一个作用域中，与当前网页中的代码不共享作用域。
