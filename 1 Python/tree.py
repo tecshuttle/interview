@@ -3,12 +3,12 @@
 
 import matplotlib.pyplot as plt
 import squarify
-#import sys   
-#reload(sys)   
-#sys.setdefaultencoding('utf8')  
+import sys   
+reload(sys)   
+sys.setdefaultencoding('utf8')  
 
 #中文及负号处理办法
-#plt.rcParams['font.sans-serif'] = 'Microsoft YaHei'
+plt.rcParams['font.sans-serif'] = 'Microsoft YaHei'
 plt.rcParams['font.sans-serif'] = 'SimHei'
 plt.rcParams['axes.unicode_minus'] = False
 
