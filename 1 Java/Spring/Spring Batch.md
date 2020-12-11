@@ -1,5 +1,7 @@
 
 
+官网 https://docs.spring.io/spring-batch/docs/4.3.x/reference/html/index.html
+
 ## 一文吃透spring batch批量处理框架
 
 https://www.cnblogs.com/miantiao312/p/9788002.html
@@ -83,9 +85,23 @@ https://www.jianshu.com/p/9c31a2a377e0
 
 ![](Spring Batch-1.webp)
 
-# Spring Boot下Spring Batch入门实例【可用】
+# 学习例子
+
+## Spring Boot下Spring Batch入门实例【可用】
 
 https://www.jianshu.com/p/305192ea4cb1
+
+这是一个简单的例子，通过java config方式配置，处理3个数字串，不需要数据库支持。最简单的一个例子。
+
+## 如何运行多个job
+
+https://blog.csdn.net/u013174217/article/details/64906572
+
+正常途径，只能运行一个job。
+
+
+
+
 
 # 《Spring Batch 批处理框架》
 
