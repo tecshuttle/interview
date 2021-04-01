@@ -99,7 +99,42 @@ https://blog.csdn.net/u013174217/article/details/64906572
 
 正常途径，只能运行一个job。
 
+```java
+// 启动文件
+@RestController
+@EnableBatchProcessing
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class SpringbatchApplication {
+    public static ConfigurableApplicationContext ctx;
 
+    public static void main(String[] args) throws 
+      JobParametersInvalidException, 
+      JobExecutionAlreadyRunningException, 
+      JobRestartException, 
+      JobInstanceAlreadyCompleteException {
+        ctx = SpringApplication.run(SpringbatchApplication.class, args);
+    }
+}
+
+// 控制器文件
+@RestController
+public class JobController {
+    @RequestMapping("/job2")   //请求的映射路由
+    public String job2() throws Exception {
+        JobParameters jobParameters = new JobParametersBuilder()
+                .addLong("time", System.currentTimeMillis())
+                .toJobParameters();
+
+        JobLauncher jobLauncher2 = SpringbatchApplication.ctx.getBean(JobLauncher.class);
+        jobLauncher2.run(
+          SpringbatchApplication.ctx.getBean("processJob2", Job.class), 
+          jobParameters
+        );
+
+        return "job 2";
+    }
+}
+```
 
 
 
