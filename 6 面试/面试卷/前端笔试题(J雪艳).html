@@ -1,0 +1,16 @@
+<script>
+  var word = 'hello';
+
+  function Person(word) {
+    this.word = `${word} world`;
+    return {};
+  }
+
+  Person.prototype.say = function () {
+    console.log(`say ${this.word}`);
+  };
+
+  let p = new Person(word);
+  console.log(p.word);
+  p.say();
+</script>

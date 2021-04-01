@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <img src="http://i.imgur.com/DHu4DEi.png" style="width: 480px !important" />
+  </body>
+  <script>
+    var a = { n: 1 };
+    var b = a;
+
+    a.x = a = { n: 2 };
+    console.log(a,b);
+
+    console.log(a.x);
+    console.log(b.x);
+  </script>
+</html>

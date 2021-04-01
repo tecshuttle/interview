@@ -64,7 +64,7 @@ ECMAScript是规范，JavaScript是这一规范的一个具体实现。
 
 - ajax是对XHR的封装，更方便使用。
 - axios是对XHR的promise化。
-- fetch是原先js，没有使用XHR。
+- fetch是原生js，没有使用XHR。
 
 
 
