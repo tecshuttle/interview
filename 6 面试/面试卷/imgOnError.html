@@ -1,10 +1,19 @@
 <html>
   <body>
-    <img src="http://i.imgur.com/DHu4DEiii.png" onerror="imgError();" style="width: 480px !important" />
+    <img
+      src="https://www.gstatic.com/images/icons/material/system/svg/keyboard_arrow_up_24px.svg"
+      onerror="imgError();"
+      style="width: 480px !important"
+    />
+    <img src="https://www.google.com/favicon.ico" onerror="imgError2()" />
   </body>
   <script>
-  function imgError() {
-    console.log('image load error!')
-  }
+    function imgError() {
+      console.log('image load error!');
+    }
+
+    function imgError2() {
+      console.log(event);
+    }
   </script>
 </html>
