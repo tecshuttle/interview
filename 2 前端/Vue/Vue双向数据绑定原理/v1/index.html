@@ -12,6 +12,7 @@
   </style>
 
   <body>
+    <!-- 变量name在这个仅起占位符，并没有模板功能。 -->
     <h1 id="name">{{name}}</h1>
   </body>
 
@@ -20,33 +21,16 @@
   <script src="js/index.js"></script>
 
   <script type="text/javascript">
+    // 1. 获得页面元素
     var ele = document.querySelector('#name');
+
+    // 2. 初始化页面元素值
     var selfVue = new SelfVue({ name: 'hello world' }, ele, 'name');
 
+    // 3. 修改页面元素值
     window.setTimeout(function () {
-      console.log('name值改变了');
+      //console.log('name值改变了');
       selfVue.name = 'canfoo';
-    }, 2000);
-
-    // 监听属性值变化
-    tom = {
-      name: 'Tom',
-      old: 42,
-    };
-
-    Object.defineProperty(tom, 'old', {
-      get: function () {
-        console.log('get');
-        return bValue;
-      },
-      set: function (newVal) {
-        bValue = newVal;
-        console.log('set: ' + newVal);
-      },
-    });
-
-    //tom.old = 42;
-    //tom.old += 1;
-    //console.log(tom.old);
+    }, 500);
   </script>
 </html>
