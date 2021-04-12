@@ -16,9 +16,7 @@
     <h1 id="name">{{name}}</h1>
   </body>
 
-  <script src="js/observer.js"></script>
-  <script src="js/watcher.js"></script>
-  <script src="js/index.js"></script>
+  <script src="index.js"></script>
 
   <script type="text/javascript">
     // 1. 获得页面元素
@@ -30,6 +28,7 @@
     // 3. 修改页面元素值
     window.setTimeout(function () {
       selfVue.name = 'canfoo';
+      console.log(selfVue);
     }, 700);
   </script>
 </html>
