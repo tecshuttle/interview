@@ -184,33 +184,105 @@ promise是对象的一个新的内置类型。promise对象是一个占位符，
 
 ### 1 使用生成器和promise编写优雅的异步代码
 
+```js
+async(function*(){
+  try{
+    const ninjas = yield get("ninjas.json");
+    const missions = yield getJSON(ninjas[0].missionsUrl);
+    const missionDescription = yield getJSON(missions[0].detailsUrl);
+    //Study the mission details
+  }
+  catch(){
+    //Oh no, we were't able to get the mission details
+  }
+});
+```
+
+如果你不能理解这个例子，或者其中的某些语法你并不熟悉（例如 `function*` 或 `yield` ），不要担心。读完本章，你将能够理解所有的关键要素。
+
 ### 2 使用生成器函数
+
+调用生成器并不会执行生成器函数，相反，它会创建一个叫作迭代器（iterator）的对象。
 
 #### 通过迭代器对象控制生成器
 
+**对迭代器进行迭代**
+
+for-of循环不过是对迭代器进行迭代的语法糖。不同于手动调用迭代器的next方法，for-of循环同时还要查看生成器是否完成，它在后台自动做了完全相同的工作。
+
+**把执行权交给下一个生成器**
+
+在迭代器上使用yield*操作符，程序会跳转到另外一个生成器上执行。仅当NinjaGenerator的工作完成后，调用原来的迭代器才会继续输出值Genghis Khan。
+
+
+
 #### 使用生成器
+
+**用生成器生成ID序列**
+
+注意：标准函数中一般不应该书写无限循环的代码。但在生成器中没有问题！当生成器遇到了一个yield语句，它就会一直挂起执行直到下次调用next方法，所以只有每次调用一次next方法，while循环才会迭代一次并返回下一个ID值。
+
+**使用迭代器遍历DOM树**
+
+
 
 #### 与生成器交互
 
+**作为生成器函数参数发送值**
+
+**使用next方向向生成器发送值**
+
+
+
 #### 探索生成器内部构成
+
+**通过执行上下文跟踪生成器函数**
+
+
 
 ### 3 使用promise
 
 #### 理解简单回调函数所带来的问题
 
+
+
 #### 深入研究promise
+
+
 
 #### 拒绝promise
 
+
+
 #### 创建第一个真实promise案例
+
+
 
 #### 链式调用promise
 
+**Promise链中的错误捕捉**
+
+
+
 #### 等待多个promise
+
+
 
 #### promise竞赛
 
+
+
 ### 4 把生成器和promise相结合
+
+#### 面向未来的async函数
+
+当前的JavaScript标准计划新增两个关键字，用于替代上述样板代码。
+
+通过在关键字function之前使用关键字async，可以表明当前的函数依赖一个异步返回的值。在每个调用异步任务的位置上，都要放置一个await关键字，用来告诉JavaScript引擎，请在不阻塞应用执行的情况下在这个位置上等待执行结果。在这个过程背后，其实发生着本章前面所讨论内容。
+
+> 注意：在JavaScript的下一个版本中将会新增async函数。现阶段还没有浏览器对其进行支持，但通过Babel或者Traceur转译代码后，你可以在代码中使用async语法。
+
+
 
 # 第3部分 深入钻研对象，强化代码
 
