@@ -272,6 +272,15 @@ DOM的特性和属性
 
 在两个宏任务之间，可以重新渲染页面，而在微任务执行之前不允许重新渲染页面。
 
+
+
+- 两类任务队列都是独立于事件循环的，这意味着任务队列的添加行为也发生在事件循环之外。如果不是这样设计，则会导致在执行JavaScript代码时，发生的任何事件都将初忽略。正因为我们不希望看到这种情况，因此检测和添加任务的行为，是独立于事件循环完成的。
+- 因为JavaScript基于单线程执行模型，所以这两类任务都是逐个
+
+
+
+
+
 #### 2 玩转计时器：延迟执行和间隔执行
 
 计时器能延迟一段代码的执行，延迟时长**至少**是指定的时长（单位是ms）。无法确保计时器延迟的时间，理解这一点非常重要，在事件循环中需要处理非常多的任务。
@@ -279,6 +288,46 @@ DOM的特性和属性
 ##### 2.1 在事件循环中执行计时器
 
 延迟执行与间隔执行的区别
+
+```js
+const tbody = document.querySelector('tbody');
+for (let i = 0; i < 20000; i++) {
+  const tr = document.createElement('tr');
+  for (let t = 0; t < 15; t++) {
+    const td = document.createElement('td');
+    td.appendChild(document.createTextNode(i + ',' + t));
+    tr.appendChild(td);
+  }
+  tbody.appendChild(tr);
+}
+```
+
+
+
+```js
+const rowCount = 80000;
+const divideInto = 40;
+const chunkSize = rowCount / divideInto;
+let iteration = 0;
+const table = document.querySelector('tbody');
+setTimeout(function generateRows() {
+  const base = chunkSize * iteration;
+  for (let i = 0; i < chunkSize; i++) {
+    const tr = document.createElement('tr');
+    for (let t = 0; t < 6; t++) {
+      const td = document.createElement('td');
+      td.appendChild(document.createTextNode(i + base + ',' + t + ',' + iteration));
+      tr.appendChild(td);
+    }
+    table.appendChild(tr);
+  }
+
+  iteration++;
+  if (iteration < divideInto) setTimeout(generateRows, 0);
+}, 0);
+```
+
+
 
 
 
