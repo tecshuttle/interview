@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>self-vue</title>
+    <title>self-vue V0.2</title>
   </head>
 
   <style>
@@ -16,9 +16,9 @@
     <h1 id="name">{{name}}</h1>
   </body>
 
-  <script src="js/observer.js"></script>
-  <script src="js/watcher.js"></script>
-  <script src="js/index.js"></script>
+  <script src="observer.js"></script>
+  <script src="watcher.js"></script>
+  <script src="index.js"></script>
 
   <script type="text/javascript">
     // 1. 获得页面元素
@@ -31,5 +31,16 @@
     window.setTimeout(function () {
       selfVue.name = 'canfoo';
     }, 700);
+
+    var name = 'lucy';
+    let obj = {
+      name: 'martin',
+      say: function () {
+        console.log(this.name);
+      },
+    };
+    obj.say(); //martin，this指向obj对象
+    setTimeout(obj.say.bind(obj), 0); //lucy，this指向window对象
+
   </script>
 </html>

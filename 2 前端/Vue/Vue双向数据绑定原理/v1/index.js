@@ -8,8 +8,8 @@ function SelfVue(data, el, exp) {
 
   new Observer(data);
 
-  new Watcher(this, exp, function (value) {
-    //el.innerHTML = value;
+  new Watcher(this, exp, function (value, oldValue) {
+    el.innerHTML = value;
   });
 }
 

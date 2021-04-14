@@ -12,6 +12,7 @@ Observer.prototype = {
   },
   defineReactive: function (data, key, val) {
     var dep = new Dep();
+
     Object.defineProperty(data, key, {
       get: function () {
         if (Dep.target) {
@@ -21,7 +22,6 @@ Observer.prototype = {
       },
       // setter，如果对一个对象属性值改变，就会触发setter中的dep.notify(), 通知watcher（订阅者）数据变更，执行对应订阅者的更新函数，来更新视图。
       set: function (newVal) {
-        console.log(newVal);
         if (newVal === val) {
           return;
         }
@@ -39,12 +39,10 @@ function Dep() {
 
 Dep.prototype = {
   addSub: function (sub) {
-    console.log(sub);
     this.subs.push(sub);
   },
   // 通知订阅者数据变更
   notify: function () {
-    console.log(this.subs);
     this.subs.forEach(function (sub) {
       sub.update();
     });

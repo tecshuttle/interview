@@ -107,7 +107,43 @@
 
 #### 4 练习题
 
-相比将事件处理器赋值给某个特定元素的属性，使用 `addEventListener` 方法来注册事件处理器的优势是什么？
+- 相比将事件处理器赋值给某个特定元素的属性，使用 `addEventListener` 方法来注册事件处理器的优势是什么？
+- 测试一下，事件是如何阻止页面构建的。
+- 如何为单击注册多个事件处理器。
+
+```js
+let click_num = 0;
+
+func_1 = () => {
+  console.log('click 1');
+  let max = 10 ** 8 * 2;
+  for (var i = 0; i < max; i++) {}
+  console.log('done ' + max);
+};
+
+func_2 = () => {
+  click_num += 1;
+  console.log('click 2');
+  delete_event();
+};
+
+delete_event = () => {
+  if (click_num === 3) {
+    ele.removeEventListener('click', func_1);
+    console.log('remove func_1');
+  }
+
+  if (click_num > 6) {
+    ele.removeEventListener('click', func_2);
+    console.log('remove func_2');
+  }
+};
+
+ele.addEventListener('click', func_1);
+ele.addEventListener('click', func_2);
+```
+
+
 
 ## 第2部分 理解函数
 
