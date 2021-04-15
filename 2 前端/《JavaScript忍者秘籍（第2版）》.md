@@ -220,7 +220,25 @@ for-of循环不过是对迭代器进行迭代的语法糖。不同于手动调�
 
 **用生成器生成ID序列**
 
+```js
+function* IdGenerator() {
+  let id = 0;
+  while (true) {
+    yield ++id;
+  }
+}
+
+const idIterator = IdGenerator();
+const idIterator2 = IdGenerator();
+
+console.log(idIterator.next().value); //1
+console.log(idIterator.next().value); //2
+console.log(idIterator.next().value); //3
+```
+
 注意：标准函数中一般不应该书写无限循环的代码。但在生成器中没有问题！当生成器遇到了一个yield语句，它就会一直挂起执行直到下次调用next方法，所以只有每次调用一次next方法，while循环才会迭代一次并返回下一个ID值。
+
+
 
 **使用迭代器遍历DOM树**
 
