@@ -302,24 +302,57 @@ console.log(idIterator.next().value); //3
 
 ##### 作为生成器函数参数发送值
 
+```js
+function* NinjaGenerator(action){
+  const imposter = yield ("Hattori " + action); 
+  const param = yield ("Yoshi (" + imposter + ") " + action); 
+  console.log(param); //end
+}
 
+const ninjaIterator = NinjaGenerator("skulk");
+const result1 = ninjaIterator.next();        //Hattori skulk
+const result2 = ninjaIterator.next("Hanzo"); //Yoshi (Hanzo) skulk
+const result3 = ninjaIterator.next("end");   //undefined
+```
 
 ##### 使用next方向向生成器发送值
 
+我们通过yield语句从生成器中返回值，再使用迭代器的next()方法把值传回生成器。
 
+注意：我们无法通过第一次调用next方法来向生成器提供值。如果你需要为生成器提供一个初始值，你可以调用生成器自身，就像NinjaGenerator("skulk")。
 
 ##### 抛出异常
 
+```js
+function* NinjaGenerator() {
+  try {
+    yield "Hattori";
+    console.log("The expected exception didn't occur");
+    yield "end";
+  }
+  catch (e) {
+    console.log("Aha! We caught an exception");
+  }
+}
 
+const ninjaIterator = NinjaGenerator();
+const result1 = ninjaIterator.next();
+console.log(result1.value);           //Hattori
+ninjaIterator.throw("Catch this!");   //Aha! We caught an exception
+const result2 = ninjaIterator.next(); //抛出异常后，迭代器完成，next返回结束值。
+console.log(result2);                 //{value: undefined, done: true}
+```
+
+这个能让我们把异常抛回生成器的特性初看可能有点奇怪。为什么要进行这样的操作呢？不必担心，我们不会让你一直蒙在鼓里。本章的最后部分，我们将使用这个特性来改善异步服务器端的通信。
 
 #### 2.4 探索生成器内部构成
 
 我们已经知道了调用了一个生成器不会实际执行它。相反，它创造了一个新的迭代器，通过该迭代器我们才能从生成器中请求值。在生成器生成（或让渡）了一个值后，生成器会挂起执行并等待下一个请求的到来。
 
-- 挂起开始
-- 执行
-- 挂起让渡
-- 完成
+- 挂起开始：创建了一个生成器后，它最先以这种状态开始。其中的你任何代码都未执行。
+- 执行：生成器中的代码执行的状态。执行要么是刚开始，要么是从上次挂起的时候继续的。当生成器对应的迭代器调用了next方法，并且当前存在可执行的代码时，生成器都会转移到这个状态。
+- 挂起让渡：当生成器在执行过程中遇到了一个yield表达式，它会创建一个包含着返回值的新对象，随后再挂起执行。生成器在这个状态暂停并等待继续执行。
+- 完成：在生成器执行期间，如果代码执行到return语句或者全部代码执行完毕，生成器就进入该状态。
 
 ##### 通过执行上下文跟踪生成器函数
 
