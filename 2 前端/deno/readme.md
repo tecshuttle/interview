@@ -14,6 +14,8 @@ Among other things, Deno is a great replacement for utility scripts that may hav
 
 Deno早期是Golang + TypeScript的，后来因为Golang和V8的GC问题，Ryan下了大工夫把golang统统换成没有GC的Rust了。[Rust-11垃圾回收机制](https://blog.csdn.net/tianlangstudio/article/details/100971001)
 
+go v8 会有双层gc问题，所以没办法，才改成rust的。
+
 [《模块化系列》snowpack，提高10倍打包速度](https://zhuanlan.zhihu.com/p/108222057)
 
 [Deno 冲上榜首，Vue.js 首次屈居第二，JavaScript 2020 年度“新起之秀”都有谁？](https://blog.csdn.net/csdnnews/article/details/112778182)
