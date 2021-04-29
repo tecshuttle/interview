@@ -1,6 +1,4 @@
-# CSS
-
-### 通用
+# 通用
 
 1. 介绍一下标准的CSS的盒子模型？[盒子模型你是怎么理解的？](https://blog.csdn.net/lxcao/article/details/52620453)，IE的盒子模型更合理，W3C为了弥补，在CSS3中增加了box-sizing属性。低版本IE的盒子模型有什么不同的？不算border宽度。
 2. 请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？
@@ -12,7 +10,7 @@
 
 1. 对BFC规范(块级格式化上下文：block formatting context)的理解？
 
-### 特性
+# 特性
 
 1. CSS选择符有哪些？哪些属性可以继承？
 
@@ -26,7 +24,7 @@
 
 1. style标签写在body后与body前有什么区别？
 
-### 属性
+# 属性
 
 1. [元素定位有哪些？](https://blog.csdn.net/lxcao/article/details/52634189)，absolute\relative\fixed\static。position的值relative和absolute定位原点是？relative是父元素，absolute是文档左上角。
    - position跟display、margin collapse、overflow、float这些特性相互叠加后会怎么样？
@@ -57,7 +55,7 @@
 
 1. overflow: scroll时不能平滑滚动的问题怎么处理？
 
-### 应用
+# 应用
 
 1. [如何居中一个元素（正常、绝对定位、浮动元素）？](https://blog.csdn.net/lxcao/article/details/52670724)参考：[CSS垂直居中的11种实现方式](https://www.cnblogs.com/zhouhuan/p/vertical_center.html)
 
@@ -99,6 +97,6 @@
 8. 什么是Cookie 隔离？（或者说：请求资源的时候不要让它带cookie怎么做）
 9. rem布局的优缺点
 
-### 面试题
+# 面试题
 
 1. [前端开发面试题收集(css部分)](https://www.cnblogs.com/wj204/p/5813736.html)

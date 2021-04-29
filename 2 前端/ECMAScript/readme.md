@@ -1,6 +1,4 @@
-# JavaScript
-
-### 通用
+# 通用
 
 1. 说说写JavaScript的基本规范？
 2. 用原生JavaScript的实现过什么功能吗？
@@ -11,7 +9,7 @@
 7. requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何缓存的？）
 8. JS模块加载器的轮子怎么造，也就是如何实现一个模块加载器？
 
-### 语言特性
+# 语言特性
 
 1. 介绍JavaScript的基本数据类型。
 2. 解释JavaScript中的作用域与变量声明提升？
@@ -35,18 +33,18 @@
 20. 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
 21. 用js实现千位分隔符?(来源：前端农民工，提示：正则+replace)
 
-### DOM
+# DOM
 
 1. DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
 
-### BOM
+# BOM
 
 1. 什么是window对象? 什么是document对象?[BOM部分基础知识总结](https://www.cnblogs.com/2010master/p/5824215.html)，[BOM和DOM详解](https://www.jb51.net/article/55851.htm)。
 1. **documen.write和 innerHTML的区别？**<br/>document.write会将页面上的所有内容清除包括标题，innerHTML只会重写所属元素的内容。<br/>document.write是直接写入到页面的内容流，会导致页面被重写。innerHTML则是DOM页面元素的一个属性，代表该元素的html内容。你可以精确到某一个具体的元素来进行更改。<br/>两者都可动态包含外部资源如JavaScript文件。通过document.write插入`<script>`元素会自动执行其中的脚本；大多数浏览器中，通过innerHTML插入`<script>`元素并不会执行其中的脚本。
 1. 检测浏览器版本版本有哪些方式？
 1. [javascript中BOM部分基础知识总结]( https://www.cnblogs.com/2010master/p/5824215.html)
 
-### 高级主题
+# 高级主题
 
 2. 那些操作会造成内存泄漏？
 3. 如何编写高性能的Javascript？
@@ -58,7 +56,7 @@
 13. 使用JS实现获取文件扩展名？
 14. Webpack热更新实现原理?
 
-### 应用
+# 应用
 
 1. 写一个通用的事件侦听器函数(机试题)。
 2. 关于事件，IE与火狐的事件机制有什么区别？ [如何阻止冒泡？](https://blog.csdn.net/lxcao/article/details/52733737)为什么要阻止事件冒泡？
@@ -74,7 +72,7 @@
 12. 移动端最小触控区域是多大？
 13. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
 
-### 框架
+# 框架
 
 1. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
 2. Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
@@ -86,7 +84,7 @@
 8. 简述一下 Handlebars 的基本用法？
 9. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
 
-### 面试题
+# 面试题
 
 1. [一份 JavaScript 高级面试题](https://zhuanlan.zhihu.com/p/34273811)
 2. [BAT前端开发面试题]( https://www.jianshu.com/p/1d0b6e6aee90)
@@ -98,7 +96,7 @@
 8. [五分钟带你领略: 腾讯半年来出现最频繁的算法之一——字符串解码](https://juejin.im/post/5dc2a7cce51d4504f0726a00)
 9. [可能是最全的 “文本溢出截断省略” 方案合集](https://juejin.im/post/5dc15b35f265da4d432a3d10)
 
-### JS
+# JS
 
 - [最详尽的 JS 原型与原型链终极详解，没有「可能是」]( https://www.jianshu.com/p/dee9f8b14771)
 - [JS—特殊的对象~函数]( https://www.jianshu.com/p/79c30b99f051)
