@@ -1,10 +1,10 @@
-## 人物
+# 人物
 
 - 尤雨溪
 - [阮一峰](https://www.ruanyifeng.com/)
 - [玉伯](https://maimai.cn/article/detail?fid=1610849252&efid=K8dkpVhSHLb-7JRmNE79JQ)
 
-## 面试
+# 面试
 
 [2019 前端面试 | “HTML + CSS + JS”专题](https://juejin.im/post/5ce4171ff265da1bd04eb4f3#heading-11)
 
@@ -17,6 +17,8 @@
 [高频前端开发面试问题及答案整理](https://mp.weixin.qq.com/s/eJH0Eh1iBohPoeXwHvfwng)
 
 [400 道前端工程师常考必考面试题+详细解答](https://mp.weixin.qq.com/s/J9YV_ZqmqvkutjVSJTJJVA)
+
+# 库
 
 ## Zepto.js
 
@@ -39,7 +41,7 @@ https://www.cnblogs.com/colima/p/5289386.html
 
 Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，兼容现代高级浏览器，主要用于移动端的开发，它有着与jQuery类似的API。就像zepto官网说的如果你会使用jQuery，那你也会用zepto。
 
-## 其它技能
+# 其它技能
 
 - 设计模式 知道什么是singleton, factory, strategy, decrator么?
 - 常使用的库有哪些？常用的前端开发工具？开发过什么应用或组件？
@@ -55,15 +57,19 @@ Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，�
 - 移动端（Android IOS）怎么做好用户体验?
 - 简单描述一下你做过的移动APP项目研发流程？
 
-## 安全
+# 安全
 
 - 是否了解Web注入攻击，说下原理，最常见的两种攻击（XSS 和 CSRF）了解到什么程度？
 
-## 性能
+# 性能
 
 - 你有用过哪些前端性能优化的方法？
 
-## 资料
+# 微前端
+
+[BAT 都在玩的微前端，究竟是怎样设计的？](https://mp.weixin.qq.com/s/Dd7dB5jkWTFgfEQdFqZvJQ)
+
+# 资料
 
 ### DevOps
 
@@ -72,58 +78,6 @@ Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，�
 [DevOps编年史](https://mp.weixin.qq.com/s/2HqJoSGUa-5-vMOFqePgWg)
 
 [前端场景下 CI/CD 的探索与实践](https://mp.weixin.qq.com/s/Y-i20dQgSPu86KFVC7wNTA)
-
-### Rust
-
-[1Password 工程副总裁：Rust 用起来真香](https://mp.weixin.qq.com/s/I_kNRc8u0P8Fm89azNFXlA)
-
-### JavaScript
-
-[13个JavaScript数组reduce的实例方法](https://mp.weixin.qq.com/s/Ozf2WA8D3HlLYcNH0bBbGA)
-
-[这难道不是你期待的 ES2021 新特性吗？](https://mp.weixin.qq.com/s/zxpZUV5EYYZbenp8afCgGA)
-
-[理解ECMAScript规范（3）](https://mp.weixin.qq.com/s/1bNRE2t7UBY1UNikC7MC6g)
-
-[使用顶层 await 简化 JS 代码](https://mp.weixin.qq.com/s/XeZXrTa5X-08dBw2I7cg6A)
-
-[图文并茂讲清楚 JavaScript 内存管理](https://mp.weixin.qq.com/s/W2AxuO0OgoAUwROMyBwpYg)
-
-[关于javascript 中的高级定时器的若干问题](https://mp.weixin.qq.com/s/0w8lSk2ZUBsWnzt2QBmkZw)
-
-[如何实现JavaSrcipt页面的跳转](https://mp.weixin.qq.com/s/2c96esPar1I-0Jgg56QTrQ)
-
-[精读《Tasks, microtasks, queues and schedules》](https://mp.weixin.qq.com/s/osRVRjMzgEnmlBgQrurd3w)
-
-[Promise、Genarator、 Async，这三者的区别和联系，你是否明白？](https://mp.weixin.qq.com/s/_ciah0VIog-IgQ75WqTkGQ)
-
-[JavaScript中foreach()用法及使用的坑](https://mp.weixin.qq.com/s/UfnfazB05LQMnQ3dmbrW_Q)
-
-[精读《函数缓存》](https://mp.weixin.qq.com/s/bvep2BfQGGaqKkfd5f3LKg)
-
-[精读《如何比较 Object 对象》](https://mp.weixin.qq.com/s/u7ckAg59Aol5QNRco7LA5A)
-
-[精读《精通 console.log》](https://mp.weixin.qq.com/s/JecYEq9JMy6sCoIXQcwclw)
-
-[JS正则获取HTML所有img的链接 ](https://blog.csdn.net/u011539729/article/details/103618300)
-
-[Js阻止事件冒泡与阻止默认事件](https://mp.weixin.qq.com/s/-42rjYODdyBLLgI4J_OgZg)
-
-[JavaScript有几种原型继承方法？](https://mp.weixin.qq.com/s/DIzvXtyk7rd5m5aUQ8LAkw)
-
-[什么是前端防抖？](https://mp.weixin.qq.com/s/FEVcAsqxTeZQfZT703YVVQ)
-
-[你用得上的25个JS技巧](https://mp.weixin.qq.com/s/AGIi-Ghpdi7U4_eHDOgIVg)
-
-[理解JavaScript中浅拷贝和深拷贝的区别](https://mp.weixin.qq.com/s/qJqgI8qZJCdWq2sudpyLPA)
-
-[前端面试必看ES6的15道练习题](https://mp.weixin.qq.com/s/1Hw2QukgCOyjabugISpVlQ)
-
-[20个常用的JavaScript简写技巧](https://mp.weixin.qq.com/s/ogrWP9Dok_8_PAMU_7fOXg)
-
-[如何理解JavaScript定时器的4种写法【带面试题讲解】](https://mp.weixin.qq.com/s/UDO_xWR1lsJlijajsLTcxA)
-
-[JavaScript生成随机数和随机字符串的5种方法](https://mp.weixin.qq.com/s/i09U7zybD22fQJ5vdoTzDQ)
 
 ### 行业
 
@@ -147,8 +101,6 @@ Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，�
 
 [数据库大牛李海翔详解全局读一致性技术](https://maimai.cn/article/detail?fid=1349253255&efid=FJJMyCrwqQFfoZ7rYKtc_A&share_channel=2&use_rn=1&_share_channel=wechat)
 
-[BAT 都在玩的微前端，究竟是怎样设计的？](https://mp.weixin.qq.com/s/Dd7dB5jkWTFgfEQdFqZvJQ)
-
 [闲鱼正在悄悄放弃 Flutter 吗？](https://mp.weixin.qq.com/s/k2RJv6FJJBwb2D5Hzgh8lg)
 
 [看了就会的浏览器帧原理](https://mp.weixin.qq.com/s/Q4MBBFhc-ONrpCYWhow3uw)
@@ -159,15 +111,7 @@ Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，�
 
 [Streams 权威指南](https://mp.weixin.qq.com/s/Kg2w5V26brFHsQkJK4-SrQ)
 
-### HTML
-
-[23款非常实用的CSS3工具](https://mp.weixin.qq.com/s/CtEfh2zbt_W21yWUd_-BLQ)
-
-[字节跳动最爱考的前端面试题：CSS 基础](https://mp.weixin.qq.com/s/DcwU4JfUZ5qjfgydL1b9_A)
-
-[Css实现图片裁剪居中（图片不变形） ](https://www.jianshu.com/p/8a9fe8f2b7fb)
-
-[网页中的形状图形都是怎么画出来的？](https://mp.weixin.qq.com/s/OWd7D7tnt2Vh8U8oduF5Cw)
+Web 前端的路该怎么走？ https://www.zhihu.com/question/34388831/answer/61429937
 
 ### VS Code
 

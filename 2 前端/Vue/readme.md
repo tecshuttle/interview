@@ -12,3 +12,4 @@
 
 [vue 生命周期共分为四个阶段](https://m.zhipin.com/mpa/html/get/share?type=2&contentId=fcf8ecee1ac913c6pnJ-2t--FA~~)
 
+九种Vue性能优化方法 https://www.jianshu.com/p/f372d0e3de80

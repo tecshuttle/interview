@@ -232,8 +232,6 @@ goBack.onclick = function () {
 
 对于页面中比较复杂的动画，尽量将元素设置为绝对定位，操作元素的定位属性，这样只有这一个元素会回流，如果不是定位的话，容易引起其父元素以及子元素的回流。
 
-
-
 ## 参考
 
 ★ [你真的了解回流和重绘吗](https://segmentfault.com/a/1190000017329980)
@@ -243,4 +241,14 @@ goBack.onclick = function () {
 [从浏览器渲染原理，浅谈回流重绘与性能优化](https://www.cnblogs.com/xiahj/p/11777786.html)
 
 
+
+# 资料
+
+[23款非常实用的CSS3工具](https://mp.weixin.qq.com/s/CtEfh2zbt_W21yWUd_-BLQ)
+
+[字节跳动最爱考的前端面试题：CSS 基础](https://mp.weixin.qq.com/s/DcwU4JfUZ5qjfgydL1b9_A)
+
+[Css实现图片裁剪居中（图片不变形） ](https://www.jianshu.com/p/8a9fe8f2b7fb)
+
+[网页中的形状图形都是怎么画出来的？](https://mp.weixin.qq.com/s/OWd7D7tnt2Vh8U8oduF5Cw)
 

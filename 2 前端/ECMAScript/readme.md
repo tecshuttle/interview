@@ -169,3 +169,51 @@
 11. [ES6十道面试题之Promise，有答案的](https://cloud.tencent.com/developer/article/1407125)
 12. [深入理解ES6箭头函数的this以及各类this面试题总结](https://blog.csdn.net/qq_39207948/article/details/79547743)
 13. [ES6系列40道基础题（含答案）](https://blog.csdn.net/qq_39207948/article/details/80678800)
+
+# 资料
+
+[13个JavaScript数组reduce的实例方法](https://mp.weixin.qq.com/s/Ozf2WA8D3HlLYcNH0bBbGA)
+
+[这难道不是你期待的 ES2021 新特性吗？](https://mp.weixin.qq.com/s/zxpZUV5EYYZbenp8afCgGA)
+
+[理解ECMAScript规范（3）](https://mp.weixin.qq.com/s/1bNRE2t7UBY1UNikC7MC6g)
+
+[使用顶层 await 简化 JS 代码](https://mp.weixin.qq.com/s/XeZXrTa5X-08dBw2I7cg6A)
+
+[图文并茂讲清楚 JavaScript 内存管理](https://mp.weixin.qq.com/s/W2AxuO0OgoAUwROMyBwpYg)
+
+[关于javascript 中的高级定时器的若干问题](https://mp.weixin.qq.com/s/0w8lSk2ZUBsWnzt2QBmkZw)
+
+[如何实现JavaSrcipt页面的跳转](https://mp.weixin.qq.com/s/2c96esPar1I-0Jgg56QTrQ)
+
+[精读《Tasks, microtasks, queues and schedules》](https://mp.weixin.qq.com/s/osRVRjMzgEnmlBgQrurd3w)
+
+[Promise、Genarator、 Async，这三者的区别和联系，你是否明白？](https://mp.weixin.qq.com/s/_ciah0VIog-IgQ75WqTkGQ)
+
+[JavaScript中foreach()用法及使用的坑](https://mp.weixin.qq.com/s/UfnfazB05LQMnQ3dmbrW_Q)
+
+[精读《函数缓存》](https://mp.weixin.qq.com/s/bvep2BfQGGaqKkfd5f3LKg)
+
+[精读《如何比较 Object 对象》](https://mp.weixin.qq.com/s/u7ckAg59Aol5QNRco7LA5A)
+
+[精读《精通 console.log》](https://mp.weixin.qq.com/s/JecYEq9JMy6sCoIXQcwclw)
+
+[JS正则获取HTML所有img的链接 ](https://blog.csdn.net/u011539729/article/details/103618300)
+
+[Js阻止事件冒泡与阻止默认事件](https://mp.weixin.qq.com/s/-42rjYODdyBLLgI4J_OgZg)
+
+[JavaScript有几种原型继承方法？](https://mp.weixin.qq.com/s/DIzvXtyk7rd5m5aUQ8LAkw)
+
+[什么是前端防抖？](https://mp.weixin.qq.com/s/FEVcAsqxTeZQfZT703YVVQ)
+
+[你用得上的25个JS技巧](https://mp.weixin.qq.com/s/AGIi-Ghpdi7U4_eHDOgIVg)
+
+[理解JavaScript中浅拷贝和深拷贝的区别](https://mp.weixin.qq.com/s/qJqgI8qZJCdWq2sudpyLPA)
+
+[前端面试必看ES6的15道练习题](https://mp.weixin.qq.com/s/1Hw2QukgCOyjabugISpVlQ)
+
+[20个常用的JavaScript简写技巧](https://mp.weixin.qq.com/s/ogrWP9Dok_8_PAMU_7fOXg)
+
+[如何理解JavaScript定时器的4种写法【带面试题讲解】](https://mp.weixin.qq.com/s/UDO_xWR1lsJlijajsLTcxA)
+
+[JavaScript生成随机数和随机字符串的5种方法](https://mp.weixin.qq.com/s/i09U7zybD22fQJ5vdoTzDQ)
