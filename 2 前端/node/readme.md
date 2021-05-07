@@ -12,6 +12,16 @@ https://cnodejs.org/topic/55815f28395a0c1812f18257
 
 koa 是由 Express 原班人马打造的，致力于成为一个更小、更富有表现力、更健壮的 Web 框架。使用 koa 编写 web 应用，通过组合不同的 generator，可以免除重复繁琐的回调函数嵌套，并极大地提升错误处理的效率。koa 不在内核方法中绑定任何中间件，它仅仅提供了一个轻量优雅的函数库，使得编写 Web 应用变得得心应手。
 
+# 版本
+
+[Node.js 版本知多少？又该如何选择？](https://zhuanlan.zhihu.com/p/77140095)
+
+[以往的版本](https://nodejs.org/zh-cn/download/releases/)
+
+[端午节后福利：Node.js 8](https://zhuanlan.zhihu.com/p/27173859)
+
+[Node.js 16 发布，V8 升级至 9.0！](https://juejin.cn/post/6957316675918102558)
+
 # 其它
 
 - [NodeJS框架Express与Koa](https://www.jianshu.com/p/6f7930687835)
