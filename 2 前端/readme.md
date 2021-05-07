@@ -41,6 +41,10 @@ https://www.cnblogs.com/colima/p/5289386.html
 
 Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，兼容现代高级浏览器，主要用于移动端的开发，它有着与jQuery类似的API。就像zepto官网说的如果你会使用jQuery，那你也会用zepto。
 
+# 组件
+
+[什么叫组件化开发?](https://www.zhihu.com/question/29735633/answer/90873592)
+
 # 其它技能
 
 - 设计模式 知道什么是singleton, factory, strategy, decrator么?
@@ -65,9 +69,73 @@ Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，�
 
 - 你有用过哪些前端性能优化的方法？
 
+[10分钟彻底搞懂前端页面性能监控](https://zhuanlan.zhihu.com/p/82981365)
+
+[(1w字)前端都该懂的浏览器工作原理，你懂了吗？](https://zhuanlan.zhihu.com/p/140700610)
+
+[认识 V8 引擎](https://zhuanlan.zhihu.com/p/27628685)
+
 # 微前端
 
+## qiankun
+
+https://qiankun.umijs.org/zh/
+
+★ [基于 qiankun 的微前端最佳实践](https://mp.weixin.qq.com/s/5BhiyfP4JtXThz2rO0_P4g)
+
+[目标是最完善的微前端解决方案 - qiankun 2.0](https://zhuanlan.zhihu.com/p/131022025)
+
+## 资料
+
 [BAT 都在玩的微前端，究竟是怎样设计的？](https://mp.weixin.qq.com/s/Dd7dB5jkWTFgfEQdFqZvJQ)
+
+[微前端的核心价值](https://zhuanlan.zhihu.com/p/95085796)
+
+[可能是你见过最完善的微前端解决方案](https://zhuanlan.zhihu.com/p/78362028)
+
+# 工程化
+
+### 各大互联网公司的前端开发流程和前端架构是怎么做的呢？
+
+- 通过框架（vue，angular，kissy）组织，把html、css、js写成不像html（mustache，dot，jade）、css（less，sass，compass，stylus）、js（babel，coffee）
+
+- 用模块工具或框架（webpack，broswerify，seajs，kissy）组织各种模块化（cmd，amd，kmd）、组件化
+
+- 再用工具（grunt，gulp）打包解析压缩合并成html、css和js，最后版本控制（git，svn，cvs）
+
+- 发布到静态资源平台（cdn），后端提供接口前端渲染或是后端（有时候权限也在前端那儿）将前端html文件套成后端语言模板发布上线。
+
+总而言之，离不开“三化”——模块化，组件化，工程化
+
+
+
+# VS Code
+
+[高效的编码：我的VS Code设置](https://mp.weixin.qq.com/s/NvtDwfG4FDAsYFuwtxsxMg)
+
+[从 VSCode 看大型 IDE 技术架构](https://zhuanlan.zhihu.com/p/96041706)
+
+[VSCode前端必备插件，有可能你装了却不知道如何使用？](https://zhuanlan.zhihu.com/p/88997646)
+
+[自用VSCode优质插件推荐](https://zhuanlan.zhihu.com/p/89693351)
+
+[20种VSCode快捷键清单，助你更快编码](https://zhuanlan.zhihu.com/p/95640787)
+
+[精选！15 个必备的 VSCode 插件（前端类）](https://zhuanlan.zhihu.com/p/27905838)
+
+[VS Code 1.47 发布！全新的 JavaScript debugger 来了！](https://zhuanlan.zhihu.com/p/158675930)
+
+[如何让 VS Code 更好用10倍？这里有一份VS Code 新手指南](https://zhuanlan.zhihu.com/p/99462672)
+
+[远程开发初探 - VSCode Remote Development](https://zhuanlan.zhihu.com/p/82568294)
+
+[这就是我想要的 VSCode 插件！](https://zhuanlan.zhihu.com/p/36020180)
+
+[Visual Studio Code（VS code）你们都在用吗？或许你们需要看一下这篇博文](https://zhuanlan.zhihu.com/p/51764279)
+
+[史上最全vscode配置使用教程](https://zhuanlan.zhihu.com/p/113222681)
+
+[从零开始配置 vscode](https://zhuanlan.zhihu.com/p/79612479)
 
 # 资料
 
@@ -111,11 +179,9 @@ Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，�
 
 [Streams 权威指南](https://mp.weixin.qq.com/s/Kg2w5V26brFHsQkJK4-SrQ)
 
-Web 前端的路该怎么走？ https://www.zhihu.com/question/34388831/answer/61429937
+[Web 前端的路该怎么走？](https://www.zhihu.com/question/34388831/answer/61429937)
 
-### VS Code
 
-[高效的编码：我的VS Code设置](https://mp.weixin.qq.com/s/NvtDwfG4FDAsYFuwtxsxMg)
 
 
 
