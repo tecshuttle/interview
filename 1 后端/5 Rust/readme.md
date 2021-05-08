@@ -9,3 +9,6 @@ https://www.rust-lang.org/zh-CN/
 - 安装[VISUAL STUDIO 2017](https://www.visualstudio.com/downloads/)
 - 或者 安装[Microsoft Visual C++ Build Tools 2015](http://go.microsoft.com/fwlink/?LinkId=691126)
 
+# Rocket
+
+https://rocket.rs/v0.4/guide/getting-started/
