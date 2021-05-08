@@ -13,6 +13,7 @@
 5. Label的作用是什么？是怎么用的？（加 for 或 包裹）
 6. title与h1的区别、b与strong的区别、i与em的区别？
 7. HTML5的form如何关闭自动完成功能？
+8. [关于html5中的section标签与div标签的区别（内有实例）](https://www.php.cn/html5-tutorial-409201.html)
 
 # 存储
 
