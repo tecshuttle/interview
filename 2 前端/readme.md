@@ -6,9 +6,9 @@
 
 # 面试
 
-[2019 前端面试 | “HTML + CSS + JS”专题](https://juejin.im/post/5ce4171ff265da1bd04eb4f3#heading-11)
+[2019前端面试 | “HTML + CSS + JS”专题](https://juejin.im/post/5ce4171ff265da1bd04eb4f3#heading-11)
 
-[400 道前端面试题！阿里、头条、网易等 19 家大厂面经全公开！](https://csdnnews.blog.csdn.net/article/details/89324381)
+[400道前端面试题！阿里、头条、网易等19家大厂面经全公开！](https://csdnnews.blog.csdn.net/article/details/89324381)
 
 [前端开发工程师简历应该如何准备？](https://mp.weixin.qq.com/s/RClhJAEKkhYs01JY-UecQA)
 
@@ -16,7 +16,7 @@
 
 [高频前端开发面试问题及答案整理](https://mp.weixin.qq.com/s/eJH0Eh1iBohPoeXwHvfwng)
 
-[400 道前端工程师常考必考面试题+详细解答](https://mp.weixin.qq.com/s/J9YV_ZqmqvkutjVSJTJJVA)
+[400道前端工程师常考必考面试题+详细解答](https://mp.weixin.qq.com/s/J9YV_ZqmqvkutjVSJTJJVA)
 
 # 库
 
@@ -35,7 +35,7 @@ https://www.cnblogs.com/colima/p/5289386.html
 1. jQuery更多是在PC端被应用，因此，考虑了很多低级浏览器的的兼容性问题；而Zepto.js则是直接抛弃了低级浏览器的适配问题，显得很轻盈；
 2. Zepto.js在移动端被运用的更加广泛；更注重在移动端的使用
 
-3. jQuery的底层是通过DOM来实现效果的，zepto.js 是用css3来实现的；
+3. jQuery的底层是通过DOM来实现效果的，zepto.js是用css3来实现的；
 
 4. Zepto.js可以说是阉割版本的jQuery。
 
@@ -47,7 +47,7 @@ Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，�
 
 # 其它技能
 
-- 设计模式 知道什么是singleton, factory, strategy, decrator么?
+- 设计模式知道什么是singleton, factory, strategy, decrator么?
 - 常使用的库有哪些？常用的前端开发工具？开发过什么应用或组件？
 - 页面重构怎么操作？
 - 列举IE与其他浏览器不一样的特性？
@@ -57,13 +57,13 @@ Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，�
 - WEB应用从服务器主动推送Data到客户端有那些方式？
 - 每个模块的代码结构都应该比较简单，且每个模块之间的关系也应该非常清晰，随着功能和迭代次数越来越多，你会如何去保持这个状态的？
 - Git知道branch, diff, merge么?
-- 知道什么是SEO并且怎么优化么? 知道各种meta data的含义么?
+- 知道什么是SEO并且怎么优化么?知道各种meta data的含义么?
 - 移动端（Android IOS）怎么做好用户体验?
 - 简单描述一下你做过的移动APP项目研发流程？
 
 # 安全
 
-- 是否了解Web注入攻击，说下原理，最常见的两种攻击（XSS 和 CSRF）了解到什么程度？
+- 是否了解Web注入攻击，说下原理，最常见的两种攻击（XSS和CSRF）了解到什么程度？
 
 # 性能
 
@@ -73,19 +73,65 @@ Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，�
 
 [(1w字)前端都该懂的浏览器工作原理，你懂了吗？](https://zhuanlan.zhihu.com/p/140700610)
 
-[V8 十年故事：从农场诞生的星球最强 JS 引擎](https://www.infoq.cn/article/v8-10-years)
+[渲染性能](https://www.jianshu.com/p/b74e348612de)
 
-[V8 引擎版本发布流程](https://zhuanlan.zhihu.com/p/35038142)
+[V8引擎版本发布流程](https://zhuanlan.zhihu.com/p/35038142)
 
 [了解V8引擎如何运行JS](https://www.jianshu.com/p/c71c714c27bd)
 
 [V8的内存限制](https://cnodejs.org/topic/5ade9f8fa7d228c16b9871fd)
 
-[V8 内存浅析](https://zhuanlan.zhihu.com/p/33816534)
+[V8内存浅析](https://zhuanlan.zhihu.com/p/33816534)
 
-[【译】了解 V8 内存管理](https://www.keisei.top/architecture-of-v8-memory/)
+[【译】了解V8内存管理](https://www.keisei.top/architecture-of-v8-memory/)
 
-## 认识 V8 引擎
+## 深度剖析浏览器渲染性能原理
+
+https://www.jianshu.com/p/a32b890c29b1
+
+### 渲染卡顿是怎么回事？
+
+### 渲染流程分为几步？
+
+### 结合渲染流程怎么优化渲染性能呢？
+
+结合上述的渲染流程，我们可以去针对性的分析并优化每个步骤。
+
+- 优化JavaScript的执行效率
+  - 动画实现，避免使用setTimeout或setInterval，尽量使用requestAnimationFrame
+  - 把耗时长的JavaScript代码放到Web Workers中去做
+  - 把DOM元素的更新划分为多个小任务，分别在多个frame中去完成
+  - 使用Chrome DevTools的Timeline来分析JavaScript的性能
+- 降低样式计算的范围和复杂度
+  - 降低样式选择器的复杂度
+  - 减少需要执行样式计算的元素个数
+- 避免大规模、复杂的布局
+  - 尽可能避免触发布局
+  - 使用flexbox替代老的布局模型
+  - 避免强制同步布局事件的发生
+  - 避免连续的强制同步布局发生
+- 简化绘制的复杂度、减少绘制区域
+  - 提升移动或渐变元素的绘制层
+  - 减少绘制区域
+  - 简化绘制的复杂度
+  - 通过Chrome DevTools来分析绘制复杂度和时间消耗，尽可能降低这些指标
+- 优先使用渲染层合并属性、控制层数量
+  - 使用transform/opacity实现动画效果
+  - 提升动画效果中的元素
+  - 管理渲染层、避免过多数量的层
+  - 使用Chrome DevTools来了解页面的渲染层情况
+- 对用户输入事件的处理函数去抖动（移动设备）
+  - 避免使用运行时间过长的输入事件处理函数
+  - 避免在输入事件处理函数中修改样式属性
+  - 对滚动事件处理函数去抖动
+
+### 总结点什么？
+
+网站性能优化是一个有一定门槛的细致活，需要对浏览器的机制有很好的理解，同时也应该学会利用Chrome DevTools去分析并解决实际问题，关于Chrome DevTools的学习我会专门开一篇博客来讲解，同时会结合具体的性能问题来分析。
+
+
+
+## 认识V8引擎
 
 https://zhuanlan.zhihu.com/p/27628685
 
@@ -93,7 +139,7 @@ https://zhuanlan.zhihu.com/p/27628685
 
 #### 1.1 渲染引擎
 
-WebCore 是各个浏览器使用的共享部分，包括HTML解析器、CSS解析器、DOM和SVG等。JavaScriptCore是WebKit的默认引擎，在谷歌系列产品中被替换为V8引擎。
+WebCore是各个浏览器使用的共享部分，包括HTML解析器、CSS解析器、DOM和SVG等。JavaScriptCore是WebKit的默认引擎，在谷歌系列产品中被替换为V8引擎。
 
 #### 1.2 网页渲染流程
 
@@ -111,7 +157,7 @@ JavaScript语言是解释型语言，为了提高性能，引入了Java虚拟机
 
 V8更加直接的将抽象语法树通过JIT技术转换成本地代码，放弃了在字节码阶段可以进行的一些性能优化，但保证了执行速度。虽然，少了生成字节码这一阶段的性能优化，但极大减少了转换时间。
 
-但是在2017年4月底，v8 的 5.9 版本发布了，新增了一个 Ignition 字节码解释器，将默认启动，从此之后将与JSCore有大致相同的流程。做出这一改变的原因为：（主要动机）减轻机器码占用的内存空间，即牺牲时间换空间；提高代码的启动速度。[V8 Ignition：JS 引擎与字节码的不解之缘](https://zhuanlan.zhihu.com/p/26669846)
+但是在2017年4月底，v8的5.9版本发布了，新增了一个Ignition字节码解释器，将默认启动，从此之后将与JSCore有大致相同的流程。做出这一改变的原因为：（主要动机）减轻机器码占用的内存空间，即牺牲时间换空间；提高代码的启动速度。[V8 Ignition：JS引擎与字节码的不解之缘](https://zhuanlan.zhihu.com/p/26669846)
 
 ### 2 V8引擎
 
@@ -154,7 +200,7 @@ function test(x, y) {
 
 该函数被调用多次之后，V8引擎可能会触发Crankshaft编译器对其进行优化，而优化代码认为示例代码的类型信息都已经被确定。但，由于尚未真正执行到new Date()这个地方，并未获取unknown这个变量的类型，V8只得将该部分代码进行回滚。优化回滚是一个很耗时的操作，在写代码过程中，尽量不要触发优化该操作。
 
-在最近发布的 V8 5.9 版本中，新增了一个 Ignition 字节码解释器，TurboFan 和 Ignition 结合起来共同完成JavaScript的编译。这个版本中消除 Cranshaft 这个旧的编译器，并让新的 Turbofan 直接从字节码来优化代码，并当需要进行反优化的时候直接反优化到字节码，而不需要再考虑 JS 源代码。
+在最近发布的V8 5.9版本中，新增了一个Ignition字节码解释器，TurboFan和Ignition结合起来共同完成JavaScript的编译。这个版本中消除Cranshaft这个旧的编译器，并让新的Turbofan直接从字节码来优化代码，并当需要进行反优化的时候直接反优化到字节码，而不需要再考虑JS源代码。
 
 #### 2.4 隐藏类与内嵌缓存
 
@@ -172,13 +218,13 @@ function test(x, y) {
 
 #### 2.5 内存管理
 
-Node中通过JavaScript使用内存时就会发现只能使用部分内存（64位系统下约为1.4 GB，32位系统下约为0.7 GB），其深层原因是 V8 垃圾回收机制的限制所致（如果可使用内存太大，V8在进行垃圾回收时需耗费更多的资源和时间，严重影响JS的执行效率）。
+Node中通过JavaScript使用内存时就会发现只能使用部分内存（64位系统下约为1.4 GB，32位系统下约为0.7 GB），其深层原因是V8垃圾回收机制的限制所致（如果可使用内存太大，V8在进行垃圾回收时需耗费更多的资源和时间，严重影响JS的执行效率）。
 
-V8 使用了分代和大数据的内存分配，在回收内存时使用精简整理的算法标记未引用的对象，然后消除没有标记的对象，最后整理和压缩那些还未保存的对象，即可完成垃圾回收。
+V8使用了分代和大数据的内存分配，在回收内存时使用精简整理的算法标记未引用的对象，然后消除没有标记的对象，最后整理和压缩那些还未保存的对象，即可完成垃圾回收。
 
 在V8中，使用较多的是年轻分代和年老分代。
 
-- 年轻分代中的对象垃圾回收主要通过Scavenge算法进行垃圾回收。在Scavenge的具体实现中，主要采用了Cheney算法：通过复制的方式实现的垃圾回收算法。它将堆内存分为两个 semispace，一个处于使用中（From空间），另一个处于闲置状态（To空间）。当分配对象时，先是在From空间中进行分配。当开始进行垃圾回收时，会检查From空间中的存活对象，这些存活对象将被复制到To空间中，而非存活对象占用的空间将会被释放。完成复制后，From空间和To空间的角色发生对换。在垃圾回收的过程中，就是通过将存活对象在两个 semispace 空间之间进行复制。年轻分代中的对象有机会晋升为年老分代，条件主要有两个：一个是对象是否经历过Scavenge回收，一个是To空间的内存占用比超过限制。
+- 年轻分代中的对象垃圾回收主要通过Scavenge算法进行垃圾回收。在Scavenge的具体实现中，主要采用了Cheney算法：通过复制的方式实现的垃圾回收算法。它将堆内存分为两个semispace，一个处于使用中（From空间），另一个处于闲置状态（To空间）。当分配对象时，先是在From空间中进行分配。当开始进行垃圾回收时，会检查From空间中的存活对象，这些存活对象将被复制到To空间中，而非存活对象占用的空间将会被释放。完成复制后，From空间和To空间的角色发生对换。在垃圾回收的过程中，就是通过将存活对象在两个semispace空间之间进行复制。年轻分代中的对象有机会晋升为年老分代，条件主要有两个：一个是对象是否经历过Scavenge回收，一个是To空间的内存占用比超过限制。
 
 - 对于年老分代中的对象，由于存活对象占较大比重，再采用上面的方式会有两个问题：一个是存活对象较多，复制存活对象的效率将会很低；另一个问题依然是浪费一半空间的问题。为此，V8在年老分代中主要采用了Mark-Sweep（标记清除）标记清除和Mark-Compact（标记整理）相结合的方式进行垃圾回收。
 
@@ -217,7 +263,9 @@ JavaScript引擎绑定机制需要将扩展代码和JavaScript引擎一块编译
 - 优化回滚。在执行多次之后，不要出现修改对象类型的语句，尽量不要触发优化回滚，否则会大幅度降低代码的性能。
 - 新机制。使用JavaScript引擎或者渲染引擎提供的新机制和新接口提高性能。
 
+## V8 十年故事：从农场诞生的星球最强JS引擎
 
+https://www.infoq.cn/article/v8-10-years
 
 # 微前端
 
@@ -225,13 +273,13 @@ JavaScript引擎绑定机制需要将扩展代码和JavaScript引擎一块编译
 
 https://qiankun.umijs.org/zh/
 
-★ [基于 qiankun 的微前端最佳实践](https://mp.weixin.qq.com/s/5BhiyfP4JtXThz2rO0_P4g)
+★ [基于qiankun的微前端最佳实践](https://mp.weixin.qq.com/s/5BhiyfP4JtXThz2rO0_P4g)
 
-[目标是最完善的微前端解决方案 - qiankun 2.0](https://zhuanlan.zhihu.com/p/131022025)
+[目标是最完善的微前端解决方案-qiankun 2.0](https://zhuanlan.zhihu.com/p/131022025)
 
 ## 资料
 
-[BAT 都在玩的微前端，究竟是怎样设计的？](https://mp.weixin.qq.com/s/Dd7dB5jkWTFgfEQdFqZvJQ)
+[BAT都在玩的微前端，究竟是怎样设计的？](https://mp.weixin.qq.com/s/Dd7dB5jkWTFgfEQdFqZvJQ)
 
 [微前端的核心价值](https://zhuanlan.zhihu.com/p/95085796)
 
@@ -255,31 +303,39 @@ https://qiankun.umijs.org/zh/
 
 # VS Code
 
+## 设置
+
+[从零开始配置vscode](https://zhuanlan.zhihu.com/p/79612479)
+
+[Visual Studio Code（VS code）你们都在用吗？或许你们需要看一下这篇博文](https://zhuanlan.zhihu.com/p/51764279)
+
+[如何让VS Code更好用10倍？这里有一份VS Code新手指南](https://zhuanlan.zhihu.com/p/99462672)
+
 [高效的编码：我的VS Code设置](https://mp.weixin.qq.com/s/NvtDwfG4FDAsYFuwtxsxMg)
 
-[从 VSCode 看大型 IDE 技术架构](https://zhuanlan.zhihu.com/p/96041706)
+[史上最全vscode配置使用教程](https://zhuanlan.zhihu.com/p/113222681)
+
+## 插件
 
 [VSCode前端必备插件，有可能你装了却不知道如何使用？](https://zhuanlan.zhihu.com/p/88997646)
 
 [自用VSCode优质插件推荐](https://zhuanlan.zhihu.com/p/89693351)
 
+[精选！15个必备的VSCode插件（前端类）](https://zhuanlan.zhihu.com/p/27905838)
+
+[这就是我想要的VSCode插件！](https://zhuanlan.zhihu.com/p/36020180)
+
+## 其它
+
+[从VSCode看大型IDE技术架构](https://zhuanlan.zhihu.com/p/96041706)
+
 [20种VSCode快捷键清单，助你更快编码](https://zhuanlan.zhihu.com/p/95640787)
 
-[精选！15 个必备的 VSCode 插件（前端类）](https://zhuanlan.zhihu.com/p/27905838)
+[VS Code1.47发布！全新的JavaScript debugger来了！](https://zhuanlan.zhihu.com/p/158675930)
 
-[VS Code 1.47 发布！全新的 JavaScript debugger 来了！](https://zhuanlan.zhihu.com/p/158675930)
+[远程开发初探-VSCode Remote Development](https://zhuanlan.zhihu.com/p/82568294)
 
-[如何让 VS Code 更好用10倍？这里有一份VS Code 新手指南](https://zhuanlan.zhihu.com/p/99462672)
 
-[远程开发初探 - VSCode Remote Development](https://zhuanlan.zhihu.com/p/82568294)
-
-[这就是我想要的 VSCode 插件！](https://zhuanlan.zhihu.com/p/36020180)
-
-[Visual Studio Code（VS code）你们都在用吗？或许你们需要看一下这篇博文](https://zhuanlan.zhihu.com/p/51764279)
-
-[史上最全vscode配置使用教程](https://zhuanlan.zhihu.com/p/113222681)
-
-[从零开始配置 vscode](https://zhuanlan.zhihu.com/p/79612479)
 
 # 资料
 
@@ -289,31 +345,31 @@ https://qiankun.umijs.org/zh/
 
 [DevOps编年史](https://mp.weixin.qq.com/s/2HqJoSGUa-5-vMOFqePgWg)
 
-[前端场景下 CI/CD 的探索与实践](https://mp.weixin.qq.com/s/Y-i20dQgSPu86KFVC7wNTA)
+[前端场景下CI/CD的探索与实践](https://mp.weixin.qq.com/s/Y-i20dQgSPu86KFVC7wNTA)
 
 ### 行业
 
 [爱奇艺是如何在活动中台实践低代码的？](https://mp.weixin.qq.com/s/m89lqxxjbfynC_pJeXAl6Q)
 
-[现代化 Web 开发实践之 PWA](https://mp.weixin.qq.com/s/AQzyegbzx_od4RKqetS_ug)
+[现代化Web开发实践之PWA](https://mp.weixin.qq.com/s/AQzyegbzx_od4RKqetS_ug)
 
 ### 测试
 
 [Chrome开发者工具9个调试技巧详解](https://www.jb51.net/article/147438.htm)
 
-[Chrome——F12 谷歌开发者工具详解](https://www.cnblogs.com/xiaowenshu/p/10450848.html)
+[Chrome——F12谷歌开发者工具详解](https://www.cnblogs.com/xiaowenshu/p/10450848.html)
 
 [Chrome开发者工具-高级使用技巧](https://blog.csdn.net/qq_42313447/article/details/113425649)
 
-[Chrome 开发者工具中文文档](https://www.html.cn/doc/chrome-devtools)
+[Chrome开发者工具中文文档](https://www.html.cn/doc/chrome-devtools)
 
-[Web Performance Metrics 与 Core Web Vitals 简介](https://mp.weixin.qq.com/s/Hmkod3gYRR38B6Qdp1Iu6g)
+[Web Performance Metrics与Core Web Vitals简介](https://mp.weixin.qq.com/s/Hmkod3gYRR38B6Qdp1Iu6g)
 
 ### 杂项
 
 [数据库大牛李海翔详解全局读一致性技术](https://maimai.cn/article/detail?fid=1349253255&efid=FJJMyCrwqQFfoZ7rYKtc_A&share_channel=2&use_rn=1&_share_channel=wechat)
 
-[闲鱼正在悄悄放弃 Flutter 吗？](https://mp.weixin.qq.com/s/k2RJv6FJJBwb2D5Hzgh8lg)
+[闲鱼正在悄悄放弃Flutter吗？](https://mp.weixin.qq.com/s/k2RJv6FJJBwb2D5Hzgh8lg)
 
 [看了就会的浏览器帧原理](https://mp.weixin.qq.com/s/Q4MBBFhc-ONrpCYWhow3uw)
 
@@ -321,9 +377,9 @@ https://qiankun.umijs.org/zh/
 
 [如何实现一个高度自适应的虚拟列表](https://mp.weixin.qq.com/s/80bNGH9nRNVsb1OCCGtgrg)
 
-[Streams 权威指南](https://mp.weixin.qq.com/s/Kg2w5V26brFHsQkJK4-SrQ)
+[Streams权威指南](https://mp.weixin.qq.com/s/Kg2w5V26brFHsQkJK4-SrQ)
 
-[Web 前端的路该怎么走？](https://www.zhihu.com/question/34388831/answer/61429937)
+[Web前端的路该怎么走？](https://www.zhihu.com/question/34388831/answer/61429937)
 
 
 
