@@ -267,6 +267,22 @@ JavaScript引擎绑定机制需要将扩展代码和JavaScript引擎一块编译
 
 https://www.infoq.cn/article/v8-10-years
 
+## 资料
+
+从Chrome源码看JS Object的实现https://zhuanlan.zhihu.com/p/26169639
+
+编译 V8 源码https://zhuanlan.zhihu.com/p/25120909
+
+Promise V8 源码分析(一)https://zhuanlan.zhihu.com/p/264944183
+
+探究JS V8引擎下的“数组”底层实现https://zhuanlan.zhihu.com/p/96959371
+
+【深度】扒开V8引擎的源码，我找到了你们想要的前端算法https://www.yisu.com/zixun/77005.html
+
+新手应该如何读Google V8引擎源代码？https://www.zhihu.com/question/39014659
+
+v8引擎源码分析https://blog.csdn.net/theanarkh/category_9015796.html
+
 # 微前端
 
 ## qiankun

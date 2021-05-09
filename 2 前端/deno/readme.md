@@ -24,4 +24,7 @@ go v8 会有双层gc问题，所以没办法，才改成rust的。
 
 ### 参考
 
-- [Deno 1.9 发布，重要更新速览](https://mp.weixin.qq.com/s/69s5mg7hzrhH-98UYahbsQ)
+[Deno 1.9 发布，重要更新速览](https://mp.weixin.qq.com/s/69s5mg7hzrhH-98UYahbsQ)
+
+[Deno + Oak 连接 MySQL 实战教程](https://zhuanlan.zhihu.com/p/157316249)
+
