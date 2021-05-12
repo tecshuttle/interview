@@ -24,6 +24,12 @@ go v8 会有双层gc问题，所以没办法，才改成rust的。
 
 [Deno 冲上榜首，Vue.js 首次屈居第二，JavaScript 2020 年度“新起之秀”都有谁？](https://blog.csdn.net/csdnnews/article/details/112778182)
 
+# 安装
+
+```bash
+curl -fsSL https://deno.land/x/install/install.sh | sh  #mac
+```
+
 # Deno修改文件自动部署
 
 https://blog.csdn.net/wenhaipan/article/details/106553631
