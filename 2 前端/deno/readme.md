@@ -41,6 +41,8 @@ denon run --allow-net server.ts
 
 # Oak
 
+[使用Deno和Oak构建REST API](https://zhuanlan.zhihu.com/p/143780633)
+
 [Deno + Oak 连接 MySQL 实战教程](https://zhuanlan.zhihu.com/p/157316249)
 
 # 资料

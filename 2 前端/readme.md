@@ -42,6 +42,14 @@ https://www.cnblogs.com/colima/p/5289386.html
 
 Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，兼容现代高级浏览器，主要用于移动端的开发，它有着与jQuery类似的API。就像zepto官网说的如果你会使用jQuery，那你也会用zepto。
 
+## Day.js
+
+国内镜像https://dayjs.gitee.io/zh-CN/
+
+```bash
+yarn add dayjs  #安装
+```
+
 # 组件
 
 [什么叫组件化开发?](https://www.zhihu.com/question/29735633/answer/90873592)
