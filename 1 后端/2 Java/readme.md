@@ -76,6 +76,39 @@ JavaBean是可序列化的，实现了serializable接口
 
 [Spring integration 基本概念 ](https://www.jianshu.com/p/bf1643539f99)
 
+# QueryDSL
+
+关于 QueryDSL 配置和使用（详细）https://blog.csdn.net/qq_36537546/article/details/95315040
+
+虽然说 QueryDSL 也可以做增删改查，但是个人不建议使用（仅限单表），因为单表操作，其实使用 Jpa 就可以了，包括 Jpa 的动态查询，都是很适合单表的，不管是代码量还是效率个人感觉都比 QueryDSL 要快，尤其是代码量，少了不止一点半点，但是连表操作的话，就比较偏向于 QueryDSL 了，特别好用！！下边是连表操作的 QueryDSL ，另外说一下上边只是演示一下 QueryDSL 的使用方法，单表还是建议用 Jpa 比较快！
+
+```xml
+<!-- QueryDSL 相关依赖 -->
+<dependency>
+  <groupId>com.querydsl</groupId>
+  <artifactId>querydsl-jpa</artifactId>
+</dependency>
+<dependency>
+  <groupId>com.querydsl</groupId>
+  <artifactId>querydsl-apt</artifactId>
+  <scope>provided</scope>
+</dependency>
+
+<!-- lombok 相关依赖 -->
+<dependency>
+  <groupId>org.projectlombok</groupId>
+  <artifactId>lombok</artifactId>
+  <version>1.16.10</version>
+  <scope>provided</scope>
+</dependency>
+```
+
+Ps：lombok 可以已注解的方式来对代码进行简化，省去了 get 和 set 方法，至于怎么使用 lombok ，先看本文示例吧
+
+采用JPA的方式确实能减少很多工作，并且效率很高，QueryDSL更是可以为JPA插上翅膀，方便很多工作。
+
+QueryDSL目前只支持：Update,Delete,Select操作，不支持Save操作，但是看官方文档有insert操作，这个目前没去试验！
+
 # 批处理
 
 [为什么阿里云要做流批一体？]( https://www.infoq.cn/article/YKKZj6IjzdRzdLLs83Kg)
