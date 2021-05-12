@@ -1,5 +1,7 @@
 https://vitejs.cn
 
+
+
 # 为什么选 Vite
 
 ## 现实问题
@@ -11,8 +13,6 @@ https://vitejs.cn
 然而，当我们开始构建越来越大型的应用时，需要处理的 JavaScript 代码量也呈指数级增长。大型项目包含数千个模块的情况并不少见。我们开始遇到性能瓶颈 —— 使用 JavaScript 开发的工具通常需要很长时间（甚至是几分钟！）才能启动开发服务器，即使使用 HMR，文件修改后的效果也需要几秒钟才能在浏览器中反映出来。如此循环往复，迟钝的反馈会极大地影响开发者的开发效率和幸福感。
 
 Vite 旨在利用生态系统中的新进展解决上述问题：浏览器开始原生支持 ES 模块，越来越多 JavaScript 工具使用编译型语言编写。
-
-
 
 # 比较
 
@@ -34,3 +34,7 @@ Vite 支持广泛的功能，构建过程也集成度更高，以下功能目前
 - [预优化的异步 chunk 加载](https://vitejs.cn/guide/features.html#异步-Chunk-加载优化)
 - [自动动态导入 polyfill](https://vitejs.cn/guide/features.html#动态导入-Polyfill)
 - 官方 [兼容模式插件](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy) 打包为现代/传统两种产物，并根据浏览器支持自动交付正确的版本。
+
+# vite 快速搭建 Vue3 + TypeScript 项目
+
+https://zhuanlan.zhihu.com/p/354373454
