@@ -30,12 +30,12 @@ go v8 会有双层gc问题，所以没办法，才改成rust的。
 curl -fsSL https://deno.land/x/install/install.sh | sh  #mac
 ```
 
-# Deno修改文件自动部署
+## Deno修改文件自动部署
 
 https://blog.csdn.net/wenhaipan/article/details/106553631
 
 ```bash
-deno install -qAf --unstable https://deno.land/x/denon/denon.ts
+deno install -qAf --unstable https://deno.land/x/denon/denon.ts  #mac和windows通用
 denon run --allow-net server.ts
 ```
 
@@ -44,6 +44,12 @@ denon run --allow-net server.ts
 [使用Deno和Oak构建REST API](https://zhuanlan.zhihu.com/p/143780633)
 
 [Deno + Oak 连接 MySQL 实战教程](https://zhuanlan.zhihu.com/p/157316249)
+
+## Deno: Access query params in controller
+
+```js
+const userId = ctx.request.url.searchParams.get('userId');
+```
 
 # 资料
 
