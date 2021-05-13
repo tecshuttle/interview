@@ -1,3 +1,48 @@
+# Java语法
+
+## 遍历List
+
+https://blog.csdn.net/WZH577/article/details/90453762
+
+```java
+for (int i = 0; i < list.size(); i++) {
+	Goods good = list.get(i);
+	if (good.getGid==20) {
+		list.remove(i);
+		break;
+	}
+}
+```
+
+## 字符串和List集合互相转换
+
+```java
+//拆分
+public static List convertStringToList(String str,String mark){
+  String[] strArray = str.split(mark);
+  List list=Arrays.asList(strArray);
+  return list;
+}
+
+//合并
+public static String convertListToString(List list,String mark){
+  return  StringUtils.join(list,";").toString();
+}
+```
+
+# 数据库操作
+
+官网项目
+
+```java
+List<ProductDetailsEntity> findAllByShowHeadAndLableLifeStageAndStatus(Integer showhead, Integer lifeStage , Integer status);
+
+@Query(value = "select * from t_product_details where status = 1 and lable_life_stage like :life_stage", nativeQuery = true)
+List<ProductDetailsEntity> findAllShowHeadByLiftStage(String life_stage);
+```
+
+
+
 # 原理
 
 ## SOA
