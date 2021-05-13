@@ -41,15 +41,25 @@ denon run --allow-net server.ts
 
 # Oak
 
-[使用Deno和Oak构建REST API](https://zhuanlan.zhihu.com/p/143780633)
+## How to create a REST API with Oak in Deno
 
-[Deno + Oak 连接 MySQL 实战教程](https://zhuanlan.zhihu.com/p/157316249)
+https://www.robinwieruch.de/deno-oak-rest-api
 
 ## Deno: Access query params in controller
 
 ```js
 const userId = ctx.request.url.searchParams.get('userId');
 ```
+
+## 资料
+
+[使用Deno和Oak构建REST API](https://zhuanlan.zhihu.com/p/143780633)
+
+[Deno + Oak 连接 MySQL 实战教程](https://zhuanlan.zhihu.com/p/157316249)
+
+[How to Create a Todo API in Deno and Oak](https://www.freecodecamp.org/news/create-a-todo-api-in-deno-written-by-a-guy-coming-from-node/)
+
+[Create a Simple REST API with DENO and OAK framework](https://dev.to/nickolasbenakis/create-a-simple-rest-api-with-deno-and-oak-framework-2fna)
 
 # 资料
 

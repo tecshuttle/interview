@@ -9,6 +9,31 @@ yarn serve
 
 [Vue CLI 是如何实现的？](https://mp.weixin.qq.com/s/UpkOGbJ2VZugzwas2ddeGA)
 
+# Vue3.0 使用 ant-design-vue
+
+https://www.antdv.com/docs/vue/introduce-cn/
+
+引入ant-design-vue
+
+```bash
+yarn  add ant-design-vue@next
+```
+
+在`main.js`中引入
+
+```js
+import {createApp} from 'vue'
+import Antd from 'ant-design-vue';
+import 'ant-design-vue/dist/antd.css';
+import App from './App.vue'
+
+createApp(App)
+    .use(Antd) 
+    .mount('#app')
+```
+
+
+
 # 优化
 
 [九种Vue性能优化方法](https://www.jianshu.com/p/f372d0e3de80)
