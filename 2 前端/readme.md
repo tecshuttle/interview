@@ -324,7 +324,27 @@ https://qiankun.umijs.org/zh/
 
 总而言之，离不开“三化”——模块化，组件化，工程化
 
+# GraphQL
 
+https://graphql.cn/learn/
+
+# Chrome插件
+
+[【干货】Chrome插件(扩展)开发全攻略](https://www.cnblogs.com/liuxianan/p/chrome-plugin-develop.html)
+
+# 无头浏览器
+
+★[初探 Headless Chrome](https://zhuanlan.zhihu.com/p/27100187)
+
+[Phantomjs、Selenium之后浪Puppeteer](https://zhuanlan.zhihu.com/p/137922030)
+
+# 视频
+
+WebRTC
+
+[Vue-Core-Video-Player - 轻量精致的web视频播放组件](https://zhuanlan.zhihu.com/p/160104019)
+
+[「1.4万字」玩转前端Video播放器 | 多图预警](https://segmentfault.com/a/1190000023243743)
 
 # VS Code
 

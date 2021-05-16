@@ -9,7 +9,42 @@ yarn serve
 
 [Vue CLI 是如何实现的？](https://mp.weixin.qq.com/s/UpkOGbJ2VZugzwas2ddeGA)
 
-# Vue3.0 使用 ant-design-vue
+# Vue3.0 
+
+## Router
+
+需求：点击列表页条目，进入编辑页面，为减少接口请求，把条目数据放在route参数中传递。
+
+问题：这个做法在Vue2中是可行的，在Vue3中Object参数会变成[object Object]。
+
+解决：把Object参数转化为JSON格式传递。
+
+原因：目前并不了解，为什么在Vue3中Route不能传递Object参数。
+
+```js
+// 列表页
+edit(item: any): void {
+  this.$router.push({
+    name: "CategoryFormEdit",
+    params: { id: item.id, item: JSON.stringify(item) },
+  });
+},
+```
+
+```js
+// 编辑页
+setup() {
+  onMounted(() => {
+    if (route.params.id) {
+      route.params.item
+        ? updateFormState(JSON.parse(<string>route.params.item))
+        : getCategory(route.params.id);
+    }
+  });
+}
+```
+
+## 使用 ant-design-vue
 
 https://www.antdv.com/docs/vue/introduce-cn/
 
@@ -32,7 +67,25 @@ createApp(App)
     .mount('#app')
 ```
 
+## 如何在Vue3中使用生命周期函数
 
+https://zhuanlan.zhihu.com/p/136417498
+
+## 深入理解 Vue3 Reactivity API
+
+https://zhuanlan.zhihu.com/p/146097763
+
+## 全面解析Vue3 Reactive家族和Ref家族API
+
+https://www.jianshu.com/p/cfe25e757d0e
+
+# Vuex
+
+[vuex数据存储到了哪里？](https://blog.csdn.net/Luckier_hope/article/details/108056585)
+
+[sessionstorage和localstorage的区别是啥？](https://www.php.cn/faq/463215.html)
+
+[sessionStorage、localStorage用法总结](https://zhuanlan.zhihu.com/p/92947594)
 
 # 优化
 
