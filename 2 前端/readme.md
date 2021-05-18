@@ -348,6 +348,48 @@ WebRTC
 
 # VS Code
 
+### 快捷键
+
+CMD + ,   打开设置 
+
+CMD + P  打开最近使用的文件
+
+Shift + CMD + X 打开插件面板
+
+CMD + K + S 显示快捷键列表
+
+CMD + K + M 快捷键方案
+
+## 命令
+
+format on save 保存时格式化
+
+zoom 屏幕缩放
+
+title
+
+## Prettier
+
+Arrow Parens
+
+Print width
+
+Single quote
+
+Semi
+
+## Theme
+
+- Cobalt2：比默认theme更好，关键字更突出。
+
+## Font
+
+- 默认：Menlo, Monaco, 'Courier New', monospace
+- 推荐字体：'cascadia code'
+- Font Ligature：运算符会显示更美观。
+  - 箭头符号会连在一起
+  - 全等号会显示为三横线
+
 ## 设置
 
 [从零开始配置vscode](https://zhuanlan.zhihu.com/p/79612479)
