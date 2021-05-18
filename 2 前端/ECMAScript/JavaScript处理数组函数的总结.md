@@ -438,3 +438,104 @@ reduce、reduceRight
 3、 JavaScript 检测数组
 4、[javascript 高级教程]()
 
+## 其它
+
+## 数组对象：在Javascript中如何查找对象数组中的值？
+
+问题:
+
+我有一个未命名的对象数组，其中包含一个命名对象的数组，我需要获取“名称”是“字符串1”的对象。这是一个示例数组。
+
+```js
+var array = [
+    { name:"string 1", value:"this", other: "that" },
+    { name:"string 2", value:"this", other: "that" }
+];
+```
+
+方法1.
+
+```js
+let arr = [
+    { name:"string 1", value:"this", other: "that" },
+    { name:"string 2", value:"this", other: "that" }
+];
+
+let obj = arr.find(o => o.name === 'string 1');
+
+console.log(obj);
+```
+
+## JS数组遍历的几种方法
+
+https://blog.csdn.net/fu983531588/article/details/89597521
+
+### for
+
+最简单的一种循环遍历方法，也是使用频率最高的一种，可优化。
+
+优化：使用临时变量，将长度缓存起来，避免重复获取数组长度，当数组较大时优化效果才会比较明显。
+
+### for…in…
+
+这个循环用的人也很多，但是效率最低（输出的 key 是数组索引）。
+
+### for…of…（ES6）
+
+虽然性能要好于 for…in…，但仍然比不上普通的 for 循环（不能循环对象）
+
+### forEach
+
+数组里的元素个数有几个，该方法里的回调就会执行几次。
+第一个参数是数组里的元素，第二个参数为数组里元素的索引，第三个参数则是它自己。
+数组自带的遍历方法，虽然使用频率略高，但是性能仍然比普通循环略低。
+
+### map
+
+遍历每一个元素并且返回对应的元素(可以返回处理后的元素) (map 映射 一一 对应)。
+返回的新数组和旧数组的长度是一样的。
+使用比较广泛，但其性能还不如 forEach。
+
+### filter
+
+遍历数组，过滤出符合条件的元素并返回一个新数组。
+
+### some
+
+遍历数组，只要有一个以上的元素满足条件就返回 true，否则返回 false。
+
+### every
+
+遍历数组，每一个元素都满足条件 则返回 true，否则返回 false。
+
+### find（ES6）
+
+遍历数组，返回符合条件的第一个元素，如果没有符合条件的元素则返回 undefined。
+
+### findIndex（ES6）
+
+遍历数组，返回符合条件的第一个元素的索引，如果没有符合条件的元素则返回 -1。
+
+## map循环如何跳出 ?
+
+https://segmentfault.com/q/1010000013463825
+
+- map无法跳出，所以才会在es6中添加for of语法。
+
+- 你用return试了就说明你对js的理解不深，类似的some或every可以通过返回的bool值推出。some是遇到ture就退出。
+- 面试官认为map可以跳出(对map理解有误)
+- 面试官想让你回答不能跳出，以及为什么不能跳出，对map的理解。
+- map 不能正常跳出，如果非要跳出的话……`throw`，当然也就得不到 map 的结果
+- Array的几个遍历的方法各有千秋，map是为了返回值的，forEach是为了处理但不返回值的，filter是过滤值的，如果要跳出循坏，还是用for。
+  至于面试这样问，是为了寻找“特殊感”？
+- map不能跳出，原因要从map流程中得到，因为map本身更精确来讲是个迭代，而不是循环。
+
+### forEach跳出本次循环和终止循环
+
+https://blog.csdn.net/daoxiaofei/article/details/108690589
+
+结论：与map()一样，无法正常跳出。
+
+
+
+END

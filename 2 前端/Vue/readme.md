@@ -87,6 +87,10 @@ https://www.jianshu.com/p/cfe25e757d0e
 
 [sessionStorage、localStorage用法总结](https://zhuanlan.zhihu.com/p/92947594)
 
+## 路由
+
+[Vue3 路由跳转与参数获取](https://blog.csdn.net/xiamoziqian/article/details/112170257)
+
 # 优化
 
 [九种Vue性能优化方法](https://www.jianshu.com/p/f372d0e3de80)
