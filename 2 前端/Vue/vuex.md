@@ -1,5 +1,10 @@
 ## 安装
 
+```bash
+yarn add vuex      #for vue2
+yarn add vuex@next #for vue3
+```
+
 在一个模块化的打包系统中，您必须显式地通过 `Vue.use()` 来安装 Vuex：
 
 ```js
