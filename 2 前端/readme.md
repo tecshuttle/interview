@@ -348,17 +348,39 @@ WebRTC
 
 # VS Code
 
-### 快捷键
+## 快捷键
 
-CMD + ,   打开设置 
+Cmd + ,   打开设置 
 
-CMD + P  打开最近使用的文件
+Cmd + P  打开最近使用的文件
 
-Shift + CMD + X 打开插件面板
+Cmd + B 打开和关闭侧栏
 
-CMD + K + S 显示快捷键列表
+Cmd + Alt + 上箭头/下箭头 块选择 
 
-CMD + K + M 快捷键方案
+Shift + Opt 块选择（鼠标）
+
+Shift + Cmd + X 打开插件面板
+
+Cmd + K + S 显示快捷键列表
+
+Cmd + K + M 快捷键方案
+
+Ctrl + J 合并上下行
+
+Ctrl + F 搜索
+
+Ctrl + ALT + F 替换
+
+Ctrl + Shift + F 在项目内搜索
+
+Ctrl + Shift + [ 折叠区域代码
+
+Ctrl + Shift + ] 展开区域代码
+
+Ctrl + / 添加关闭行注释
+
+Shift + Alt + A 块区域注释
 
 ## 命令
 
@@ -390,33 +412,42 @@ Semi
   - 箭头符号会连在一起
   - 全等号会显示为三横线
 
-## 设置
-
-[从零开始配置vscode](https://zhuanlan.zhihu.com/p/79612479)
-
-[Visual Studio Code（VS code）你们都在用吗？或许你们需要看一下这篇博文](https://zhuanlan.zhihu.com/p/51764279)
-
-[如何让VS Code更好用10倍？这里有一份VS Code新手指南](https://zhuanlan.zhihu.com/p/99462672)
-
-[高效的编码：我的VS Code设置](https://mp.weixin.qq.com/s/NvtDwfG4FDAsYFuwtxsxMg)
-
-[史上最全vscode配置使用教程](https://zhuanlan.zhihu.com/p/113222681)
-
 ## 插件
-
-[VSCode前端必备插件，有可能你装了却不知道如何使用？](https://zhuanlan.zhihu.com/p/88997646)
 
 [自用VSCode优质插件推荐](https://zhuanlan.zhihu.com/p/89693351)
 
-[精选！15个必备的VSCode插件（前端类）](https://zhuanlan.zhihu.com/p/27905838)
+- Settings Sync 它能够利用GitHub Gist作为存储载体，把VSCode的各类.json设置文件上传保存，并能够在不同的设备间同步。
+
+[15个必备的VSCode插件](https://zhuanlan.zhihu.com/p/27905838)
+
+- Quokka 是一个调试工具插件，能够根据你正在编写的代码提供实时反馈。
+- Prettier 是目前 Web 开发中最受欢迎的代码格式化程序。
 
 [这就是我想要的VSCode插件！](https://zhuanlan.zhihu.com/p/36020180)
+
+- Bracket Pair Colorizer 可以让不同缩减的括号显示不同的颜色。
+- HTML Snippets
+- JavaScript (ES6) code snippets
+- Import Cost 这个扩展简直惊艳到我了，之前写代码的时候很少有关注导入包的大小。只有在后期优化的时候才考虑这些问题。但是这个插件可以在你导入包的时候就提示这个包有多大。
+- Auto Rename Tag 在 VSCode 中输入一半的标签会自动帮忙补全另一半，但是如果我后期想修改的话需要就需要两边都要改了，插件可以很好的解决这个问题。
+- GitLens 可以增强 VSCode 内置 Git 的功能。
+
+[从零开始配置vscode](https://zhuanlan.zhihu.com/p/79612479)
+
+- ESLint 要养成一个良好的编程习惯, `ESLint`就是一个不错的选择. 它能适应项目中的规则来纠正你的不好的习惯。
+
+[Visual Studio Code（VS code）你们都在用吗？或许你们需要看一下这篇博文](https://zhuanlan.zhihu.com/p/51764279)
+
+- WakaTime 从您的编程活动自动生成的度量标准，见解和时间跟踪。
+- vetur 语法高亮、智能感知、Emmet等（VUE插件）。
+
+[高效的编码：我的VS Code设置](https://mp.weixin.qq.com/s/NvtDwfG4FDAsYFuwtxsxMg)
+
+- Version Lens 显示 package.json 文件中每个软件包的最新版本。
 
 ## 其它
 
 [从VSCode看大型IDE技术架构](https://zhuanlan.zhihu.com/p/96041706)
-
-[20种VSCode快捷键清单，助你更快编码](https://zhuanlan.zhihu.com/p/95640787)
 
 [VS Code1.47发布！全新的JavaScript debugger来了！](https://zhuanlan.zhihu.com/p/158675930)
 
