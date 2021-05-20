@@ -121,6 +121,15 @@ JavaBean是可序列化的，实现了serializable接口
 
 [Spring integration 基本概念 ](https://www.jianshu.com/p/bf1643539f99)
 
+# 数据库操作
+
+```java
+// 时间查询
+java.sql.Timestamp now = new java.sql.Timestamp(new Date().getTime());
+query.where(qInterestRateEntity.timePublish.lt(now));
+query.where(qInterestRateEntity.timeExpire.gt(now));
+```
+
 # QueryDSL
 
 关于 QueryDSL 配置和使用（详细）https://blog.csdn.net/qq_36537546/article/details/95315040
