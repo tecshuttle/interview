@@ -54,6 +54,20 @@ yarn add dayjs  #安装
 
 [什么叫组件化开发?](https://www.zhihu.com/question/29735633/answer/90873592)
 
+# 测试
+
+## console.log()加样式
+
+```js
+console.log(
+  `%c${description} With Tax:%c$${total}`,
+  'font-weight: bold',
+  'color: green'
+);
+```
+
+
+
 # 其它技能
 
 - 设计模式知道什么是singleton, factory, strategy, decrator么?
@@ -413,6 +427,12 @@ Semi
   - 全等号会显示为三横线
 
 ## 插件
+
+[Prettier 完全指南，以及和 Git、VSCode、ESLint 整合，让你的代码变美丽](https://mp.weixin.qq.com/s/Et2Y2H71O3d3q5Ui7v5WLA)
+
+[ESlint + stylelint + VSCode自动格式化代码(2020)](https://mp.weixin.qq.com/s/T17_kj5Ag21026EB8djUWw)
+
+[每个Web开发者在2021年必须拥有15 个VSCode扩展](https://mp.weixin.qq.com/s/s04gdmR9dJTbC6IG2SsX2Q)
 
 [自用VSCode优质插件推荐](https://zhuanlan.zhihu.com/p/89693351)
 
