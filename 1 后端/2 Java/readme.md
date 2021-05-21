@@ -41,7 +41,9 @@ List<ProductDetailsEntity> findAllByShowHeadAndLableLifeStageAndStatus(Integer s
 List<ProductDetailsEntity> findAllShowHeadByLiftStage(String life_stage);
 ```
 
+## 资料
 
+Java 获取数据库的库、表、字段信息https://www.jianshu.com/p/e8ad294068bc
 
 # 原理
 
@@ -188,3 +190,9 @@ QueryDSL目前只支持：Update,Delete,Select操作，不支持Save操作，但
 [欠下“技术债”，谁负责？]( https://www.infoq.cn/article/G9hyluiAvCiAhX11Badv)
 
 [首席技术官：你的同事尊重你吗？]( https://www.infoq.cn/article/gwcL2psAF0WzhViD8xGw)
+
+QueryDsl使用https://www.jianshu.com/p/8bb33f86d158
+
+Spring Boot(五)：Spring Boot Jpa 的使用http://www.ityouknow.com/springboot/2016/08/20/spring-boot-jpa.html
+
+【翻译】Protobuf比JSON性能更好https://zhuanlan.zhihu.com/p/53339153

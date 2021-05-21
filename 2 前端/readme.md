@@ -66,7 +66,17 @@ console.log(
 );
 ```
 
+[一探前端开发中的JS调试技巧]( http://seejs.me/2016/03/27/jsdebugger/)
 
+[Chrome开发者工具9个调试技巧详解](https://www.jb51.net/article/147438.htm)
+
+[Chrome——F12谷歌开发者工具详解](https://www.cnblogs.com/xiaowenshu/p/10450848.html)
+
+[Chrome开发者工具-高级使用技巧](https://blog.csdn.net/qq_42313447/article/details/113425649)
+
+[Chrome开发者工具中文文档](https://www.html.cn/doc/chrome-devtools)
+
+[Web Performance Metrics与Core Web Vitals简介](https://mp.weixin.qq.com/s/Hmkod3gYRR38B6Qdp1Iu6g)
 
 # 其它技能
 
@@ -107,6 +117,12 @@ console.log(
 [V8内存浅析](https://zhuanlan.zhihu.com/p/33816534)
 
 [【译】了解V8内存管理](https://www.keisei.top/architecture-of-v8-memory/)
+
+[HTTP缓存是如何实现](http://caibaojian.com/http-cache.html)
+
+[首页白屏优化实践](https://segmentfault.com/a/1190000020383064)
+
+[Webview加载界面白屏解决方法总结](https://blog.csdn.net/qq_34584049/article/details/78280815)
 
 ## 深度剖析浏览器渲染性能原理
 
@@ -324,6 +340,10 @@ https://qiankun.umijs.org/zh/
 
 [可能是你见过最完善的微前端解决方案](https://zhuanlan.zhihu.com/p/78362028)
 
+了解什么是微前端 https://juejin.im/post/5d1f19e3f265da1bab29ce5f
+
+微前端如何落地 https://www.infoq.cn/article/xm_AaiOTXmLpPgWvX9y9
+
 # 工程化
 
 ### 各大互联网公司的前端开发流程和前端架构是怎么做的呢？
@@ -338,6 +358,10 @@ https://qiankun.umijs.org/zh/
 
 总而言之，离不开“三化”——模块化，组件化，工程化
 
+## 资料
+
+[package-lock.json的作用](https://www.cnblogs.com/cangqinglang/p/8336754.html)
+
 # GraphQL
 
 https://graphql.cn/learn/
@@ -351,6 +375,8 @@ https://graphql.cn/learn/
 ★[初探 Headless Chrome](https://zhuanlan.zhihu.com/p/27100187)
 
 [Phantomjs、Selenium之后浪Puppeteer](https://zhuanlan.zhihu.com/p/137922030)
+
+[PhantomJs](https://www.jianshu.com/p/80e984ef94d3)
 
 # 视频
 
@@ -519,6 +545,24 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 # 资料
 
+[前端开发中79条不可忽视的知识点汇总](https://juejin.im/post/5d8989296fb9a06b1f147070)
+
+[Lodash](https://juejin.im/post/5c134de65188250918135eb6)
+
+[快看，前端开发者都收藏了这几张图表！](https://juejin.im/post/5dc43b6b6fb9a04a945dd6b2)
+
+[微服务架构~BFF和网关是如何演化出来的](https://www.cnblogs.com/dadadechengzi/p/9373069.html)
+
+[如何编写轻量级 CSS 框架](https://www.cnblogs.com/nzbin/p/7073601.html)
+
+[个人的中小型项目前端架构浅谈](https://blog.csdn.net/qq20004604/article/details/70480932)
+
+[awesome-javascript](https://github.com/sorrycc/awesome-javascript)
+
+[Kafka，Mq和Redis作为消息队列使用时的差异有哪些](https://www.jianshu.com/p/a4319755c6da)
+
+[Immutable.js了解一下？](https://www.jianshu.com/p/0fa8c7456c15)
+
 ### DevOps
 
 [K8S怎么就和微服务成死对头了？](https://mp.weixin.qq.com/s/sJWoiDwc-VwR-euakeb7iA)
@@ -533,17 +577,9 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 [现代化Web开发实践之PWA](https://mp.weixin.qq.com/s/AQzyegbzx_od4RKqetS_ug)
 
-### 测试
+### Git
 
-[Chrome开发者工具9个调试技巧详解](https://www.jb51.net/article/147438.htm)
-
-[Chrome——F12谷歌开发者工具详解](https://www.cnblogs.com/xiaowenshu/p/10450848.html)
-
-[Chrome开发者工具-高级使用技巧](https://blog.csdn.net/qq_42313447/article/details/113425649)
-
-[Chrome开发者工具中文文档](https://www.html.cn/doc/chrome-devtools)
-
-[Web Performance Metrics与Core Web Vitals简介](https://mp.weixin.qq.com/s/Hmkod3gYRR38B6Qdp1Iu6g)
+[25个每个人都应该知道的Git命令](https://mp.weixin.qq.com/s/nZjJVcKQIZEbagz4pRjJMg)
 
 ### 杂项
 
@@ -552,8 +588,6 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 [闲鱼正在悄悄放弃Flutter吗？](https://mp.weixin.qq.com/s/k2RJv6FJJBwb2D5Hzgh8lg)
 
 [看了就会的浏览器帧原理](https://mp.weixin.qq.com/s/Q4MBBFhc-ONrpCYWhow3uw)
-
-[25个每个人都应该知道的Git命令](https://mp.weixin.qq.com/s/nZjJVcKQIZEbagz4pRjJMg)
 
 [如何实现一个高度自适应的虚拟列表](https://mp.weixin.qq.com/s/80bNGH9nRNVsb1OCCGtgrg)
 

@@ -1,3 +1,23 @@
+# 版本
+
+https://huangxuan.me/2015/09/22/js-version/
+
+https://segmentfault.com/a/1190000039352300
+
+[1.5万字概括ES6全部特性(看图就能记下，值得收藏)]( https://zhuanlan.zhihu.com/p/87699079)
+
+[这难道不是你期待的 ES2021 新特性吗？](https://mp.weixin.qq.com/s/zxpZUV5EYYZbenp8afCgGA)
+
+[理解ECMAScript规范（3）](https://mp.weixin.qq.com/s/1bNRE2t7UBY1UNikC7MC6g)
+
+[ES7、ES8、ES9、ES10 新特性大盘点](https://zhuanlan.zhihu.com/p/99342755)
+
+★★★ [JS ES各版本特性](https://cloud.tencent.com/developer/article/1625624)
+
+★★★ [种草 ES2020 新特性](https://zhuanlan.zhihu.com/p/100251213)
+
+★★★★ [解读ES2020（ES11）新特性](https://www.jianshu.com/p/3e59df36342a)
+
 # 通用
 
 1. 说说写JavaScript的基本规范？
@@ -10,6 +30,64 @@
 8. JS模块加载器的轮子怎么造，也就是如何实现一个模块加载器？
 
 # 语言特性
+
+## 相等
+
+## 异步
+
+[阻塞非阻塞与同步异步的区别是什么？]( https://leetcode-cn.com/circle/discuss/uHGOZo)
+
+[使用顶层 await 简化 JS 代码](https://mp.weixin.qq.com/s/XeZXrTa5X-08dBw2I7cg6A)
+
+[Promise、Genarator、 Async，这三者的区别和联系，你是否明白？](https://mp.weixin.qq.com/s/_ciah0VIog-IgQ75WqTkGQ)
+
+### await了解吗？
+
+1. promise
+
+2. 了解ES各版本、着重学习ES6。
+
+3. New Function()
+
+4. Function.prototype 是函数对象，什么是函数对象？
+
+5. null 是一个独立的数据类型，为什么typeof(null)的值是object？
+
+6. prototype原型、原型链 => 继承
+
+7. prototype/ `__proto__`的区别
+
+8. 构造函数
+
+9. call / apply / bind
+
+10. js OOP
+
+11. clone / deepcopy
+
+12. 同步与异步、阻塞与非阻塞
+
+## 错误处理
+
+## ES6
+
+- Object.is() 与原来的比较操作符“ ===”、“ ==”的区别？
+- ES6是如何实现编译成ES5的？
+- css-loader的原理？
+- ECMAScript6 怎么写class，为什么会出现class这种东西?
+- 谈一谈你对ECMAScript6的了解？
+- ES6、ES7、ES8、ES9、ES10新特性一览 https://juejin.im/post/5ca2e1935188254416288eb2#heading-26
+- promise、await 、async、异步。
+- Async/Await：比Promise更好的6个理由 http://caibaojian.com/asyncawait.html
+- [Javascript中的async await](https://www.cnblogs.com/cpselvis/p/6344122.html)
+- [JS 异步(callback→Promise→async/await)](https://segmentfault.com/a/1190000013141641)
+- [「译」ES5, ES6, ES2016, ES.Next: JavaScript 的版本是怎么回事？](https://huangxuan.me/2015/09/22/js-version/)
+
+## 数组
+
+[13个JavaScript数组reduce的实例方法](https://mp.weixin.qq.com/s/Ozf2WA8D3HlLYcNH0bBbGA)
+
+## 其它
 
 1. 介绍JavaScript的基本数据类型。
 2. 解释JavaScript中的作用域与变量声明提升？
@@ -32,6 +110,12 @@
 19. 数组和对象有哪些原生方法，列举一下？
 20. 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
 21. 用js实现千位分隔符?(来源：前端农民工，提示：正则+replace)
+
+# 运算符
+
+- 空值合并操作符（??）是一个逻辑操作符，当左侧的操作数为 null或者 undefined时，返回其右侧操作数，否则返回左侧操作数。
+- 逻辑空赋值运算符 (x??= y) 仅在x是nullish(null或undefined) 时对其赋值。
+- 可选链操作符( ?. )允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。?. 操作符的功能类似于 . 链式操作符，不同之处在于，在引用为空(nullish) (null或者 undefined) 的情况下不会引起错误，该表达式短路返回值是 undefined。与函数调用一起使用时，如果给定的函数不存在，则返回 undefined。
 
 # DOM
 
@@ -84,76 +168,6 @@
 8. 简述一下 Handlebars 的基本用法？
 9. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
 
-# JS
-
-- [最详尽的 JS 原型与原型链终极详解，没有「可能是」]( https://www.jianshu.com/p/dee9f8b14771)
-- [JS—特殊的对象~函数]( https://www.jianshu.com/p/79c30b99f051)
-- [一探前端开发中的JS调试技巧]( http://seejs.me/2016/03/27/jsdebugger/)
-- 数学运算
-- 取余：%
-- 开方：Math.pow()、 2**3
-- [1.5万字概括ES6全部特性(看图就能记下，值得收藏)]( https://zhuanlan.zhihu.com/p/87699079)
-- PhantomJs https://www.jianshu.com/p/80e984ef94d3
-- 如何编写轻量级 CSS 框架 https://www.cnblogs.com/nzbin/p/7073601.html
-- 个人的中小型项目前端架构浅谈 https://blog.csdn.net/qq20004604/article/details/70480932
-- 了解什么是微前端 https://juejin.im/post/5d1f19e3f265da1bab29ce5f
-- 微前端如何落地 https://www.infoq.cn/article/xm_AaiOTXmLpPgWvX9y9
-- [阻塞非阻塞与同步异步的区别是什么？]( https://leetcode-cn.com/circle/discuss/uHGOZo)
-- isset() defined()
-
-- [(建议精读)原生JS灵魂之问(中)，检验自己是否真的熟悉JavaScript？](https://juejin.im/post/5dbebbfa51882524c507fddb)
-- [前端开发中79条不可忽视的知识点汇总](https://juejin.im/post/5d8989296fb9a06b1f147070)
-- [Lodash](https://juejin.im/post/5c134de65188250918135eb6)
-- [快看，前端开发者都收藏了这几张图表！](https://juejin.im/post/5dc43b6b6fb9a04a945dd6b2)
-- [微服务架构~BFF和网关是如何演化出来的](https://www.cnblogs.com/dadadechengzi/p/9373069.html)
-- [HTTP缓存是如何实现](http://caibaojian.com/http-cache.html)
-- [首页白屏优化实践](https://segmentfault.com/a/1190000020383064)
-- [Webview加载界面白屏解决方法总结](https://blog.csdn.net/qq_34584049/article/details/78280815)
-- [awesome-javascript](https://github.com/sorrycc/awesome-javascript)
-- [Kafka，Mq和Redis作为消息队列使用时的差异有哪些](https://www.jianshu.com/p/a4319755c6da)
-- [Immutable.js了解一下？](https://www.jianshu.com/p/0fa8c7456c15)
-- [package-lock.json的作用](https://www.cnblogs.com/cangqinglang/p/8336754.html)
-
-# ECMAScript6 相关
-
-- Object.is() 与原来的比较操作符“ ===”、“ ==”的区别？
-- ES6是如何实现编译成ES5的？
-- css-loader的原理？
-- ECMAScript6 怎么写class，为什么会出现class这种东西?
-- 谈一谈你对ECMAScript6的了解？
-- ES6、ES7、ES8、ES9、ES10新特性一览 https://juejin.im/post/5ca2e1935188254416288eb2#heading-26
-- promise、await 、async、异步。
-- Async/Await：比Promise更好的6个理由 http://caibaojian.com/asyncawait.html
-- [Javascript中的async await](https://www.cnblogs.com/cpselvis/p/6344122.html)
-- [JS 异步(callback→Promise→async/await)](https://segmentfault.com/a/1190000013141641)
-- [「译」ES5, ES6, ES2016, ES.Next: JavaScript 的版本是怎么回事？](https://huangxuan.me/2015/09/22/js-version/)
-
-# await了解吗？
-
-1. promise
-
-2. 了解ES各版本、着重学习ES6。
-
-3. New Function()
-
-4. Function.prototype 是函数对象，什么是函数对象？
-
-5. null 是一个独立的数据类型，为什么typeof(null)的值是object？
-
-6. prototype原型、原型链 => 继承
-
-7. prototype/ `__proto__`的区别
-
-8. 构造函数
-
-9. call / apply / bind
-
-10. js OOP
-
-11. clone / deepcopy
-
-12. 同步与异步、阻塞与非阻塞
-
 # 面试题
 
 1. [一份 JavaScript 高级面试题](https://zhuanlan.zhihu.com/p/34273811)
@@ -169,26 +183,35 @@
 11. [ES6十道面试题之Promise，有答案的](https://cloud.tencent.com/developer/article/1407125)
 12. [深入理解ES6箭头函数的this以及各类this面试题总结](https://blog.csdn.net/qq_39207948/article/details/79547743)
 13. [ES6系列40道基础题（含答案）](https://blog.csdn.net/qq_39207948/article/details/80678800)
+14. [前端面试必看ES6的15道练习题](https://mp.weixin.qq.com/s/1Hw2QukgCOyjabugISpVlQ)
 
 # 资料
 
-[13个JavaScript数组reduce的实例方法](https://mp.weixin.qq.com/s/Ozf2WA8D3HlLYcNH0bBbGA)
+## 原理
 
-[这难道不是你期待的 ES2021 新特性吗？](https://mp.weixin.qq.com/s/zxpZUV5EYYZbenp8afCgGA)
+[最详尽的 JS 原型与原型链终极详解，没有「可能是」]( https://www.jianshu.com/p/dee9f8b14771)
 
-[理解ECMAScript规范（3）](https://mp.weixin.qq.com/s/1bNRE2t7UBY1UNikC7MC6g)
-
-[使用顶层 await 简化 JS 代码](https://mp.weixin.qq.com/s/XeZXrTa5X-08dBw2I7cg6A)
+[JS—特殊的对象~函数]( https://www.jianshu.com/p/79c30b99f051)
 
 [图文并茂讲清楚 JavaScript 内存管理](https://mp.weixin.qq.com/s/W2AxuO0OgoAUwROMyBwpYg)
 
+[JavaScript有几种原型继承方法？](https://mp.weixin.qq.com/s/DIzvXtyk7rd5m5aUQ8LAkw)
+
+[理解JavaScript中浅拷贝和深拷贝的区别](https://mp.weixin.qq.com/s/qJqgI8qZJCdWq2sudpyLPA)
+
+## 事件
+
 [关于javascript 中的高级定时器的若干问题](https://mp.weixin.qq.com/s/0w8lSk2ZUBsWnzt2QBmkZw)
 
-[如何实现JavaSrcipt页面的跳转](https://mp.weixin.qq.com/s/2c96esPar1I-0Jgg56QTrQ)
+[如何理解JavaScript定时器的4种写法【带面试题讲解】](https://mp.weixin.qq.com/s/UDO_xWR1lsJlijajsLTcxA)
 
 [精读《Tasks, microtasks, queues and schedules》](https://mp.weixin.qq.com/s/osRVRjMzgEnmlBgQrurd3w)
 
-[Promise、Genarator、 Async，这三者的区别和联系，你是否明白？](https://mp.weixin.qq.com/s/_ciah0VIog-IgQ75WqTkGQ)
+[Js阻止事件冒泡与阻止默认事件](https://mp.weixin.qq.com/s/-42rjYODdyBLLgI4J_OgZg)
+
+## 其它
+
+[如何实现JavaSrcipt页面的跳转](https://mp.weixin.qq.com/s/2c96esPar1I-0Jgg56QTrQ)
 
 [JavaScript中foreach()用法及使用的坑](https://mp.weixin.qq.com/s/UfnfazB05LQMnQ3dmbrW_Q)
 
@@ -200,20 +223,18 @@
 
 [JS正则获取HTML所有img的链接 ](https://blog.csdn.net/u011539729/article/details/103618300)
 
-[Js阻止事件冒泡与阻止默认事件](https://mp.weixin.qq.com/s/-42rjYODdyBLLgI4J_OgZg)
-
-[JavaScript有几种原型继承方法？](https://mp.weixin.qq.com/s/DIzvXtyk7rd5m5aUQ8LAkw)
-
 [什么是前端防抖？](https://mp.weixin.qq.com/s/FEVcAsqxTeZQfZT703YVVQ)
 
 [你用得上的25个JS技巧](https://mp.weixin.qq.com/s/AGIi-Ghpdi7U4_eHDOgIVg)
 
-[理解JavaScript中浅拷贝和深拷贝的区别](https://mp.weixin.qq.com/s/qJqgI8qZJCdWq2sudpyLPA)
-
-[前端面试必看ES6的15道练习题](https://mp.weixin.qq.com/s/1Hw2QukgCOyjabugISpVlQ)
-
 [20个常用的JavaScript简写技巧](https://mp.weixin.qq.com/s/ogrWP9Dok_8_PAMU_7fOXg)
 
-[如何理解JavaScript定时器的4种写法【带面试题讲解】](https://mp.weixin.qq.com/s/UDO_xWR1lsJlijajsLTcxA)
-
 [JavaScript生成随机数和随机字符串的5种方法](https://mp.weixin.qq.com/s/i09U7zybD22fQJ5vdoTzDQ)
+
+取余：%
+
+开方：Math.pow()、 2**3
+
+isset() defined()
+
+[(建议精读)原生JS灵魂之问(中)，检验自己是否真的熟悉JavaScript？](https://juejin.im/post/5dbebbfa51882524c507fddb)
