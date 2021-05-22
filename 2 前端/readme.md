@@ -50,6 +50,18 @@ Zepto是一个轻量级的JavaScript库，它的文件大小只有10K左右，�
 yarn add dayjs  #安装
 ```
 
+## SortableJS
+
+```bash
+yarn add vuedraggable@next  # for V3  不能用，版本很长时间没更新了。
+```
+
+## qs
+
+https://github.com/ljharb/qs
+
+[npm qs 模块（中文）](https://www.cnblogs.com/sexintercourse/p/14364050.html)
+
 # 组件
 
 [什么叫组件化开发?](https://www.zhihu.com/question/29735633/answer/90873592)
