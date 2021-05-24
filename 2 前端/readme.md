@@ -56,6 +56,8 @@ yarn add dayjs  #安装
 yarn add vuedraggable@next  # for V3  不能用，版本很长时间没更新了。
 ```
 
+[Sortable.js中文网](http://www.sortablejs.com/index.html)
+
 ## qs
 
 https://github.com/ljharb/qs
@@ -92,7 +94,6 @@ console.log(
 
 # 其它技能
 
-- 设计模式知道什么是singleton, factory, strategy, decrator么?
 - 常使用的库有哪些？常用的前端开发工具？开发过什么应用或组件？
 - 页面重构怎么操作？
 - 列举IE与其他浏览器不一样的特性？
@@ -101,10 +102,27 @@ console.log(
 - 是否了解公钥加密和私钥加密。
 - WEB应用从服务器主动推送Data到客户端有那些方式？
 - 每个模块的代码结构都应该比较简单，且每个模块之间的关系也应该非常清晰，随着功能和迭代次数越来越多，你会如何去保持这个状态的？
-- Git知道branch, diff, merge么?
 - 知道什么是SEO并且怎么优化么?知道各种meta data的含义么?
 - 移动端（Android IOS）怎么做好用户体验?
 - 简单描述一下你做过的移动APP项目研发流程？
+
+# 设计模式
+
+设计模式知道什么是singleton, factory, strategy, decrator么?
+
+# Git
+
+Git知道branch, diff, merge么?
+
+[25个每个人都应该知道的Git命令](https://mp.weixin.qq.com/s/nZjJVcKQIZEbagz4pRjJMg)
+
+# Svelte
+
+[官网](https://www.sveltejs.cn/tutorial/making-an-app)
+
+[新兴前端框架 Svelte 从入门到原理](https://zhuanlan.zhihu.com/p/350507037)
+
+[尝鲜 Svelte 前端框架，开发读书笔记](https://www.sohu.com/a/433313081_115128)
 
 # 安全
 
@@ -553,8 +571,6 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 这是个随笔日记，发现来看的人还真多，我就总结一下：技术要以产品为导向，产品以需求为导向，因为需求才是可以交付的价值，一切为交付服务。
 
-
-
 # 资料
 
 [前端开发中79条不可忽视的知识点汇总](https://juejin.im/post/5d8989296fb9a06b1f147070)
@@ -588,10 +604,6 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 [爱奇艺是如何在活动中台实践低代码的？](https://mp.weixin.qq.com/s/m89lqxxjbfynC_pJeXAl6Q)
 
 [现代化Web开发实践之PWA](https://mp.weixin.qq.com/s/AQzyegbzx_od4RKqetS_ug)
-
-### Git
-
-[25个每个人都应该知道的Git命令](https://mp.weixin.qq.com/s/nZjJVcKQIZEbagz4pRjJMg)
 
 ### 杂项
 
