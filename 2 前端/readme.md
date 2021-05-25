@@ -416,6 +416,8 @@ WebRTC
 
 [「1.4万字」玩转前端Video播放器 | 多图预警](https://segmentfault.com/a/1190000023243743)
 
+[从0到1实现Web端H.265播放器：YUV渲染篇](https://mp.weixin.qq.com/s/9Ui3NcEZ63PcjDb12mLiAQ)
+
 # VS Code
 
 ## 快捷键

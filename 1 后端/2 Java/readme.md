@@ -30,20 +30,7 @@ public static String convertListToString(List list,String mark){
 }
 ```
 
-# 数据库操作
 
-官网项目
-
-```java
-List<ProductDetailsEntity> findAllByShowHeadAndLableLifeStageAndStatus(Integer showhead, Integer lifeStage , Integer status);
-
-@Query(value = "select * from t_product_details where status = 1 and lable_life_stage like :life_stage", nativeQuery = true)
-List<ProductDetailsEntity> findAllShowHeadByLiftStage(String life_stage);
-```
-
-## 资料
-
-Java 获取数据库的库、表、字段信息https://www.jianshu.com/p/e8ad294068bc
 
 # 原理
 
@@ -107,6 +94,21 @@ JavaBean是可序列化的，实现了serializable接口
 
 [java注解-最通俗易懂的讲解]( https://zhuanlan.zhihu.com/p/37701743)
 
+# 开发热更新
+
+在springboot的项目中，可以配置一个dev-tools插件，也可以实现小幅度的热加载，但是体验不怎么好，因为它是相当于帮你做了重启tomcat的工作，你还是需要等待重启的时间。
+
+## IDEA热部署插件Jrebel安装以及使用步骤
+
+https://blog.csdn.net/qq_36501591/article/details/114606613
+
+1. 下载安装Jreble，然后重启IDE。
+2. 生成一个GUID：b88f27f4-b791-48d2-b075-0ed7f6973693  [在线生成GUID地址](https://www.guidgen.com/)
+3. 根据反向代理服务器地址拼接激活地址 https://jrebel.qekang.com/b88f27f4-b791-48d2-b075-0ed7f6973693
+4. 打开jrebel 激活面板 . 选择Connect to online licensing service .
+
+
+
 # DDD
 
 [以理性不断的崇敬 - 对 DDD 之后复杂业务软件系统设计的思考]( https://xie.infoq.cn/article/6938f09ca191361f383615890)
@@ -130,9 +132,24 @@ JavaBean是可序列化的，实现了serializable接口
 java.sql.Timestamp now = new java.sql.Timestamp(new Date().getTime());
 query.where(qInterestRateEntity.timePublish.lt(now));
 query.where(qInterestRateEntity.timeExpire.gt(now));
+
+// 时间空值及复合逻辑比较
+predicate = ExpressionUtils.and(predicate, qInterestRateEntity.publishTime.lt(now).or(qInterestRateEntity.publishTime.isNull()));
+                predicate = ExpressionUtils.and(predicate, qInterestRateEntity.expireTime.gt(now).or(qInterestRateEntity.expireTime.isNull()));
 ```
 
-# QueryDSL
+
+
+接口参数
+
+```java
+List<ProductDetailsEntity> findAllByShowHeadAndLableLifeStageAndStatus(Integer showhead, Integer lifeStage , Integer status);
+
+@Query(value = "select * from t_product_details where status = 1 and lable_life_stage like :life_stage", nativeQuery = true)
+List<ProductDetailsEntity> findAllShowHeadByLiftStage(String life_stage);
+```
+
+## QueryDSL
 
 关于 QueryDSL 配置和使用（详细）https://blog.csdn.net/qq_36537546/article/details/95315040
 
@@ -165,6 +182,14 @@ Ps：lombok 可以已注解的方式来对代码进行简化，省去了 get 和
 
 QueryDSL目前只支持：Update,Delete,Select操作，不支持Save操作，但是看官方文档有insert操作，这个目前没去试验！
 
+## 资料
+
+[QueryDsl使用](https://www.jianshu.com/p/8bb33f86d158)
+
+[Spring Boot(五)：Spring Boot Jpa 的使用](http://www.ityouknow.com/springboot/2016/08/20/spring-boot-jpa.html)
+
+[Java 获取数据库的库、表、字段信息](https://www.jianshu.com/p/e8ad294068bc)
+
 # 批处理
 
 [为什么阿里云要做流批一体？]( https://www.infoq.cn/article/YKKZj6IjzdRzdLLs83Kg)
@@ -191,8 +216,7 @@ QueryDSL目前只支持：Update,Delete,Select操作，不支持Save操作，但
 
 [首席技术官：你的同事尊重你吗？]( https://www.infoq.cn/article/gwcL2psAF0WzhViD8xGw)
 
-QueryDsl使用https://www.jianshu.com/p/8bb33f86d158
+[Protobuf比JSON性能更好](https://zhuanlan.zhihu.com/p/53339153)
 
-Spring Boot(五)：Spring Boot Jpa 的使用http://www.ityouknow.com/springboot/2016/08/20/spring-boot-jpa.html
+[Windows 关闭端口号](https://blog.csdn.net/qq_35974759/article/details/88850940)
 
-【翻译】Protobuf比JSON性能更好https://zhuanlan.zhihu.com/p/53339153

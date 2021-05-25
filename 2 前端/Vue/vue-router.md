@@ -402,3 +402,9 @@ outer.matcher是比较核心的一个属性。对外提供两个方法match(负�
 https://www.cnblogs.com/rever/p/11577322.html
 
 不处理。
+
+
+
+## 资料
+
+[Vue 路由组件传参的 8 种方式](https://mp.weixin.qq.com/s/-mSBuGcjmSMT5C7KaLgftQ)
