@@ -190,6 +190,115 @@ QueryDSL目前只支持：Update,Delete,Select操作，不支持Save操作，但
 
 [Java 获取数据库的库、表、字段信息](https://www.jianshu.com/p/e8ad294068bc)
 
+# 文件操作
+
+## 读本地文件，然后下载
+
+```java
+@ApiOperation(value = "文件下载")
+@GetMapping("/download")
+public HttpServletResponse fileDownload( HttpServletResponse response) {
+    String path = "d:/a.txt";
+    String fileName = "new_file.txt";
+
+    try {
+        // path是指欲下载的文件的路径。
+        File file = new File(path);
+
+        // 取得文件名。
+        String filename = file.getName();
+        // 取得文件的后缀名。
+        String ext = filename.substring(filename.lastIndexOf(".") + 1).toUpperCase();
+
+        // 以流的形式下载文件。
+        InputStream fis = new BufferedInputStream(new FileInputStream(path));
+        byte[] buffer = new byte[fis.available()];
+        fis.read(buffer);
+        fis.close();
+
+        // 清空response
+        response.reset();
+        // 设置response的Header
+        response.addHeader("Content-Disposition", "attachment;filename=" + fileName);
+        response.addHeader("Content-Length", "" + file.length());
+        OutputStream toClient = new BufferedOutputStream(response.getOutputStream());
+        response.setContentType("application/octet-stream");
+        toClient.write(buffer);
+        toClient.flush();
+        toClient.close();
+    } catch (IOException ex) {
+        ex.printStackTrace();
+    }
+    
+    return response;
+}
+```
+
+
+
+## 读网络文件，然后下载
+
+```java
+@ApiOperation(value = "文件下载")
+@GetMapping("/download")
+public HttpServletResponse fileDownload( HttpServletResponse response) {
+    String path = "d:/a.txt";
+    String fileName = "new_icon.jpg";
+    String urlStr = "http://www.tomtalk.net/uploads/thumbnail/1b3f99234b1c9c5ad3970f8280265939.jpg";
+    String savePath = "d:/icon";
+
+    try {
+
+        URL url = new URL(urlStr);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        // 设置超时间为3秒
+        conn.setConnectTimeout(3 * 1000);
+        // 防止屏蔽程序抓取而返回403错误
+        conn.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)");
+
+        // 得到输入流
+        InputStream inputStream = conn.getInputStream();
+        // 获取自己数组
+        byte[] getData = readInputStream(inputStream);
+
+        // 清空response
+        response.reset();
+        // 设置response的Header
+        response.addHeader("Content-Disposition", "attachment;filename=" + fileName);
+        response.addHeader("Content-Length", "" + getData.length);
+        OutputStream toClient = new BufferedOutputStream(response.getOutputStream());
+        response.setContentType("application/octet-stream");
+        toClient.write(getData);
+        toClient.flush();
+        toClient.close();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    return response;
+}
+
+/**
+ * 从输入流中获取字节数组
+ *
+ * @param inputStream
+ * @return
+ * @throws IOException
+ */
+private static byte[] readInputStream(InputStream inputStream) throws IOException {
+    byte[] buffer = new byte[1024];
+    int len = 0;
+    ByteArrayOutputStream bos = new ByteArrayOutputStream();
+    while ((len = inputStream.read(buffer)) != -1) {
+        bos.write(buffer, 0, len);
+    }
+    bos.close();
+    return bos.toByteArray();
+}
+```
+
+
+
 # 批处理
 
 [为什么阿里云要做流批一体？]( https://www.infoq.cn/article/YKKZj6IjzdRzdLLs83Kg)
