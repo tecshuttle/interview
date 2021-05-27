@@ -204,6 +204,10 @@ QueryDSL目前只支持：Update,Delete,Select操作，不支持Save操作，但
 
 [爱奇艺微服务标准技术架构实践]( https://www.infoq.cn/article/AJj3lKQyaKVeA08Bgj9e)
 
+# 分布式
+
+[Seata 是什么?](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
+
 # 资料
 
 [RestTemplate实践]( https://www.jianshu.com/p/0fd5f3f64137)

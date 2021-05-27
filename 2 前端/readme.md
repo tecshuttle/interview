@@ -4,6 +4,7 @@
 - [阮一峰](https://www.ruanyifeng.com/)
 - [玉伯](https://maimai.cn/article/detail?fid=1610849252&efid=K8dkpVhSHLb-7JRmNE79JQ)
 - [郭宇](https://www.zhihu.com/question/375888332)
+- 刘博文
 
 # 面试
 
@@ -18,6 +19,17 @@
 [高频前端开发面试问题及答案整理](https://mp.weixin.qq.com/s/eJH0Eh1iBohPoeXwHvfwng)
 
 [400道前端工程师常考必考面试题+详细解答](https://mp.weixin.qq.com/s/J9YV_ZqmqvkutjVSJTJJVA)
+
+# DOM
+
+1. DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
+
+# BOM
+
+1. 什么是window对象? 什么是document对象?[BOM部分基础知识总结](https://www.cnblogs.com/2010master/p/5824215.html)，[BOM和DOM详解](https://www.jb51.net/article/55851.htm)。
+1. **documen.write和 innerHTML的区别？**<br/>document.write会将页面上的所有内容清除包括标题，innerHTML只会重写所属元素的内容。<br/>document.write是直接写入到页面的内容流，会导致页面被重写。innerHTML则是DOM页面元素的一个属性，代表该元素的html内容。你可以精确到某一个具体的元素来进行更改。<br/>两者都可动态包含外部资源如JavaScript文件。通过document.write插入`<script>`元素会自动执行其中的脚本；大多数浏览器中，通过innerHTML插入`<script>`元素并不会执行其中的脚本。
+1. 检测浏览器版本版本有哪些方式？
+1. [javascript中BOM部分基础知识总结]( https://www.cnblogs.com/2010master/p/5824215.html)
 
 # 库
 
@@ -63,6 +75,12 @@ yarn add vuedraggable@next  # for V3  不能用，版本很长时间没更新了
 https://github.com/ljharb/qs
 
 [npm qs 模块（中文）](https://www.cnblogs.com/sexintercourse/p/14364050.html)
+
+## framer
+
+https://www.framer.com/motion
+
+动画库，提供了一些简单地API帮助我们创建复杂的动效，这些简化的API帮助然我们抽象出动画背后的复杂性，让创建动画变得简单。
 
 # 组件
 
@@ -116,7 +134,21 @@ Git知道branch, diff, merge么?
 
 [25个每个人都应该知道的Git命令](https://mp.weixin.qq.com/s/nZjJVcKQIZEbagz4pRjJMg)
 
-# Svelte
+
+
+# 框架
+
+1. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
+2. Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
+3. Node.js的适用场景？
+4. (如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?
+5. 解释一下 Backbone 的 MVC 实现方式？
+6. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
+7. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
+8. 简述一下 Handlebars 的基本用法？
+9. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
+
+## Svelte
 
 [官网](https://www.sveltejs.cn/tutorial/making-an-app)
 

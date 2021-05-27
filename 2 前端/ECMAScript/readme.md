@@ -117,16 +117,11 @@ https://segmentfault.com/a/1190000039352300
 - 逻辑空赋值运算符 (x??= y) 仅在x是nullish(null或undefined) 时对其赋值。
 - 可选链操作符( ?. )允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。?. 操作符的功能类似于 . 链式操作符，不同之处在于，在引用为空(nullish) (null或者 undefined) 的情况下不会引起错误，该表达式短路返回值是 undefined。与函数调用一起使用时，如果给定的函数不存在，则返回 undefined。
 
-# DOM
+# 书籍
 
-1. DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
+- 犀牛书
 
-# BOM
-
-1. 什么是window对象? 什么是document对象?[BOM部分基础知识总结](https://www.cnblogs.com/2010master/p/5824215.html)，[BOM和DOM详解](https://www.jb51.net/article/55851.htm)。
-1. **documen.write和 innerHTML的区别？**<br/>document.write会将页面上的所有内容清除包括标题，innerHTML只会重写所属元素的内容。<br/>document.write是直接写入到页面的内容流，会导致页面被重写。innerHTML则是DOM页面元素的一个属性，代表该元素的html内容。你可以精确到某一个具体的元素来进行更改。<br/>两者都可动态包含外部资源如JavaScript文件。通过document.write插入`<script>`元素会自动执行其中的脚本；大多数浏览器中，通过innerHTML插入`<script>`元素并不会执行其中的脚本。
-1. 检测浏览器版本版本有哪些方式？
-1. [javascript中BOM部分基础知识总结]( https://www.cnblogs.com/2010master/p/5824215.html)
+- 红宝书
 
 # 高级主题
 
@@ -155,18 +150,6 @@ https://segmentfault.com/a/1190000039352300
 11. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
 12. 移动端最小触控区域是多大？
 13. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
-
-# 框架
-
-1. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
-2. Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
-3. Node.js的适用场景？
-4. (如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?
-5. 解释一下 Backbone 的 MVC 实现方式？
-6. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
-7. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
-8. 简述一下 Handlebars 的基本用法？
-9. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
 
 # 面试题
 
