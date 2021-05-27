@@ -299,6 +299,18 @@ private static byte[] readInputStream(InputStream inputStream) throws IOExceptio
 
 
 
+# Lucene
+
+[SpringBoot整合Lucene实现全文检索](https://blog.csdn.net/lovely960823/article/details/110046111)
+
+[第17课：Spring Boot 集成 Lucence](https://gitchat.csdn.net/columnTopic/5b47fa84fa56195ed488ad1f)
+
+[Spring Boot 中使用 Lucene](https://blog.csdn.net/panjianlongWUHAN/article/details/84982554)
+
+[Lucene实现全文检索技术(包含SpringBoot整合Lucene 7.6.0 )](https://www.jianshu.com/p/a7d7092fba02)
+
+
+
 # 批处理
 
 [为什么阿里云要做流批一体？]( https://www.infoq.cn/article/YKKZj6IjzdRzdLLs83Kg)
