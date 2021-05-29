@@ -102,7 +102,7 @@ JavaBean是可序列化的，实现了serializable接口
 
 https://blog.csdn.net/qq_36501591/article/details/114606613
 
-1. 下载安装Jreble，然后重启IDE。
+1. 下载安装Jreble，File->Settings->Plugins->Marketplace，然后重启IDE。
 2. 生成一个GUID：b88f27f4-b791-48d2-b075-0ed7f6973693  [在线生成GUID地址](https://www.guidgen.com/)
 3. 根据反向代理服务器地址拼接激活地址 https://jrebel.qekang.com/b88f27f4-b791-48d2-b075-0ed7f6973693
 4. 打开jrebel 激活面板 . 选择Connect to online licensing service .
@@ -301,13 +301,7 @@ private static byte[] readInputStream(InputStream inputStream) throws IOExceptio
 
 # Lucene
 
-[SpringBoot整合Lucene实现全文检索](https://blog.csdn.net/lovely960823/article/details/110046111)
-
-[第17课：Spring Boot 集成 Lucence](https://gitchat.csdn.net/columnTopic/5b47fa84fa56195ed488ad1f)
-
-[Spring Boot 中使用 Lucene](https://blog.csdn.net/panjianlongWUHAN/article/details/84982554)
-
-[Lucene实现全文检索技术(包含SpringBoot整合Lucene 7.6.0 )](https://www.jianshu.com/p/a7d7092fba02)
+★[第17课：Spring Boot 集成 Lucence](https://gitchat.csdn.net/columnTopic/5b47fa84fa56195ed488ad1f)
 
 
 
