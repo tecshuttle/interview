@@ -1,15 +1,16 @@
+# 算法
 
 https://leetcode-cn.com/
 
 
 
-# 深度学习
+# 自然语言处理
 
-★[Kaggle入门，看这一篇就够了](https://zhuanlan.zhihu.com/p/25686876)
+语雀知识库：自然语言处理https://www.yuque.com/mathpythondata/kt4xgg
 
-[Kaggle如何入门？](https://www.zhihu.com/question/23987009)
 
-# 资料
+
+## 资料
 
 [自然语言处理中句子相似度计算的几种方法](https://cloud.tencent.com/developer/article/1145941)
 
@@ -34,3 +35,16 @@ https://leetcode-cn.com/
 [CS224n-2019 笔记列表](https://zhuanlan.zhihu.com/p/68502016)
 
 [斯坦福CS224N深度学习自然语言处理（一）](https://zhuanlan.zhihu.com/p/26259699)
+
+
+
+# 深度学习
+
+★[Kaggle入门，看这一篇就够了](https://zhuanlan.zhihu.com/p/25686876)
+
+[Kaggle如何入门？](https://www.zhihu.com/question/23987009)
+
+
+
+# 资料
+
