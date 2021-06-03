@@ -625,6 +625,28 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 [Immutable.js了解一下？](https://www.jianshu.com/p/0fa8c7456c15)
 
+[call、apply和bind方法的用法以及区别 ](https://www.jianshu.com/p/bc541afad6ee)
+
+[彻底弄懂bind，apply，call三者的区别 ](https://zhuanlan.zhihu.com/p/82340026)
+
+[几张图让你看懂WebAssembly ](https://www.jianshu.com/p/bff8aa23fe4d)
+
+[（可参考）vue2.x+iview实现可编辑表格 ](https://zhuanlan.zhihu.com/p/81027411)
+
+[Vue.js实现可编辑的表格 ](https://www.jb51.net/article/176195.htm)
+
+[vue+iview 实现可编辑表格的示例代码 ](https://www.jb51.net/article/149855.htm)
+
+[国内有哪些互联网公司已经开始使用 HTTP/2 了？](https://www.zhihu.com/question/38166198)
+
+[Rust Web框架怎么选？研究本文就够了！](https://blog.csdn.net/weixin_45583158/article/details/104489414)
+
+[常见的web性能优化方法](https://blog.csdn.net/daimomo000/article/details/72897436)
+
+[前端性能优化的七大手段](https://www.cnblogs.com/xiaohuochai/p/9178390.html)
+
+[网页上用 Rust 渲染十万个待办事项有多快？](https://zhuanlan.zhihu.com/p/112223727)
+
 ### DevOps
 
 [K8S怎么就和微服务成死对头了？](https://mp.weixin.qq.com/s/sJWoiDwc-VwR-euakeb7iA)

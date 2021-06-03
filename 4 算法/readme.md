@@ -4,19 +4,31 @@
 
 - 于建国
 
+# 比赛
 
+★[有哪些值得推荐的计算机专业的竞赛？](https://www.zhihu.com/question/48762643)
+
+[计算机比赛有哪些？参加这些计算机类比赛，“钱”途 前途都有了！](https://zhuanlan.zhihu.com/p/362944027)
+
+[计算机领域有哪些常见的比赛？](https://blog.csdn.net/qq_36761831/article/details/104956605)
 
 # 算法
 
+## leetcode
+
 https://leetcode-cn.com/
 
+[从力扣周赛来看刷题语言热度](https://leetcode-cn.com/circle/article/xTpoHG/)
 
+## 算法题
+
+[如何从N个数中选出最大（小）的n个数？ ](https://blog.csdn.net/fisher_jiang/article/details/2473698)
+
+[从n个数选出最大的m个的算法比较 ](https://blog.csdn.net/qq_17612199/article/details/51203518)
 
 # 自然语言处理
 
 语雀知识库：自然语言处理https://www.yuque.com/mathpythondata/kt4xgg
-
-
 
 ## 资料
 
