@@ -1,3 +1,8 @@
+# 书籍
+
+- 《Thinking in Java》第4版
+- 《Core Java》第11版
+
 # Java语法
 
 ## 遍历List
@@ -29,8 +34,6 @@ public static String convertListToString(List list,String mark){
   return  StringUtils.join(list,";").toString();
 }
 ```
-
-
 
 # 原理
 
