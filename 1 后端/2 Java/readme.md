@@ -3,6 +3,30 @@
 - 《Thinking in Java》第4版
 - 《Core Java》第11版
 
+# HelloWorld
+
+```java
+public class HelloWorld{ 
+    public static void main(String[] args) {  
+        System.out.println("Hello World!"); 
+    }
+}
+```
+
+###运行java程序
+```bash
+$ javac HelloWorld.java
+$ java HelloWorld  #文件名后面不要带.class后缀，否则会报错“错误：找不到或无法加载主类”。
+Hello World!
+```
+
+###打包可运行的jar文件
+```bash
+$ jar -cvfe HelloWorld.jar HelloWorld HelloWorld.class
+$ java -jar HelloWorld.jar
+Hello World!
+```
+
 # Java语法
 
 ## 遍历List
