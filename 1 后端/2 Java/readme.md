@@ -366,3 +366,10 @@ private static byte[] readInputStream(InputStream inputStream) throws IOExceptio
 
 [Windows 关闭端口号](https://blog.csdn.net/qq_35974759/article/details/88850940)
 
+Java的各个版本和各个版本的历史版本号的关系与解读https://blog.csdn.net/wq6ylg08/article/details/91351603
+
+如何选择Java版本https://www.cnblogs.com/Eva0110/p/14075653.html
+
+jdk版本的选择（推荐1.8）https://zhuanlan.zhihu.com/p/51228073
+
+一文彻底搞懂令人疑惑的Java和JDK的版本命名！https://blog.csdn.net/sinat_33921105/article/details/117513645
