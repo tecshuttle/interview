@@ -272,8 +272,6 @@ public HttpServletResponse fileDownload( HttpServletResponse response) {
 }
 ```
 
-
-
 ## 读网络文件，然后下载
 
 ```java
@@ -332,6 +330,58 @@ private static byte[] readInputStream(InputStream inputStream) throws IOExceptio
     }
     bos.close();
     return bos.toByteArray();
+}
+```
+
+## 读网络文件，保存至本地
+
+```java
+@ApiOperation(value = "文件下载")
+@GetMapping("/download")
+public HttpServletResponse fileDownload(
+        HttpServletResponse response,
+        @RequestParam(value = "fileUrl") String fileUrl,
+        @RequestParam(value = "fileName") String fileName
+) {
+    try {
+        // 1. 读取网络文件数据
+        URL url = new URL(fileUrl);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setConnectTimeout(3 * 1000); // 设置超时间为3秒
+        conn.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)");
+        InputStream inputStream = conn.getInputStream();
+        byte[] fileStream = readInputStream(inputStream);
+
+
+        // 2. 保存文件到本地
+        //String path = ResourceUtils.getURL("classpath:").getPath() + "static/upload";
+        //path = path.replace('/', '\\').substring(1,path.length()) ;
+        String path = "/file/temp";
+
+        File saveDir = new File(path);
+
+        if (!saveDir.exists()) {
+            saveDir.mkdirs();
+        }
+
+        File file = new File(saveDir + File.separator + fileName);
+        FileOutputStream fos = new FileOutputStream(file);
+        fos.write(fileStream);
+        if (fos != null) {
+            fos.close();
+        }
+        if (inputStream != null) {
+            inputStream.close();
+        }
+
+        // 3. 跳转到本地文件
+        fileName = URLEncoder.encode(fileName, "UTF-8");
+        response.sendRedirect("http://www.tomtalk.net/file/temp/" + fileName);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    return response;
 }
 ```
 
