@@ -1,0 +1,15 @@
+<html>
+  <body></body>
+  <script>
+    let arr = JSON.parse(JSON.stringify(Array(101)));
+    arr = "C".repeat(101).split("").keys();
+
+    for (let i of arr) {
+      console.log(i);
+    }
+
+    let arr2 = Array.from({ length: 100 });
+
+    console.log(arr2.keys());
+  </script>
+</html>

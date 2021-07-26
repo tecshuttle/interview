@@ -1,0 +1,62 @@
+<html>
+  <body></body>
+  <script>
+    function inValid(s) {
+      if (s.trim() === '') {
+        return fasle;
+      }
+
+      let brace = s.split('');
+      if (brace.length === 1) {
+        return false;
+      }
+
+      let left = ['[', '(', '{'];
+      let right = [']', ')', '}'];
+
+      let holder = [];
+
+      for (let char of brace) {
+        if (holder.length === 0) {
+          // 右括号直接返回false
+          if (left.indexOf(char) > -1) {
+            holder.push(char);
+          } else {
+            return false;
+          }
+        } else {
+          // 1. 有配对，直接清出holder
+          let hit = false;
+          let leftIndex = null;
+          let rightIndex = null;
+
+          if (left.indexOf(holder[holder.length - 1]) === right.indexOf(char)) {
+            hit = true;
+            holder.pop();
+          }
+
+          // 2. 没有配对，存入holder
+          if (!hit) {
+            if (left.indexOf(char) > -1) {
+              holder.push(char);
+            } else {
+              return false; // 不能是右括号
+            }
+          }
+        }
+      }
+
+      // 3. holder要全部清空
+      return holder.length === 0;
+    }
+
+    console.log(inValid('()'));
+    console.log(inValid('()[]{}'));
+    console.log(inValid('{[]}'));
+    console.log(inValid(')('));
+    console.log(inValid('([)]'));
+    console.log(inValid('(]'));
+    console.log(inValid('(}{)'));
+    console.log(inValid(')(){}'));
+  </script>
+</html>

@@ -1,0 +1,27 @@
+<html>
+  <body></body>
+  <script>
+    let a = [1, 2, 3, 1, 2, 3, 4, 5];
+    let b = [2, 3, 2, 3];
+
+    // 方法一
+    let sub = [];
+    new Set(a).forEach((v) => {
+      if (b.indexOf(v) === -1) {
+        sub.push(v);
+      }
+    });
+
+    console.log(sub);
+
+    // 方法二
+    console.log(
+      a.filter((v) => {
+        return b.indexOf(v) === -1;
+      })
+    );
+
+    // 方法三
+    console.log(a.filter((x) => ! new Set(b).has(x)));
+  </script>
+</html>
