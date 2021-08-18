@@ -160,6 +160,31 @@ Git知道branch, diff, merge么?
 
 - 是否了解Web注入攻击，说下原理，最常见的两种攻击（XSS和CSRF）了解到什么程度？
 
+## SEO
+
+[前端，你要知道的SEO知识](https://mp.weixin.qq.com/s/h9CLv8XWnAKzTg2YqngiDg)
+
+https://zh.nuxtjs.org/
+
+https://www.nuxtjs.cn/ 中文网
+
+### Nuxt报错：Though the "loose" option was set to "false" in your @babel/preset-env config
+
+在 nuxt.config.js 的 build 加上该插件就行了
+
+```javascript
+build: {
+    parallel: true,
+    babel:{
+      plugins:[
+        ["@babel/plugin-proposal-private-methods", { "loose": true }]
+      ]
+   }
+}
+```
+
+
+
 # 性能
 
 - 你有用过哪些前端性能优化的方法？
@@ -675,7 +700,51 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 [Web前端的路该怎么走？](https://www.zhihu.com/question/34388831/answer/61429937)
 
+[JS计算两个数组的交集、差集、并集、补集](https://blog.csdn.net/qq_45039540/article/details/112554604)
 
+[Real DOM和 Virtual DOM 的区别？优缺点？](https://www.cnblogs.com/houxianzhou/p/15047476.html)
+
+[react hooks的诞生](https://zhuanlan.zhihu.com/p/50953073)
+
+[不用循环，不用递归，输出1到100的整数](https://www.cnblogs.com/igin/archive/2008/07/12/1241388.html)
+
+[ES6不用循坏快速创建从0到N的数组的方法及详解](https://blog.csdn.net/qq_28473731/article/details/79537303)
+
+[理解 JavaScript 中的高阶函数](https://zhuanlan.zhihu.com/p/49579052)
+
+[全网最完整的JavaScript迭代器](https://blog.csdn.net/qq_39287602/article/details/108795880)
+
+[「中文」React Native 最佳实践 - 前端 - 掘金](https://juejin.im/entry/57146f338ac247006478f2d3)
+
+[一文看懂npm、yarn、pnpm之间的区别](http://geek.csdn.net/news/detail/197339)
+
+[Yarn vs npm：你需要知道的一切](https://zhuanlan.zhihu.com/p/23493436)
+
+[聊一聊前端自动化测试](https://segmentfault.com/a/1190000004558796)
+
+[js为什么是单线程的？](https://www.cnblogs.com/langzianan/p/8403330.html)
+
+[Ant Design - 一个 UI 设计语言](https://ant.design/index-cn)
+
+[Ant Design Mobile - 移动端设计规范](https://mobile.ant.design/index-cn)
+
+[arnog/mathlive: Math input made easy](https://github.com/arnog/mathlive)
+
+[display 的 32 种写法](https://www.cnblogs.com/langzianan/p/8403331.html)
+
+[组件 | Element](https://element.eleme.cn/#/zh-CN/component/installation)
+
+[组件 · Bootstrap 中文文档](http://v3.bootcss.com/components/)
+
+[蚂蚁数据可视化 - AntV](https://antv.alipay.com/zh-cn/index.html)
+
+[Font Awesome Icons](http://fontawesome.io/icons/)
+
+[FullCalendar - Full-sized Calendar jQuery Plugin](http://arshaw.com/fullcalendar/)
+
+[fullCalendar:中文API](http://blog.163.com/lizhenming_2008/blog/static/7655833320124304254255/)
+
+[git-trash/repo.jsx at master · kureikain/git-trash · GitHub](https://github.com/kureikain/git-trash/blob/master/src/repo.jsx)
 
 
 

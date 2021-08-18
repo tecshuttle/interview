@@ -91,6 +91,14 @@ https://www.jianshu.com/p/cfe25e757d0e
 
 [Vue3 路由跳转与参数获取](https://blog.csdn.net/xiamoziqian/article/details/112170257)
 
+# 组件
+
+[vue组件传值的11种方式](https://blog.csdn.net/dan_seek/article/details/102641761)
+
+[Vue - 生命周期详解](https://www.jianshu.com/p/672e967e201c)
+
+[vue 生命周期共分为四个阶段](https://m.zhipin.com/mpa/html/get/share?type=2&contentId=fcf8ecee1ac913c6pnJ-2t--FA~~)
+
 # 优化
 
 [九种Vue性能优化方法](https://www.jianshu.com/p/f372d0e3de80)
@@ -109,5 +117,9 @@ https://www.jianshu.com/p/cfe25e757d0e
 
 [说说你对 VUE 的理解?](https://m.zhipin.com/mpa/html/get/column?contentId=6687c624f10c470cqxB93dU~)
 
-[vue 生命周期共分为四个阶段](https://m.zhipin.com/mpa/html/get/share?type=2&contentId=fcf8ecee1ac913c6pnJ-2t--FA~~)
+[vue项目之动态改变url参数 ](https://blog.csdn.net/QQ_Empire/article/details/85061274)
+
+[vuex的优缺点](https://blog.csdn.net/l13640698113/article/details/109224692)
+
+[Vue.js中 watch(深度监听)的最易懂的解释](https://www.cnblogs.com/yesu/p/9546458.html)
 
