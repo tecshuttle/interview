@@ -100,6 +100,10 @@ console.log(
 
 [一探前端开发中的JS调试技巧]( http://seejs.me/2016/03/27/jsdebugger/)
 
+[前端容易忽略的debugger调试技巧](https://mp.weixin.qq.com/s/VOoDHqIo4gh3scHVNxk3lA)
+
+[你需要知道的javaScript的调试](https://juejin.cn/post/6992098793722216462)
+
 [Chrome开发者工具9个调试技巧详解](https://www.jb51.net/article/147438.htm)
 
 [Chrome——F12谷歌开发者工具详解](https://www.cnblogs.com/xiaowenshu/p/10450848.html)
@@ -107,6 +111,10 @@ console.log(
 [Chrome开发者工具-高级使用技巧](https://blog.csdn.net/qq_42313447/article/details/113425649)
 
 [Chrome开发者工具中文文档](https://www.html.cn/doc/chrome-devtools)
+
+[面对this指向丢失，尤雨溪在Vuex源码中是怎么处理的](https://juejin.cn/post/6991701614612447239)
+
+[如何优雅的使用console](https://mp.weixin.qq.com/s/yVY3N14Vr9Fl2Y1twH-VJQ)
 
 [Web Performance Metrics与Core Web Vitals简介](https://mp.weixin.qq.com/s/Hmkod3gYRR38B6Qdp1Iu6g)
 
@@ -204,6 +212,8 @@ build: {
 [V8内存浅析](https://zhuanlan.zhihu.com/p/33816534)
 
 [【译】了解V8内存管理](https://www.keisei.top/architecture-of-v8-memory/)
+
+[从Chrome源码看浏览器如何构建DOM树](https://zhuanlan.zhihu.com/p/24911872)
 
 [HTTP缓存是如何实现](http://caibaojian.com/http-cache.html)
 
@@ -529,6 +539,8 @@ Single quote
 
 Semi
 
+[VSCode Prettier 单引号设置无效](https://blog.csdn.net/Lyrelion/article/details/113569702)
+
 ## Theme
 
 - Cobalt2：比默认theme更好，关键字更突出。
@@ -609,6 +621,8 @@ Semi
 [VS Code1.47发布！全新的JavaScript debugger来了！](https://zhuanlan.zhihu.com/p/158675930)
 
 [远程开发初探-VSCode Remote Development](https://zhuanlan.zhihu.com/p/82568294)
+
+
 
 # 跨端
 

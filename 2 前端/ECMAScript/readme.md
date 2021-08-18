@@ -182,6 +182,8 @@ https://segmentfault.com/a/1190000039352300
 
 [理解JavaScript中浅拷贝和深拷贝的区别](https://mp.weixin.qq.com/s/qJqgI8qZJCdWq2sudpyLPA)
 
+[全网最完整的JavaScript迭代器](https://blog.csdn.net/qq_39287602/article/details/108795880)
+
 ## 事件
 
 [关于javascript 中的高级定时器的若干问题](https://mp.weixin.qq.com/s/0w8lSk2ZUBsWnzt2QBmkZw)
