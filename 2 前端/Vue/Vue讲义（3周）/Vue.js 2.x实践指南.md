@@ -16,7 +16,7 @@ Promises基本概念介绍
 10 ES7语法糖async/await
 11 开发工具
 Visual Studio Code
-vuedevtools
+vue dev tools
 Chrome
 
 # 第2章 Vue基础入门
