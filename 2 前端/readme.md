@@ -70,6 +70,10 @@ yarn add vuedraggable@next  # for V3  不能用，版本很长时间没更新了
 
 [Sortable.js中文网](http://www.sortablejs.com/index.html)
 
+## Lodash
+
+[Lodash](https://juejin.im/post/5c134de65188250918135eb6)
+
 ## qs
 
 https://github.com/ljharb/qs
@@ -142,8 +146,6 @@ Git知道branch, diff, merge么?
 
 [25个每个人都应该知道的Git命令](https://mp.weixin.qq.com/s/nZjJVcKQIZEbagz4pRjJMg)
 
-
-
 # 框架
 
 1. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
@@ -195,7 +197,7 @@ build: {
 
 # 性能
 
-- 你有用过哪些前端性能优化的方法？
+你有用过哪些前端性能优化的方法？
 
 [10分钟彻底搞懂前端页面性能监控](https://zhuanlan.zhihu.com/p/82981365)
 
@@ -622,8 +624,6 @@ Semi
 
 [远程开发初探-VSCode Remote Development](https://zhuanlan.zhihu.com/p/82568294)
 
-
-
 # 跨端
 
 分享这半年的 Electron 应用开发和优化经验http://www.uml.org.cn/AJAX/2020032621.asp
@@ -648,7 +648,7 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 [前端开发中79条不可忽视的知识点汇总](https://juejin.im/post/5d8989296fb9a06b1f147070)
 
-[Lodash](https://juejin.im/post/5c134de65188250918135eb6)
+
 
 [快看，前端开发者都收藏了这几张图表！](https://juejin.im/post/5dc43b6b6fb9a04a945dd6b2)
 
@@ -714,21 +714,7 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 [Web前端的路该怎么走？](https://www.zhihu.com/question/34388831/answer/61429937)
 
-[JS计算两个数组的交集、差集、并集、补集](https://blog.csdn.net/qq_45039540/article/details/112554604)
-
 [Real DOM和 Virtual DOM 的区别？优缺点？](https://www.cnblogs.com/houxianzhou/p/15047476.html)
-
-[react hooks的诞生](https://zhuanlan.zhihu.com/p/50953073)
-
-[不用循环，不用递归，输出1到100的整数](https://www.cnblogs.com/igin/archive/2008/07/12/1241388.html)
-
-[ES6不用循坏快速创建从0到N的数组的方法及详解](https://blog.csdn.net/qq_28473731/article/details/79537303)
-
-[理解 JavaScript 中的高阶函数](https://zhuanlan.zhihu.com/p/49579052)
-
-[全网最完整的JavaScript迭代器](https://blog.csdn.net/qq_39287602/article/details/108795880)
-
-[「中文」React Native 最佳实践 - 前端 - 掘金](https://juejin.im/entry/57146f338ac247006478f2d3)
 
 [一文看懂npm、yarn、pnpm之间的区别](http://geek.csdn.net/news/detail/197339)
 

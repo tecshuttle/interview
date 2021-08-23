@@ -111,6 +111,14 @@ https://segmentfault.com/a/1190000039352300
 20. 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
 21. 用js实现千位分隔符?(来源：前端农民工，提示：正则+replace)
 
+[不用循环，不用递归，输出1到100的整数](https://www.cnblogs.com/igin/archive/2008/07/12/1241388.html)
+
+[ES6不用循坏快速创建从0到N的数组的方法及详解](https://blog.csdn.net/qq_28473731/article/details/79537303)
+
+[理解 JavaScript 中的高阶函数](https://zhuanlan.zhihu.com/p/49579052)
+
+[全网最完整的JavaScript迭代器](https://blog.csdn.net/qq_39287602/article/details/108795880)
+
 # 运算符
 
 - 空值合并操作符（??）是一个逻辑操作符，当左侧的操作数为 null或者 undefined时，返回其右侧操作数，否则返回左侧操作数。
@@ -153,20 +161,35 @@ https://segmentfault.com/a/1190000039352300
 
 # 面试题
 
-1. [一份 JavaScript 高级面试题](https://zhuanlan.zhihu.com/p/34273811)
-2. [BAT前端开发面试题]( https://www.jianshu.com/p/1d0b6e6aee90)
-3. [前端开发面试题收集(js部分)](https://www.cnblogs.com/wj204/p/5816455.html)
-4. [10 个常问的 JS 面试题](https://juejin.im/post/5dc360bef265da4d307f193a)
-5. [7道简单的 JavaScript 面试题，三个月没招到一个人](https://juejin.im/post/5dbe818a6fb9a0203c34e4bb)
-6. [听说会做这道题的人后来都进了头条？](https://juejin.im/post/5dca5516f265da4d3429b003)
-7. [JS 原生面经从初级到高级【近1.5W字】](https://juejin.im/post/5daeefc8e51d4524f007fb15)
-8. [五分钟带你领略: 腾讯半年来出现最频繁的算法之一——字符串解码](https://juejin.im/post/5dc2a7cce51d4504f0726a00)
-9. [可能是最全的 “文本溢出截断省略” 方案合集](https://juejin.im/post/5dc15b35f265da4d432a3d10)
-10. [面试常见ES6问题集锦]( https://zhuanlan.zhihu.com/p/61068657)
-11. [ES6十道面试题之Promise，有答案的](https://cloud.tencent.com/developer/article/1407125)
-12. [深入理解ES6箭头函数的this以及各类this面试题总结](https://blog.csdn.net/qq_39207948/article/details/79547743)
-13. [ES6系列40道基础题（含答案）](https://blog.csdn.net/qq_39207948/article/details/80678800)
-14. [前端面试必看ES6的15道练习题](https://mp.weixin.qq.com/s/1Hw2QukgCOyjabugISpVlQ)
+[一份 JavaScript 高级面试题](https://zhuanlan.zhihu.com/p/34273811)
+
+[BAT前端开发面试题]( https://www.jianshu.com/p/1d0b6e6aee90)
+
+[前端开发面试题收集(js部分)](https://www.cnblogs.com/wj204/p/5816455.html)
+
+[10 个常问的 JS 面试题](https://juejin.im/post/5dc360bef265da4d307f193a)
+
+[7道简单的 JavaScript 面试题，三个月没招到一个人](https://juejin.im/post/5dbe818a6fb9a0203c34e4bb)
+
+[听说会做这道题的人后来都进了头条？](https://juejin.im/post/5dca5516f265da4d3429b003)
+
+[JS 原生面经从初级到高级【近1.5W字】](https://juejin.im/post/5daeefc8e51d4524f007fb15)
+
+[五分钟带你领略: 腾讯半年来出现最频繁的算法之一——字符串解码](https://juejin.im/post/5dc2a7cce51d4504f0726a00)
+
+[可能是最全的 “文本溢出截断省略” 方案合集](https://juejin.im/post/5dc15b35f265da4d432a3d10)
+
+[面试常见ES6问题集锦]( https://zhuanlan.zhihu.com/p/61068657)
+
+[ES6十道面试题之Promise，有答案的](https://cloud.tencent.com/developer/article/1407125)
+
+[深入理解ES6箭头函数的this以及各类this面试题总结](https://blog.csdn.net/qq_39207948/article/details/79547743)
+
+[ES6系列40道基础题（含答案）](https://blog.csdn.net/qq_39207948/article/details/80678800)
+
+[前端面试必看ES6的15道练习题](https://mp.weixin.qq.com/s/1Hw2QukgCOyjabugISpVlQ)
+
+[JS计算两个数组的交集、差集、并集、补集](https://blog.csdn.net/qq_45039540/article/details/112554604)
 
 # 资料
 

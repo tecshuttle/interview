@@ -2,6 +2,8 @@
 
 ### Web前端技术的发展
 
+《前端架构：从入门到微前端》第1章 前端架构
+
 前端静态页面走向动态页面的转变
 
 程序后端走向前端的转变
@@ -50,9 +52,116 @@ Vue.js与其它框架比较
 
 知识图、生态、https://github.com/vuejs/awesome-vue
 
+#### 资料
+
+【译】Angular vs React vs Vuehttps://zhuanlan.zhihu.com/p/28349401
+
+React VS Vue：2020年选哪个更好？https://zhuanlan.zhihu.com/p/88267994
+
+Reactjs vs. Vuejshttps://zhuanlan.zhihu.com/p/26757994
+
+8分钟为你详解React、Angular、Vue三大前端技术https://www.cnblogs.com/huaweiyun/p/12979587.html
+
+“前端架构”React，Angular还是Vue，太难选了？看完秒懂https://new.qq.com/omn/20201105/20201105A0H3NT00.html
+
+技术趋势：React vs Vue vs Angularhttps://www.cnblogs.com/willick/p/React-vs-Vue-vs-Angular.html
+
+作为前端，真的有必要把三大JS框架（vue，react，angular）都学会吗?https://www.zhihu.com/question/368330227
+
+前端框架angular，angularJS，React，Vue对比https://blog.csdn.net/xinghuowuzhao/article/details/104562732
+
 ### 示例
 
 创建一个Vue实例
+
+```bash
+$ vue create user-list
+$ cd user-list
+$ npm run serve
+```
+
+代码
+
+```html
+<template>
+  <div class="hello">
+    <div class="form">
+      <p>姓名：<input v-model="formVal.name" /></p>
+      <p>
+        性别：
+        <select v-model="formVal.sex">
+          <option value="1">男</option>
+          <option value="0">女</option>
+        </select>
+      </p>
+      <p>年龄：<input v-model="formVal.old" /></p>
+      <p><button @click="add">添加</button></p>
+    </div>
+
+    <table>
+      <tr>
+        <td>序号</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>年龄</td>
+      </tr>
+      <tr v-for="(item, index) in userList" :key="index">
+        <td>{{ index + 1 }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.sex === "1" ? "男" : "女" }}</td>
+        <td>{{ item.old }}</td>
+        <td><button @click="del(index)">删除</button></td>
+      </tr>
+    </table>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      formVal: {},
+      userList: [
+        { name: "Tom", sex: 1, old: 42 },
+        { name: "Jack", sex: 1, old: 36 },
+        { name: "Elle", sex: 0, old: 18 },
+      ],
+    };
+  },
+  methods: {
+    add() {
+      if (Object.keys(this.formVal).length === 3) {
+        this.userList.push(this.formVal);
+        this.formVal = {};
+      }
+    },
+    del(index) {
+      this.userList.splice(index, 1);
+    },
+  },
+};
+</script>
+
+<style scoped>
+table {
+  width: 100%;
+}
+
+div.form {
+  width: 50%;
+  margin: 1em auto 1em auto;
+}
+
+input,
+select {
+  width: 160px;
+}
+
+div.form p {
+  text-align: left;
+}
+</style>
+```
 
 模板语法
 
