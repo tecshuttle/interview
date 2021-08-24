@@ -48,6 +48,7 @@ Vue.js简史
 
 - 版本及特点
 - [Vue简史](https://zhuanlan.zhihu.com/p/58261979)
+- [Vue最全知识点](https://zhuanlan.zhihu.com/p/168589606)
 
 Vue特点
 
