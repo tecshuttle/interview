@@ -30,11 +30,24 @@ Web开发面临的问题
 
 解决方案：前后端分离
 
+### 资料
+
+[Web前端技术发展简史](https://www.cnblogs.com/luwanlin/p/11228147.html)
+
+[前端的发展历程](https://zhuanlan.zhihu.com/p/53211263)
+
+[盘点Web前端20年的技术变迁史](https://cloud.tencent.com/developer/article/1492656)
+
+[前端发展简史](https://blog.csdn.net/freekiteyu/article/details/79927047)
+
+[Web前端发展史](https://segmentfault.com/a/1190000020281750)
+
 ### 初识Vue.js
 
 Vue.js简史
 
 - 版本及特点
+- [Vue简史](https://zhuanlan.zhihu.com/p/58261979)
 
 Vue特点
 
@@ -44,31 +57,7 @@ Vue特点
   - 状态侦测
   - 虚拟DOM与Diff算法
 
-Vue.js与其它框架比较
-
-- Angular
-
-- React
-
 知识图、生态、https://github.com/vuejs/awesome-vue
-
-#### 资料
-
-【译】Angular vs React vs Vuehttps://zhuanlan.zhihu.com/p/28349401
-
-React VS Vue：2020年选哪个更好？https://zhuanlan.zhihu.com/p/88267994
-
-Reactjs vs. Vuejshttps://zhuanlan.zhihu.com/p/26757994
-
-8分钟为你详解React、Angular、Vue三大前端技术https://www.cnblogs.com/huaweiyun/p/12979587.html
-
-“前端架构”React，Angular还是Vue，太难选了？看完秒懂https://new.qq.com/omn/20201105/20201105A0H3NT00.html
-
-技术趋势：React vs Vue vs Angularhttps://www.cnblogs.com/willick/p/React-vs-Vue-vs-Angular.html
-
-作为前端，真的有必要把三大JS框架（vue，react，angular）都学会吗?https://www.zhihu.com/question/368330227
-
-前端框架angular，angularJS，React，Vue对比https://blog.csdn.net/xinghuowuzhao/article/details/104562732
 
 ### 示例
 
@@ -204,4 +193,24 @@ div.form p {
 最佳实践
 
 # 面试题（2天）
+
+
+
+# 资料
+
+[【译】Angular vs React vs Vue](https://zhuanlan.zhihu.com/p/28349401)
+
+[React VS Vue：2020年选哪个更好？](https://zhuanlan.zhihu.com/p/88267994)
+
+[Reactjs vs. Vuejs](https://zhuanlan.zhihu.com/p/26757994)
+
+[8分钟为你详解React、Angular、Vue三大前端技术](https://www.cnblogs.com/huaweiyun/p/12979587.html)
+
+[“前端架构”React，Angular还是Vue，太难选了？看完秒懂](https://new.qq.com/omn/20201105/20201105A0H3NT00.html)
+
+[技术趋势：React vs Vue vs Angular](https://www.cnblogs.com/willick/p/React-vs-Vue-vs-Angular.html)
+
+[作为前端，真的有必要把三大JS框架（vue，react，angular）都学会吗?](https://www.zhihu.com/question/368330227)
+
+[前端框架angular，angularJS，React，Vue对比](https://blog.csdn.net/xinghuowuzhao/article/details/104562732)
 
