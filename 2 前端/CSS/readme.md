@@ -100,3 +100,13 @@
 # 面试题
 
 1. [前端开发面试题收集(css部分)](https://www.cnblogs.com/wj204/p/5813736.html)
+
+# 资料
+
+[css - 如何实现图片的角标呢？](https://segmentfault.com/q/1010000006551803)
+
+[CSS Grid 网格布局教程 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
+
+[CSS 下拉菜单](https://www.runoob.com/css/css-dropdowns.html)
+
+[CSS布局十八般武艺都在这里了](https://segmentfault.com/a/1190000008789039)

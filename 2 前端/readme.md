@@ -146,6 +146,14 @@ Git知道branch, diff, merge么?
 
 [25个每个人都应该知道的Git命令](https://mp.weixin.qq.com/s/nZjJVcKQIZEbagz4pRjJMg)
 
+[git打tag - 简书](https://www.jianshu.com/p/cdd80dd15593)
+
+[Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN)
+
+[git cherry-pick 教程](http://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html)
+
+[Git操作 ：从一个分支cherry-pick多个commit到其他分支](https://www.jianshu.com/p/c787fa885ffd)
+
 # 框架
 
 1. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
@@ -222,6 +230,8 @@ build: {
 [首页白屏优化实践](https://segmentfault.com/a/1190000020383064)
 
 [Webview加载界面白屏解决方法总结](https://blog.csdn.net/qq_34584049/article/details/78280815)
+
+[前端优化-如何计算白屏和首屏时间](https://www.cnblogs.com/longm/p/7382163.html)
 
 ## 深度剖析浏览器渲染性能原理
 
@@ -644,11 +654,41 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 这是个随笔日记，发现来看的人还真多，我就总结一下：技术要以产品为导向，产品以需求为导向，因为需求才是可以交付的价值，一切为交付服务。
 
+# DevOps
+
+[K8S怎么就和微服务成死对头了？](https://mp.weixin.qq.com/s/sJWoiDwc-VwR-euakeb7iA)
+
+[DevOps编年史](https://mp.weixin.qq.com/s/2HqJoSGUa-5-vMOFqePgWg)
+
+[前端场景下CI/CD的探索与实践](https://mp.weixin.qq.com/s/Y-i20dQgSPu86KFVC7wNTA)
+
+# 行业
+
+[爱奇艺是如何在活动中台实践低代码的？](https://mp.weixin.qq.com/s/m89lqxxjbfynC_pJeXAl6Q)
+
+[现代化Web开发实践之PWA](https://mp.weixin.qq.com/s/AQzyegbzx_od4RKqetS_ug)
+
 # 资料
 
 [前端开发中79条不可忽视的知识点汇总](https://juejin.im/post/5d8989296fb9a06b1f147070)
 
+[小程序的老祖宗PWA为什么没有火起来？](https://baijiahao.baidu.com/s?id=1612919514973793701&wfr=spider&for=pc)
 
+[自制前端脚手架](https://cloud.tencent.com/developer/article/1547353)
+
+[JS获取文件扩展名方法](https://www.cnblogs.com/FallIntoDarkness/p/9757334.html)
+
+[web前端在线预览，编辑word文件的方法汇总（2021-7-14更新）](https://blog.csdn.net/qq_41312395/article/details/109450562)
+
+[TinyMCE中文文档](http://tinymce.ax-z.cn/)
+
+[MVC、MVP、MVVM的区别和联系（精讲版）]( http://c.biancheng.net/view/7743.html)
+
+[MVC，MVP 和 MVVM 的图示](http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html)
+
+[MVVM和MVC模型的区别](http://metronic.net.cn/metronic/show-42520.html)
+
+[五分钟了解互联网Web技术发展史](https://new.qq.com/omn/20210331/20210331A0CN8U00.html)
 
 [快看，前端开发者都收藏了这几张图表！](https://juejin.im/post/5dc43b6b6fb9a04a945dd6b2)
 
@@ -685,22 +725,6 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 [前端性能优化的七大手段](https://www.cnblogs.com/xiaohuochai/p/9178390.html)
 
 [网页上用 Rust 渲染十万个待办事项有多快？](https://zhuanlan.zhihu.com/p/112223727)
-
-### DevOps
-
-[K8S怎么就和微服务成死对头了？](https://mp.weixin.qq.com/s/sJWoiDwc-VwR-euakeb7iA)
-
-[DevOps编年史](https://mp.weixin.qq.com/s/2HqJoSGUa-5-vMOFqePgWg)
-
-[前端场景下CI/CD的探索与实践](https://mp.weixin.qq.com/s/Y-i20dQgSPu86KFVC7wNTA)
-
-### 行业
-
-[爱奇艺是如何在活动中台实践低代码的？](https://mp.weixin.qq.com/s/m89lqxxjbfynC_pJeXAl6Q)
-
-[现代化Web开发实践之PWA](https://mp.weixin.qq.com/s/AQzyegbzx_od4RKqetS_ug)
-
-### 杂项
 
 [数据库大牛李海翔详解全局读一致性技术](https://maimai.cn/article/detail?fid=1349253255&efid=FJJMyCrwqQFfoZ7rYKtc_A&share_channel=2&use_rn=1&_share_channel=wechat)
 

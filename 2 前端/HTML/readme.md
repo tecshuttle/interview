@@ -21,6 +21,28 @@
 2. 浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？
 3. 请描述一下cookies，sessionStorage和localStorage的区别？
 
+# 自适应
+
+[静态布局、自适应布局、流式布局、响应式布局、弹性布局等的概念和区别](https://www.cnblogs.com/yanayana/p/7066948.html)
+
+[响应式（自适应）网页设计](https://blog.csdn.net/qq_40164190/article/details/83089459)
+
+[自适应和响应式的介绍和区别](https://blog.csdn.net/li_li_lin/article/details/80675092)
+
+[响应式（自适应）网页设计](http://www.zuidaima.com/blog/4397162647342080.htm)
+
+[响应式布局与自适应式布局有什么不同](https://baijiahao.baidu.com/s?id=1627060039271152391&wfr=spider&for=pc)
+
+[响应式布局和自适应布局详解](http://caibaojian.com/356.html)
+
+[响应式网站自适应网站的区别以及利与弊](https://zhuanlan.zhihu.com/p/43702870)
+
+[自适应与响应式网站设计：最佳比较指南](https://www.sumaart.com/share/1161.html)
+
+[自适应和响应式的区别](https://www.jianshu.com/p/b8c5493f743e)
+
+[自适应网站和响应式网站有什么区别，哪个更利于SEO一些]( https://www.yelangcn.com/view/1495.html)
+
 # 应用
 
 1. **页面可见性（Page Visibility API）可以有哪些用途？**<br/>如果页面最小化了或者隐藏在了其他标签页后面，那么有些功能是可以停下来的。目前，只有IE 10和Chrome支持这个API。《JS高级程序设计（第三版）》P686
@@ -263,6 +285,4 @@ HTML 2.0：1995年1 1月作为RFC 1866发布，于2000年6月发布之后被宣�
 HTML 3.2：1997年1月14日，W3C推荐标准。
 HTML 4.0：1997年12月18日，W3C推荐标准。
 HTML 4.01（微小改进）：1999年12月24日，W3C推荐标准。
-HTML5：2014年10月28日，W3C推荐标准；
-
-# 
+HTML5：2014年10月28日，W3C推荐标准。
