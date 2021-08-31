@@ -40,6 +40,10 @@ https://zhuanlan.zhihu.com/p/112010468
 
 [HTTP缓存——协商缓存（缓存验证）](https://www.cnblogs.com/padding1015/p/15169091.html)
 
+[设计一个无懈可击的浏览器缓存方案：关于思路，细节，ServiceWorker，以及HTTP/2](https://zhuanlan.zhihu.com/p/28113197)
+
+[缓存位置可分Service Worker、Memory Cache、Disk Cache、Push Cache四种](https://blog.csdn.net/m0_37217612/article/details/107942864)
+
 ## 参考资料
 
 [可能是全网最全的http面试答案HTTP协议](https://juejin.cn/post/6844903865410650126)
