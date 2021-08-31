@@ -163,6 +163,14 @@ https://blog.csdn.net/qq_36501591/article/details/114606613
 
 [Spring integration 基本概念 ](https://www.jianshu.com/p/bf1643539f99)
 
+[Spring Cloud Data Flow初探](https://www.jianshu.com/p/f91f5e42d71f)
+
+[springboot 静态资源访问，和文件上传 ，以及路径问题](https://www.cnblogs.com/xiaowangbangzhu/p/10304211.html)
+
+[SpringBoot开发案例之配置静态资源文件路径](https://blog.csdn.net/zhoujiyu123/article/details/80255445)
+
+[SSH和SSM区别](https://www.jianshu.com/p/ae1b0287cd0a)
+
 # 数据库操作
 
 ```java

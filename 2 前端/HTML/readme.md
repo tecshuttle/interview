@@ -253,3 +253,16 @@ goBack.onclick = function () {
 
 [网页中的形状图形都是怎么画出来的？](https://mp.weixin.qq.com/s/OWd7D7tnt2Vh8U8oduF5Cw)
 
+[HTML最新标准HTML5小结](https://www.cnblogs.com/chenpi/p/5578011.html)
+
+[H5 是 HTML5 吗？](https://zhuanlan.zhihu.com/p/29027643)
+
+HTML历史上有如下版本：
+HTML 1.0：在1993年6月作为互联网工程工作小组(IETF)工作草案发布。
+HTML 2.0：1995年1 1月作为RFC 1866发布，于2000年6月发布之后被宣布已经过时。
+HTML 3.2：1997年1月14日，W3C推荐标准。
+HTML 4.0：1997年12月18日，W3C推荐标准。
+HTML 4.01（微小改进）：1999年12月24日，W3C推荐标准。
+HTML5：2014年10月28日，W3C推荐标准；
+
+# 

@@ -99,6 +99,10 @@ https://www.jianshu.com/p/cfe25e757d0e
 
 [vue 生命周期共分为四个阶段](https://m.zhipin.com/mpa/html/get/share?type=2&contentId=fcf8ecee1ac913c6pnJ-2t--FA~~)
 
+[vue组件缓存之keep-alive正确使用姿势](https://zhuanlan.zhihu.com/p/352059246)
+
+[Vue 中的组件缓存](https://blog.csdn.net/weixin_44827418/article/details/119055387)
+
 # 优化
 
 [九种Vue性能优化方法](https://www.jianshu.com/p/f372d0e3de80)
@@ -123,5 +127,9 @@ https://www.jianshu.com/p/cfe25e757d0e
 
 [Vue.js中 watch(深度监听)的最易懂的解释](https://www.cnblogs.com/yesu/p/9546458.html)
 
+[Vue学习路线图](https://blog.csdn.net/xiangzhihong8/article/details/84963201)
 
+[Vue.js 项目开发学习路线图](https://www.cnblogs.com/yqmcu/p/10796025.html)
+
+[前端学习路线图-Vue.js项目实战](https://zhuanlan.zhihu.com/p/101418102)
 

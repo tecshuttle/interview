@@ -179,3 +179,17 @@ Next.js
 [React 中 setState() 为什么是异步的？]( https://www.jqhtml.com/15392.html)
 
 [Generator与react状态机（14）]( https://zhuanlan.zhihu.com/p/60914496)
+
+[Reactjs历史时间轴一览](https://www.jianshu.com/p/ad533d71f79e)
+
+[React发展历史](https://blog.csdn.net/Leon_Jinhai_Sun/article/details/103442727)
+
+[React 学习路线图 - 2018版](https://zhuanlan.zhihu.com/p/39744174)
+
+[React框架发展史](https://www.deaboway.com/react%e6%a1%86%e6%9e%b6%e5%8f%91%e5%b1%95%e5%8f%b2.html)
+
+[React Hook的发展史](https://juejin.cn/post/6995889352400338951)
+
+[vue 和 react发展史、设计思想及维度](https://bbs.huaweicloud.com/blogs/257646)
+
+[React 学习路线图 - 2018版](https://zhuanlan.zhihu.com/p/39744174)

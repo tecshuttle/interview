@@ -37,3 +37,7 @@
 [线性代数——02 基、线性组合](https://www.jianshu.com/p/43ae620ec882)
 
 [110道Python面试题（真题）](https://zhuanlan.zhihu.com/p/54430650)
+
+[从 Python 2 迁移到 Go：虽然代码量多，但太香了](https://www.infoq.cn/article/hFCLqOMPbuH4qrAwXYM7)
+
+[jackfrued/Python-100-Days: Python - 100天从新手到大师](https://github.com/jackfrued/Python-100-Days)

@@ -28,15 +28,31 @@ https://zhuanlan.zhihu.com/p/112010468
 
 
 
-## 参考资料
+## 缓存
 
 [从 0 到 1 上手 bfcache 往返缓存](https://mp.weixin.qq.com/s/eAxooCtufmua4nDnBCpshQ)
 
-[可能是全网最全的http面试答案HTTP协议](https://juejin.cn/post/6844903865410650126)
-
 [浅析HTTP缓存](https://mp.weixin.qq.com/s/dt1_TrjgAwRxz73vqeACiw)
 
+[强缓存和协商缓存](https://www.jianshu.com/p/fb59c770160c)
+
+[缓存（二）——浏览器缓存机制：强缓存、协商缓存](https://github.com/amandakelake/blog/issues/41)
+
+[HTTP缓存——协商缓存（缓存验证）](https://www.cnblogs.com/padding1015/p/15169091.html)
+
+## 参考资料
+
+[可能是全网最全的http面试答案HTTP协议](https://juejin.cn/post/6844903865410650126)
+
 [都2019年了，还问GET和POST的区别](https://zhuanlan.zhihu.com/p/57361216)
+
+[POST与GET的区别及RESTful](http://blog.csdn.net/shiyaru1314/article/details/47294871)
+
+[浏览器HTTP请求并发数和TCP连接的关系](https://blog.csdn.net/u012193330/article/details/99713563)
+
+[401、402、403、404分别是什么意思？](https://www.cnblogs.com/lgj8/p/12072587.html)
+
+
 
 # TCP/IP
 
