@@ -87,7 +87,7 @@ axios.all([getUserAccount(), getUserPermissions()])
 
 ##### axios(config)
 
-```
+```js
 // 发送 POST 请求
 axios({
   method: 'post',
@@ -110,7 +110,7 @@ axios({
 
 ##### axios(url[, config])
 
-```
+```js
 // 发送 GET 请求（默认的方法）
 axios('/user/12345');
 ```
