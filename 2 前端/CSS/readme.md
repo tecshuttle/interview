@@ -10,6 +10,8 @@
 
 1. 对BFC规范(块级格式化上下文：block formatting context)的理解？
 
+
+
 # 特性
 
 1. CSS选择符有哪些？哪些属性可以继承？
@@ -23,6 +25,8 @@
 1. 浏览器是怎样解析CSS选择器的？
 
 1. style标签写在body后与body前有什么区别？
+
+
 
 # 属性
 
@@ -54,6 +58,8 @@
 1. display:inline-block 什么时候会显示间隙？(携程)
 
 1. overflow: scroll时不能平滑滚动的问题怎么处理？
+
+
 
 # 应用
 
@@ -97,9 +103,13 @@
 8. 什么是Cookie 隔离？（或者说：请求资源的时候不要让它带cookie怎么做）
 9. rem布局的优缺点
 
+
+
 # 面试题
 
-1. [前端开发面试题收集(css部分)](https://www.cnblogs.com/wj204/p/5813736.html)
+[前端开发面试题收集(css部分)](https://www.cnblogs.com/wj204/p/5813736.html)
+
+
 
 # 资料
 
