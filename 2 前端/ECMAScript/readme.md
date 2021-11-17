@@ -33,6 +33,140 @@ https://segmentfault.com/a/1190000039352300
 
 # 语言特性
 
+## 原型
+
+### 最详尽的 JS 原型与原型链终极详解
+
+https://www.jianshu.com/p/dee9f8b14771
+
+#### 一 普通对象与函数对象
+
+JavaScript 中，万物皆对象！但对象也是有区别的。分为：
+
+- 普通对象
+- 函数对象
+
+#### 二 构造函数
+
+person1 和 person2 都是 Person 的实例。这两个实例都有一个 constructor （构造函数）属性，该属性（是一个指针）指向 Person。
+
+#### 三 原型对象
+
+每个对象都有 `__proto__` 属性，但只有函数对象才有prototype属性。
+
+```js
+Person.prototype.constructor == Person
+person1.constructor == Person
+```
+
+那原型对象是用来做什么的呢？主要作用是用于继承。
+
+#### 四 `__proto__`
+
+JS 在创建对象（不论是普通对象还是函数对象）的时候，都有一个叫做`__proto__` 的内置属性，用于指向创建它的构造函数的原型对象。
+
+```js
+person1.__proto__ == Person.prototype
+```
+
+#### 五 构造器
+
+```js
+var obj = {}
+// 它等同于下面这样
+var obj = new Object()
+```
+
+构造器都是函数对象。
+
+#### 六 原型链
+
+小测试来检验一下你理解的怎么样：
+
+1. `person1.__proto__` 是什么？
+2. `Person.__proto__` 是什么？
+3. `Person.prototype.__proto__` 是什么？
+4. `Object.__proto__` 是什么？
+5. `Object.prototype.__proto__` 是什么？
+
+#### 七 函数对象
+
+所有函数对象的`__proto__`都指向Function.prototype，它是一个空函数（Empty function）。
+
+Function.prototype也是唯一一个typeof XXX.prototype为 function的prototype。其它的构造器的prototype都是一个对象。
+
+```js
+Function.prototype.__proto__ === Object.prototype  // true
+Object.prototype.__proto__ === null // true
+```
+
+#### 八 prototype
+
+在 ECMAScript 核心所定义的全部属性中，最耐人寻味的就要数 prototype 属性了。对于 ECMAScript 中的引用类型而言，prototype 是保存着它们所有实例方法的真正所在。换句话所说，诸如 toString()和 valuseOf() 等方法实际上都保存在 prototype 名下，只不过是通过各自对象的实例访问罢了。
+
+——《JavaScript 高级程序设计》第三版 P116
+
+```javascript
+var arrayAllKeys = Array.prototype; // [] 空数组
+
+console.log(Object.getOwnPropertyNames(arrayAllKeys)); 
+/*
+["length", "constructor", "toString", "toLocaleString", "join", "pop", "push", 
+"concat", "reverse", "shift", "unshift", "slice", "splice", "sort", "filter", "forEach", 
+"some", "every", "map", "indexOf", "lastIndexOf", "reduce", "reduceRight", 
+"entries", "keys", "copyWithin", "find", "findIndex", "fill"]
+*/
+```
+
+JS的hasOwnPrototype()方法和 in 操作符
+
+https://blog.csdn.net/a18792627168/article/details/106735231
+
+#### 九 复习一下
+
+```js
+p.__proto__ === Person.prototype; // true
+p.__proto__ === p.constructor.prototype; // true
+```
+
+#### 十 原型链（再复习一下：）
+
+```javascript
+function Person(){}
+var person1 = new Person();
+console.log(person1.__proto__ === Person.prototype); // true
+console.log(Person.prototype.__proto__ === Object.prototype) //true
+console.log(Object.prototype.__proto__) //null
+
+Person.__proto__ == Function.prototype; //true
+console.log(Function.prototype)// function(){} (空函数)
+
+var num = new Array()
+console.log(num.__proto__ == Array.prototype) // true
+console.log( Array.prototype.__proto__ == Object.prototype) // true
+console.log(Array.prototype) // [] (空数组)
+console.log(Object.prototype.__proto__) //null
+
+console.log(Array.__proto__ == Function.prototype)// true
+```
+
+#### 十一 总结
+
+- 原型和原型链是JS实现继承的一种模型。
+- 原型链的形成是真正是靠`__proto__` 而非prototype。
+
+### JavaScript有几种原型继承方法？
+
+https://mp.weixin.qq.com/s/DIzvXtyk7rd5m5aUQ8LAkw
+
+#### 1 简单混入继承
+
+#### 2 混入式原型继承
+
+#### 3 替换式原型继承
+
+#### 4 Object.create()方法实现原型继承
+
 ## 相等
 
 ## 异步
@@ -197,13 +331,9 @@ https://segmentfault.com/a/1190000039352300
 
 ## 原理
 
-[最详尽的 JS 原型与原型链终极详解，没有「可能是」]( https://www.jianshu.com/p/dee9f8b14771)
-
 [JS—特殊的对象~函数]( https://www.jianshu.com/p/79c30b99f051)
 
 [图文并茂讲清楚 JavaScript 内存管理](https://mp.weixin.qq.com/s/W2AxuO0OgoAUwROMyBwpYg)
-
-[JavaScript有几种原型继承方法？](https://mp.weixin.qq.com/s/DIzvXtyk7rd5m5aUQ8LAkw)
 
 [理解JavaScript中浅拷贝和深拷贝的区别](https://mp.weixin.qq.com/s/qJqgI8qZJCdWq2sudpyLPA)
 

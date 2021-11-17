@@ -122,6 +122,8 @@ console.log(
 
 [Web Performance Metrics与Core Web Vitals简介](https://mp.weixin.qq.com/s/Hmkod3gYRR38B6Qdp1Iu6g)
 
+[聊一聊前端自动化测试](https://segmentfault.com/a/1190000004558796)
+
 # 其它技能
 
 - 常使用的库有哪些？常用的前端开发工具？开发过什么应用或组件？
@@ -174,9 +176,35 @@ Git知道branch, diff, merge么?
 
 [尝鲜 Svelte 前端框架，开发读书笔记](https://www.sohu.com/a/433313081_115128)
 
+## 资料
+
+[如何编写轻量级 CSS 框架](https://www.cnblogs.com/nzbin/p/7073601.html)
+
+[（可参考）vue2.x+iview实现可编辑表格 ](https://zhuanlan.zhihu.com/p/81027411)
+
+[Vue.js实现可编辑的表格 ](https://www.jb51.net/article/176195.htm)
+
+[vue+iview 实现可编辑表格的示例代码 ](https://www.jb51.net/article/149855.htm)
+
+[Rust Web框架怎么选？研究本文就够了！](https://blog.csdn.net/weixin_45583158/article/details/104489414)
+
+[网页上用 Rust 渲染十万个待办事项有多快？](https://zhuanlan.zhihu.com/p/112223727)
+
+[组件 | Element](https://element.eleme.cn/#/zh-CN/component/installation)
+
+[组件 · Bootstrap 中文文档](http://v3.bootcss.com/components/)
+
+[Ant Design - 一个 UI 设计语言](https://ant.design/index-cn)
+
+[Ant Design Mobile - 移动端设计规范](https://mobile.ant.design/index-cn)
+
+
+
 # 安全
 
 - 是否了解Web注入攻击，说下原理，最常见的两种攻击（XSS和CSRF）了解到什么程度？
+
+
 
 ## SEO
 
@@ -207,31 +235,206 @@ build: {
 
 你有用过哪些前端性能优化的方法？
 
-[10分钟彻底搞懂前端页面性能监控](https://zhuanlan.zhihu.com/p/82981365)
+## 渲染页面：浏览器的工作原理
 
-[(1w字)前端都该懂的浏览器工作原理，你懂了吗？](https://zhuanlan.zhihu.com/p/140700610)
+https://developer.mozilla.org/zh-CN/docs/Web/Performance/How_browsers_work
 
-[渲染性能](https://www.jianshu.com/p/b74e348612de)
+## 图解浏览器的基本工作原理
 
-[V8引擎版本发布流程](https://zhuanlan.zhihu.com/p/35038142)
+https://www.infoq.cn/article/CS9-WZQlNR5h05HHDo1b
 
-[了解V8引擎如何运行JS](https://www.jianshu.com/p/c71c714c27bd)
+### 前言
 
-[V8的内存限制](https://cnodejs.org/topic/5ade9f8fa7d228c16b9871fd)
+- 可能每一个前端工程师都想要理解浏览器的工作原理。
 
-[V8内存浅析](https://zhuanlan.zhihu.com/p/33816534)
+- 我们希望知道从在浏览器地址栏中输入 url 到页面展现的短短几秒内浏览器究竟做了什么；
 
-[【译】了解V8内存管理](https://www.keisei.top/architecture-of-v8-memory/)
+- 我们希望了解平时常常听说的各种代码优化方案是究竟为什么能起到优化的作用；
 
-[从Chrome源码看浏览器如何构建DOM树](https://zhuanlan.zhihu.com/p/24911872)
+- 我们希望更细化的了解浏览器的渲染流程。
 
-[HTTP缓存是如何实现](http://caibaojian.com/http-cache.html)
+### 浏览器的多进程架构
 
-[首页白屏优化实践](https://segmentfault.com/a/1190000020383064)
+#### 1 进程（process）和线程（thread）
 
-[Webview加载界面白屏解决方法总结](https://blog.csdn.net/qq_34584049/article/details/78280815)
+一个好的程序常常被划分为几个相互独立又彼此配合的模块，浏览器也是如此，以 Chrome 为例，它由多个进程组成，每个进程都有自己核心的职责，它们相互配合完成浏览器的整体功能，每个进程中又包含多个线程，一个进程内的多个线程也会协同工作，配合完成所在进程的职责。
 
-[前端优化-如何计算白屏和首屏时间](https://www.cnblogs.com/longm/p/7382163.html)
+#### 2 浏览器的架构
+
+- Browser Process：负责包括地址栏，书签栏，前进后退按钮等部分的工作；负责处理浏览器的一些不可见的底层操作，比如网络请求和文件访问；
+- Renderer Process：负责一个 tab 内关于网页呈现的所有事情；
+- Plugin Process：负责控制一个网页用到的所有插件，如 flash；
+- GPU Process：负责处理 GPU 相关的任务。
+
+<img src="images/browser_1.png" width="80%"/>
+
+#### 3 Chrome 多进程架构的优缺点
+
+优点
+
+- 某一渲染进程出问题不会影响其他进程；
+- 更为安全，在系统层面上限定了不同进程的权限。
+
+缺点
+
+由于不同进程间的内存不共享，不同进程的内存常常需要包含相同的内容。。
+
+为了节省内存，Chrome 限制了最多的进程数，最大进程数量由设备的内存和 CPU 能力决定，当达到这一限制时，新打开的 Tab 会共用之前同一个站点的渲染进程。
+
+Chrome 把浏览器不同程序的功能看做服务，这些服务可以方便的分割为不同的进程或者合并为一个进程。以 Broswer Process 为例，如果 Chrome 运行在强大的硬件上，它会分割不同的服务到不同的进程，这样 Chrome 整体的运行会更加稳定，但是如果 Chrome 运行在资源贫瘠的设备上，这些服务又会合并到同一个进程中运行，这样可以节省内存。
+
+#### 4 iframe 的渲染 -- Site Isolation
+
+Site Isolation 机制从 Chrome 67 开始默认启用。这种机制允许在同一个 Tab 下的跨站 iframe 使用单独的进程来渲染，这样会更为安全。
+
+### 导航过程发生了什么
+
+我们知道浏览器 Tab 外的工作主要由 Browser Process 掌控，Browser Process 又对这些工作进一步划分，使用不同线程进行处理：
+
+- UI thread：控制浏览器上的按钮及输入框；
+- network thread：处理网络请求，从网上获取数据；
+- storage thread：控制文件等的访问。
+
+#### 1 处理输入
+
+UI thread需要判断用户输入的是 URL 还是 query。
+
+#### 2 开始导航
+
+当用户点击回车键，UI thread 通知 network thread 获取网页内容，并控制 tab 上的 spinner 展现，表示正在加载中。
+
+network thread 会执行 DNS 查询，随后为请求建立 TLS 连接。
+
+如果 network thread 接收到了重定向请求头如 301，network thread 会通知 UI thread 服务器要求重定向，之后，另外一个 URL 请求会被触发。
+
+#### 3 读取响应
+
+当请求响应返回的时候，network thread 会依据 Content-Type 及 MIME Type sniffing 判断响应内容的格式。
+
+如果响应内容的格式是 HTML ，下一步将会把这些数据传递给 renderer process，如果是 zip 文件或者其它文件，会把相关数据传输给下载管理器。
+
+Safe Browsing 检查也会在此时触发，如果域名或者请求内容匹配到已知的恶意站点，network thread 会展示一个警告页。此外 CORB 检测也会触发确保敏感数据不会被传递给渲染进程。
+
+Cross-Origin Read Blocking (CORB)http://www.yaoyanhuo.com/blog/corb/
+
+#### 4 查找渲染进程
+
+当上述所有检查完成，network thread 确信浏览器可以导航到请求网页，network thread 会通知 UI thread 数据已经准备好，UI thread 会查找到一个 renderer process 进行网页的渲染。
+
+收到 Network thread 返回的数据后，UI thread 查找相关的渲染进程
+
+由于网络请求获取响应需要时间，这里其实还存在着一个加速方案。当 UI thread 发送 URL 请求给 network thread 时，浏览器其实已经知道了将要导航到那个站点。UI thread 会并行的预先查找和启动一个渲染进程，如果一切正常，当 network thread 接收到数据时，渲染进程已经准备就绪了，但是如果遇到重定向，准备好的渲染进程也许就不可用了，这时候就需要重启一个新的渲染进程。
+
+#### 5 确认导航
+
+进过了上述过程，数据以及渲染进程都可用了， Browser Process 会给 renderer process 发送 IPC 消息来确认导航，一旦 Browser Process 收到 renderer process 的渲染确认消息，导航过程结束，页面加载过程开始。
+
+此时，地址栏会更新，展示出新页面的网页信息。history tab 会更新，可通过返回键返回导航来的页面，为了让关闭 tab 或者窗口后便于恢复，这些信息会存放在硬盘中。
+
+#### 6 额外的步骤
+
+一旦导航被确认，renderer process 会使用相关的资源渲染页面，下文中我们将重点介绍渲染流程。当 renderer process 渲染结束（渲染结束意味着该页面内的所有的页面，包括所有 iframe 都触发了 onload 时），会发送 IPC 信号到 Browser process， UI thread 会停止展示 tab 中的 spinner。
+
+所有的 JS 代码其实都由 renderer Process 控制的，所以在你浏览网页内容的过程大部分时候不会涉及到其它的进程。
+
+除了上述流程，有些页面还拥有 Service Worker （服务工作线程），Service Worker 让开发者对本地缓存及判断何时从网络上获取信息有了更多的控制权，如果 Service Worker 被设置为从本地 cache 中加载数据，那么就没有必要从网上获取更多数据了。
+
+值得注意的是 service worker 也是运行在渲染进程中的 JS 代码，因此对于拥有 Service Worker 的页面，上述流程有些许的不同。
+
+### 渲染进程是如何工作的
+
+渲染进程几乎负责 Tab 内的所有事情，渲染进程的核心目的在于转换 HTML CSS JS 为用户可交互的 web 页面。渲染进程中主要包含以下线程：
+
+1. 主线程 Main thread
+
+2. 工作线程 Worker thread
+
+3. 排版线程 Compositor thread
+
+4. 光栅线程 Raster thread
+
+后文我们将逐步介绍不同线程的职责，在此之前我们先看看渲染的流程。
+
+1. 构建 DOM：当渲染进程接收到导航的确认信息，开始接受 HTML 数据时，主线程会解析文本字符串为 DOM。
+
+2. 加载次级的资源：网页中常常包含诸如图片，CSS，JS 等额外的资源，这些资源需要从网络上或者 cache 中获取。主进程可以在构建 DOM 的过程中会逐一请求它们，为了加速 preload scanner 会同时运行，如果在 html 中存在 `<img>` `<link>` 等标签，preload scanner 会把这些请求传递给 Browser process 中的 network thread 进行相关资源的下载。
+
+3. JS 的下载与执行：当遇到 `<script>` 标签时，渲染进程会停止解析 HTML，而去加载，解析和执行 JS 代码，停止解析 html 的原因在于 JS 可能会改变 DOM 的结构（使用诸如 `documwnt.write()`等 API）。不过开发者其实也有多种方式来告知浏览器应对如何应对某个资源，比如说如果在`<script>` 标签上添加了 `async` 或 `defer` 等属性，浏览器会异步的加载和执行 JS 代码，而不会阻塞渲染。
+
+4. 样式计算：仅仅渲染 DOM 还不足以获知页面的具体样式，主进程还会基于 CSS 选择器解析 CSS 获取每一个节点的最终的计算样式值。即使不提供任何 CSS，浏览器对每个元素也会有一个默认的样式。
+
+5. 获取布局：想要渲染一个完整的页面，除了获知每个节点的具体样式，还需要获知每一个节点在页面上的位置，布局其实是找到所有元素的几何关系的过程。通过遍历 DOM 及相关元素的计算样式，主线程会构建出包含每个元素的坐标信息及盒子大小的布局树。布局树和 DOM 树类似，但是其中只包含页面可见的元素，如果一个元素设置了 `display:none` ，这个元素不会出现在布局树上，伪元素虽然在 DOM 树上不可见，但是在布局树上是可见的。
+
+6. 绘制各元素：即使知道了不同元素的位置及样式信息，我们还需要知道不同元素的绘制先后顺序才能正确绘制出整个页面。在绘制阶段，主线程会遍历布局树以创建绘制记录。绘制记录可以看做是记录各元素绘制先后顺序的笔记。
+
+7. 合成帧：不同层的组合由 compositor 线程（合成器线程）完成。一旦层树被创建，渲染顺序被确定，主线程会把这些信息通知给合成器线程，合成器线程会栅格化每一层。有的层的可以达到整个页面的大小，因此，合成器线程将它们分成多个磁贴，并将每个磁贴发送到栅格线程，栅格线程会栅格化每一个磁贴并存储在 GPU 显存中。合成器的优点在于，其工作无关主线程，合成器线程不需要等待样式计算或者 JS 执行，这就是为什么合成器相关的动画 最流畅，如果某个动画涉及到布局或者绘制的调整，就会涉及到主线程的重新计算，自然会慢很多。
+
+### 浏览器对事件的处理
+
+当用户在屏幕上触发诸如 touch 等手势时，首先收到手势信息的是 Browser process， 不过 Browser process 只会感知到在哪里发生了手势，对 tab 内内容的处理是还是由渲染进程控制的。
+
+事件发生时，浏览器进程会发送事件类型及相应的坐标给渲染进程，渲染进程随后找到事件对象并执行所有绑定在其上的相关事件处理函数。
+
+这里涉及到一个专业名词「非快速滚动区域（non-fast scrollable region）」。由于执行 JS 是主线程的工作，当页面合成时，合成器线程会标记页面中绑定有事件处理器的区域为 non-fast scrollable region ，如果存在这个标注，合成器线程会把发生在此处的事件发送给主线程，如果事件不是发生在这些区域，合成器线程则会直接合成新的帧而不用等到主线程的响应。
+
+web 开发中常用的事件处理模式是事件委托，基于事件冒泡，我们常常在最顶层绑定事件：
+
+```js
+document.body.addEventListener('touchstart', event => {
+    if (event.target === area) {
+        event.preventDefault();
+    }
+});
+```
+
+上述做法很常见，但是如果从浏览器的角度看，整个页面都成了 non-fast scrollable region 了。
+
+这意味着即使操作的是页面无绑定事件处理器的区域，每次输入时，合成器线程也需要和主线程通信并等待反馈，流畅的合成器独立处理合成帧的模式就失效了。
+
+为了防止这种情况，我们可以为事件处理器传递 `passive: true` 做为参数，这样写就能让浏览器即监听相关事件，又让组合器线程在等等主线程响应前构建新的组合帧。
+
+```js
+document.body.addEventListener('touchstart', event => {
+    if (event.target === area) {
+        event.preventDefault()
+    }
+ }, {passive: true}); 
+```
+
+不过上述写法可能又会带来另外一个问题，假设某个区域你只想要水平滚动，使用 `passive: true` 可以实现平滑滚动，但是垂直方向的滚动可能会先于`event.preventDefault()`发生，此时可以通过 `event.cancelable` 来防止这种情况。
+
+```js
+document.body.addEventListener('pointermove', event => {
+    if (event.cancelable) {
+        event.preventDefault(); // block the native scroll
+        /*
+        *  do what you want the application to do here
+        */
+    } 
+}, {passive: true});
+```
+
+也可以使用 css 属性 `touch-action` 来完全消除事件处理器的影响，如：
+
+```css
+#area { 
+  touch-action: pan-x; 
+}
+```
+
+#### 查找到事件对象
+
+当组合器线程发送输入事件给主线程时，主线程首先会进行命中测试（hit test）来查找对应的事件目标，命中测试会基于渲染过程中生成的绘制记录（ paint records ）查找事件发生坐标下存在的元素。
+
+#### 事件的优化
+
+一般我们屏幕的刷新速率为 60fps，但是某些事件的触发量会不止这个值，出于优化的目的，Chrome 会合并连续的事件(如 wheel, mousewheel, mousemove, pointermove, touchmove )，并延迟到下一帧渲染时候执行 。
+
+而如 keydown, keyup, mouseup, mousedown, touchstart, 和 touchend 等非连续性事件则会立即被触发。
+
+合并事件虽然能提示性能，但是如果你的应用是绘画等，则很难绘制一条平滑的曲线了，此时可以使用 `getCoalescedEvents` API 来获取组合的事件。
+
+
 
 ## 深度剖析浏览器渲染性能原理
 
@@ -277,7 +480,59 @@ https://www.jianshu.com/p/a32b890c29b1
 
 网站性能优化是一个有一定门槛的细致活，需要对浏览器的机制有很好的理解，同时也应该学会利用Chrome DevTools去分析并解决实际问题，关于Chrome DevTools的学习我会专门开一篇博客来讲解，同时会结合具体的性能问题来分析。
 
+## 浏览器的渲染过程 
 
+http://www.tripod.fun/2019/01/03/2019/浏览器的渲染过程/
+
+1. DOMTree的构建
+2. CSSOMTree的构建
+3. 渲染树的构建
+4. 布局
+5. 渲染
+
+
+
+## 浏览器渲染中发生的事
+
+https://zhuanlan.zhihu.com/p/36700206
+
+
+
+## 前端性能优化：细说浏览器渲染的重排与重绘
+
+https://zhuanlan.zhihu.com/p/40605154
+
+
+
+## 浏览器渲染流水线解析与网页动画性能优化
+
+https://zhuanlan.zhihu.com/p/30534023
+
+
+
+## 白屏
+
+[首页白屏优化实践](https://segmentfault.com/a/1190000020383064)
+
+[Webview加载界面白屏解决方法总结](https://blog.csdn.net/qq_34584049/article/details/78280815)
+
+[前端优化-如何计算白屏和首屏时间](https://www.cnblogs.com/longm/p/7382163.html)
+
+
+
+## 资料
+
+从Chrome源码看JS Object的实现https://zhuanlan.zhihu.com/p/26169639
+
+[10分钟彻底搞懂前端页面性能监控](https://zhuanlan.zhihu.com/p/82981365)
+
+[从Chrome源码看浏览器如何构建DOM树](https://zhuanlan.zhihu.com/p/24911872)
+
+[常见的web性能优化方法](https://blog.csdn.net/daimomo000/article/details/72897436)
+
+[前端性能优化的七大手段](https://www.cnblogs.com/xiaohuochai/p/9178390.html)
+
+# V8引擎
 
 ## 认识V8引擎
 
@@ -417,8 +672,6 @@ https://www.infoq.cn/article/v8-10-years
 
 ## 资料
 
-从Chrome源码看JS Object的实现https://zhuanlan.zhihu.com/p/26169639
-
 编译 V8 源码https://zhuanlan.zhihu.com/p/25120909
 
 Promise V8 源码分析(一)https://zhuanlan.zhihu.com/p/264944183
@@ -430,6 +683,18 @@ Promise V8 源码分析(一)https://zhuanlan.zhihu.com/p/264944183
 新手应该如何读Google V8引擎源代码？https://www.zhihu.com/question/39014659
 
 v8引擎源码分析https://blog.csdn.net/theanarkh/category_9015796.html
+
+[V8引擎版本发布流程](https://zhuanlan.zhihu.com/p/35038142)
+
+[了解V8引擎如何运行JS](https://www.jianshu.com/p/c71c714c27bd)
+
+[V8的内存限制](https://cnodejs.org/topic/5ade9f8fa7d228c16b9871fd)
+
+[V8内存浅析](https://zhuanlan.zhihu.com/p/33816534)
+
+[【译】了解V8内存管理](https://www.keisei.top/architecture-of-v8-memory/)
+
+
 
 # 微前端
 
@@ -453,9 +718,11 @@ https://qiankun.umijs.org/zh/
 
 微前端如何落地 https://www.infoq.cn/article/xm_AaiOTXmLpPgWvX9y9
 
+
+
 # 工程化
 
-### 各大互联网公司的前端开发流程和前端架构是怎么做的呢？
+## 各大互联网公司的前端开发流程和前端架构是怎么做的呢？
 
 - 通过框架（vue，angular，kissy）组织，把html、css、js写成不像html（mustache，dot，jade）、css（less，sass，compass，stylus）、js（babel，coffee）
 
@@ -465,11 +732,21 @@ https://qiankun.umijs.org/zh/
 
 - 发布到静态资源平台（cdn），后端提供接口前端渲染或是后端（有时候权限也在前端那儿）将前端html文件套成后端语言模板发布上线。
 
-总而言之，离不开“三化”——模块化，组件化，工程化
+总而言之，离不开“三化”——模块化，组件化，工程化。
+
+
 
 ## 资料
 
 [package-lock.json的作用](https://www.cnblogs.com/cangqinglang/p/8336754.html)
+
+[自制前端脚手架](https://cloud.tencent.com/developer/article/1547353)
+
+[一文看懂npm、yarn、pnpm之间的区别](http://geek.csdn.net/news/detail/197339)
+
+[Yarn vs npm：你需要知道的一切](https://zhuanlan.zhihu.com/p/23493436)
+
+
 
 # GraphQL
 
@@ -479,6 +756,8 @@ https://graphql.cn/learn/
 
 [【干货】Chrome插件(扩展)开发全攻略](https://www.cnblogs.com/liuxianan/p/chrome-plugin-develop.html)
 
+
+
 # 无头浏览器
 
 ★[初探 Headless Chrome](https://zhuanlan.zhihu.com/p/27100187)
@@ -486,6 +765,8 @@ https://graphql.cn/learn/
 [Phantomjs、Selenium之后浪Puppeteer](https://zhuanlan.zhihu.com/p/137922030)
 
 [PhantomJs](https://www.jianshu.com/p/80e984ef94d3)
+
+
 
 # 视频
 
@@ -496,6 +777,8 @@ WebRTC
 [「1.4万字」玩转前端Video播放器 | 多图预警](https://segmentfault.com/a/1190000023243743)
 
 [从0到1实现Web端H.265播放器：YUV渲染篇](https://mp.weixin.qq.com/s/9Ui3NcEZ63PcjDb12mLiAQ)
+
+
 
 # VS Code
 
@@ -634,13 +917,13 @@ Semi
 
 [远程开发初探-VSCode Remote Development](https://zhuanlan.zhihu.com/p/82568294)
 
+
+
 # 跨端
 
-分享这半年的 Electron 应用开发和优化经验http://www.uml.org.cn/AJAX/2020032621.asp
 
-2020年 开发桌面应用是用 flutter 还是用 electron？https://www.zhihu.com/question/390186321
 
-### 我为啥没有再学习flutter和electron了
+## 我为啥没有再学习flutter和electron了
 
 不可否认这两个都是牛逼的技术，我为什么没有学习了，因为离开业务谈技术都是耍流氓，一个是用来开发app的，一个用来开发桌面的，目前我不知道哪些产品和业务有这样的使用场景。我没有开发app的需求，也没有开发桌面的需求，所以就放弃了。我还没有想好开发什么产品，就算要开发产品，也是先要搞定服务器端开发，而不是app端和桌面端开发。单纯用这俩技术找工作，那就是幼稚，这不是什么生产力技术，而且比我厉害的人多得是，我没有什么优势。与其这样，我不如用心去学习下java,c++和设计模式，算法等底层通用知识。
 
@@ -654,6 +937,18 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 这是个随笔日记，发现来看的人还真多，我就总结一下：技术要以产品为导向，产品以需求为导向，因为需求才是可以交付的价值，一切为交付服务。
 
+
+
+## 资料
+
+[闲鱼正在悄悄放弃Flutter吗？](https://mp.weixin.qq.com/s/k2RJv6FJJBwb2D5Hzgh8lg)
+
+分享这半年的 Electron 应用开发和优化经验http://www.uml.org.cn/AJAX/2020032621.asp
+
+2020年 开发桌面应用是用 flutter 还是用 electron？https://www.zhihu.com/question/390186321
+
+
+
 # DevOps
 
 [K8S怎么就和微服务成死对头了？](https://mp.weixin.qq.com/s/sJWoiDwc-VwR-euakeb7iA)
@@ -662,19 +957,21 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 [前端场景下CI/CD的探索与实践](https://mp.weixin.qq.com/s/Y-i20dQgSPu86KFVC7wNTA)
 
+
+
 # 行业
 
 [爱奇艺是如何在活动中台实践低代码的？](https://mp.weixin.qq.com/s/m89lqxxjbfynC_pJeXAl6Q)
 
 [现代化Web开发实践之PWA](https://mp.weixin.qq.com/s/AQzyegbzx_od4RKqetS_ug)
 
+[小程序的老祖宗PWA为什么没有火起来？](https://baijiahao.baidu.com/s?id=1612919514973793701&wfr=spider&for=pc)
+
+
+
 # 资料
 
 [前端开发中79条不可忽视的知识点汇总](https://juejin.im/post/5d8989296fb9a06b1f147070)
-
-[小程序的老祖宗PWA为什么没有火起来？](https://baijiahao.baidu.com/s?id=1612919514973793701&wfr=spider&for=pc)
-
-[自制前端脚手架](https://cloud.tencent.com/developer/article/1547353)
 
 [JS获取文件扩展名方法](https://www.cnblogs.com/FallIntoDarkness/p/9757334.html)
 
@@ -694,8 +991,6 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 [微服务架构~BFF和网关是如何演化出来的](https://www.cnblogs.com/dadadechengzi/p/9373069.html)
 
-[如何编写轻量级 CSS 框架](https://www.cnblogs.com/nzbin/p/7073601.html)
-
 [个人的中小型项目前端架构浅谈](https://blog.csdn.net/qq20004604/article/details/70480932)
 
 [awesome-javascript](https://github.com/sorrycc/awesome-javascript)
@@ -710,25 +1005,9 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 [几张图让你看懂WebAssembly ](https://www.jianshu.com/p/bff8aa23fe4d)
 
-[（可参考）vue2.x+iview实现可编辑表格 ](https://zhuanlan.zhihu.com/p/81027411)
-
-[Vue.js实现可编辑的表格 ](https://www.jb51.net/article/176195.htm)
-
-[vue+iview 实现可编辑表格的示例代码 ](https://www.jb51.net/article/149855.htm)
-
 [国内有哪些互联网公司已经开始使用 HTTP/2 了？](https://www.zhihu.com/question/38166198)
 
-[Rust Web框架怎么选？研究本文就够了！](https://blog.csdn.net/weixin_45583158/article/details/104489414)
-
-[常见的web性能优化方法](https://blog.csdn.net/daimomo000/article/details/72897436)
-
-[前端性能优化的七大手段](https://www.cnblogs.com/xiaohuochai/p/9178390.html)
-
-[网页上用 Rust 渲染十万个待办事项有多快？](https://zhuanlan.zhihu.com/p/112223727)
-
 [数据库大牛李海翔详解全局读一致性技术](https://maimai.cn/article/detail?fid=1349253255&efid=FJJMyCrwqQFfoZ7rYKtc_A&share_channel=2&use_rn=1&_share_channel=wechat)
-
-[闲鱼正在悄悄放弃Flutter吗？](https://mp.weixin.qq.com/s/k2RJv6FJJBwb2D5Hzgh8lg)
 
 [看了就会的浏览器帧原理](https://mp.weixin.qq.com/s/Q4MBBFhc-ONrpCYWhow3uw)
 
@@ -740,25 +1019,11 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 
 [Real DOM和 Virtual DOM 的区别？优缺点？](https://www.cnblogs.com/houxianzhou/p/15047476.html)
 
-[一文看懂npm、yarn、pnpm之间的区别](http://geek.csdn.net/news/detail/197339)
-
-[Yarn vs npm：你需要知道的一切](https://zhuanlan.zhihu.com/p/23493436)
-
-[聊一聊前端自动化测试](https://segmentfault.com/a/1190000004558796)
-
 [js为什么是单线程的？](https://www.cnblogs.com/langzianan/p/8403330.html)
-
-[Ant Design - 一个 UI 设计语言](https://ant.design/index-cn)
-
-[Ant Design Mobile - 移动端设计规范](https://mobile.ant.design/index-cn)
 
 [arnog/mathlive: Math input made easy](https://github.com/arnog/mathlive)
 
 [display 的 32 种写法](https://www.cnblogs.com/langzianan/p/8403331.html)
-
-[组件 | Element](https://element.eleme.cn/#/zh-CN/component/installation)
-
-[组件 · Bootstrap 中文文档](http://v3.bootcss.com/components/)
 
 [蚂蚁数据可视化 - AntV](https://antv.alipay.com/zh-cn/index.html)
 
@@ -769,6 +1034,3 @@ flutter源于公司要给客户开发一个app的需求，后来公司感觉成�
 [fullCalendar:中文API](http://blog.163.com/lizhenming_2008/blog/static/7655833320124304254255/)
 
 [git-trash/repo.jsx at master · kureikain/git-trash · GitHub](https://github.com/kureikain/git-trash/blob/master/src/repo.jsx)
-
-
-

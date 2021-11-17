@@ -425,6 +425,8 @@ Object.prototype
 
 ## 附录A ES6中的Class
 
+class基本上只是现有[[Prototype]]（委托！）机制的一种语法糖。
+
 
 
 # 中卷：类型和语法
