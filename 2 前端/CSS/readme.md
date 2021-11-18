@@ -117,6 +117,8 @@
 
 [CSS Grid 网格布局教程 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2019/03/grid-layout-tutorial.html)
 
+[flexbox-CSS3弹性盒模型flexbox布局完整版教程](http://caibaojian.com/flexbox-guide.html#t8)
+
 [CSS 下拉菜单](https://www.runoob.com/css/css-dropdowns.html)
 
 [CSS布局十八般武艺都在这里了](https://segmentfault.com/a/1190000008789039)
