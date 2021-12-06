@@ -1001,6 +1001,8 @@ Cmd + K + M 快捷键方案
 
 Ctrl + J 合并上下行
 
+Alt + Shfit + 箭头 复制行
+
 Ctrl + F 搜索
 
 Ctrl + ALT + F 替换
@@ -1035,15 +1037,20 @@ Semi
 
 [VSCode Prettier 单引号设置无效](https://blog.csdn.net/Lyrelion/article/details/113569702)
 
+## Snippets
+
+- ES7 React/Redux/GraphQL/React-Native snippets
+- HTML Snippets
+- JavaScript(ES6) code snippets
+
 ## Theme
 
 - Cobalt2：比默认theme更好，关键字更突出。
 
 ## Font
 
-- 默认：Menlo, Monaco, 'Courier New', monospace
-- 推荐字体：'cascadia code'
-- Font Ligature：运算符会显示更美观。
+- 推荐字体：`"editor.fontFamily": "'cascadia code', Menlo, Monaco, 'Courier New', monospace"`
+- Font Ligature：运算符会显示更美观。`"editor.fontLigatures": true,`
   - 箭头符号会连在一起
   - 全等号会显示为三横线
 

@@ -1,10 +1,12 @@
+## 数组函数
+
 https://mp.weixin.qq.com/s/B2F0BSALlWUPL7Gs_mlgnQ
 
 
 
 JavaScript的array可以包含任意数据类型，并通过索引来访问每个元素。
 
-## 1 检测数组
+### 1 检测数组
 
 instanceof、slice()、Array.isArray()
 
@@ -62,7 +64,7 @@ Object.prototype.toString.call(value); // "[object RegExp]"
 Object.prototype.toString.call(value); // "[object Date]"
 注意：Object的toString()方法不能检测非原生的构造函数的构造函数名，因此，开发人员定义的任何构造函数都将返回[object Object]。
 
-## 2 获取数组长度
+### 2 获取数组长度
 
 直接访问length属性获取数组长度：
 
@@ -80,7 +82,7 @@ arr;//1,2
 通过设置Array的length属性，可以从数组的末尾移除或者添加若干新项。
 利用length属性还可以方便的向数组末尾添加新项：arr[arr.length]="black"，不过，这种方法通常可以用'push'方法来替代。
 
-## 3 修改数组元素
+### 3 修改数组元素
 
 var arr = [1,2,3];
 arr[5] = 8;
@@ -88,7 +90,7 @@ arr;//1,2,3,undefined,undefined,8
 
 建议：大多数其他编程语言不允许直接改变数组的大小，越界访问索引会报错。然而，JavaScript的Array却不会有任何错误。在编写代码时，不建议直接修改Array的大小，访问索引时要确保索引不会越界。
 
-## 4 位置方法
+### 4 位置方法
 
 与String类似，Array也可以通过indexOf()来搜索一个指定的元素在Array中首次出现的位置:
 
@@ -111,7 +113,7 @@ indexOf() 方法对大小写敏感！
 
 lastIndexOf和indexOf操作符类似，不过是从数组的末尾开始向前查找的。
 
-## 5 操作方法
+### 5 操作方法
 
 slice()、concat()、splice()
 
@@ -214,7 +216,7 @@ arrayX: 必需。该参数可以是具体的值，也可以是数组对象。可
 
 若果要在数组中插入某些项，只能使用'splice'
 
-## 6 栈方法
+### 6 栈方法
 
 push和pop
 
@@ -249,7 +251,7 @@ arrayObject.pop()
 
 pop() 方法将删除 arrayObject 的最后一个元素，把数组长度减 1，并且返回它删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回 undefined 值。
 
-## 7 队列方法
+### 7 队列方法
 
 unshift和shift
 
@@ -266,7 +268,7 @@ arr.shift(); // 空数组继续shift不会报错，而是返回undefined
 arr; // []
 注意： unshift() 方法无法在 Internet Explorer 中正确地工作！
 
-## 8 重排序方法
+### 8 重排序方法
 
 sort和reserve
 
@@ -332,7 +334,7 @@ arr.reverse();
 arr;//['three','two','one'];
 注意：该方法会直接改变原来的数组，而不会创建新的数组。
 
-## 9 转换方法
+### 9 转换方法
 
 join、toString、toLocaleString、valueOf
 
@@ -378,7 +380,7 @@ separator: 可选。指定要使用的分隔符。如果省略该参数，则使
 
 Image
 
-## 10 迭代方法
+### 10 迭代方法
 
 every、filter、forEach、map、some
 
@@ -420,7 +422,7 @@ $().each(callback): 以每一个匹配的元素作为上下文来执行一个函
 
 calback:对于每个匹配的元素所要执行的函数。回调函数只有一个参数，即index。
 
-## 11 归并方法
+### 11 归并方法
 
 reduce、reduceRight
 
@@ -438,9 +440,9 @@ reduce、reduceRight
 3、 JavaScript 检测数组
 4、[javascript 高级教程]()
 
-## 其它
 
-## 数组对象：在Javascript中如何查找对象数组中的值？
+
+## 查找数组中的值？
 
 问题:
 
