@@ -177,6 +177,13 @@ https://mp.weixin.qq.com/s/DIzvXtyk7rd5m5aUQ8LAkw
 
 [使用顶层 await 简化 JS 代码](https://mp.weixin.qq.com/s/XeZXrTa5X-08dBw2I7cg6A)
 
+```jsx
+async function asyncwaitcode(){
+  let getData = await axios('www.xyzdata.org/api')
+  console.log(getData.data)
+}
+```
+
 [Promise、Genarator、 Async，这三者的区别和联系，你是否明白？](https://mp.weixin.qq.com/s/_ciah0VIog-IgQ75WqTkGQ)
 
 Async/Await：比Promise更好的6个理由 http://caibaojian.com/asyncawait.html
