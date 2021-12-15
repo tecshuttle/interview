@@ -13,14 +13,16 @@ public class HelloWorld{
 }
 ```
 
-###运行java程序
+### 运行java程序
+
 ```bash
 $ javac HelloWorld.java
 $ java HelloWorld  #文件名后面不要带.class后缀，否则会报错“错误：找不到或无法加载主类”。
 Hello World!
 ```
 
-###打包可运行的jar文件
+### 打包可运行的jar文件
+
 ```bash
 $ jar -cvfe HelloWorld.jar HelloWorld HelloWorld.class
 $ java -jar HelloWorld.jar
