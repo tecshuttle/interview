@@ -90,7 +90,9 @@ https://www.framer.com/motion
 
 [什么叫组件化开发?](https://www.zhihu.com/question/29735633/answer/90873592)
 
-# 测试
+
+
+# 开发调试
 
 ## console.log()加样式
 
@@ -120,9 +122,33 @@ console.log(
 
 [如何优雅的使用console](https://mp.weixin.qq.com/s/yVY3N14Vr9Fl2Y1twH-VJQ)
 
-[Web Performance Metrics与Core Web Vitals简介](https://mp.weixin.qq.com/s/Hmkod3gYRR38B6Qdp1Iu6g)
+
+
+# 自动化测试
+
+
+
+## 无头浏览器
+
+★[初探 Headless Chrome](https://zhuanlan.zhihu.com/p/27100187)
+
+[Phantomjs、Selenium之后浪Puppeteer](https://zhuanlan.zhihu.com/p/137922030)
+
+[PhantomJs](https://www.jianshu.com/p/80e984ef94d3)
+
+
+
+## Robot Framework
+
+https://robotframework.org/
+
+[Robot Framework零基础入门教程](https://zhuanlan.zhihu.com/p/158122663)
+
+## 其它
 
 [聊一聊前端自动化测试](https://segmentfault.com/a/1190000004558796)
+
+
 
 # 其它技能
 
@@ -725,6 +751,8 @@ goBack.onclick = function () {
 
 [10分钟彻底搞懂前端页面性能监控](https://zhuanlan.zhihu.com/p/82981365)
 
+[Web Performance Metrics与Core Web Vitals简介](https://mp.weixin.qq.com/s/Hmkod3gYRR38B6Qdp1Iu6g)
+
 [从Chrome源码看浏览器如何构建DOM树](https://zhuanlan.zhihu.com/p/24911872)
 
 [常见的web性能优化方法](https://blog.csdn.net/daimomo000/article/details/72897436)
@@ -957,16 +985,6 @@ https://graphql.cn/learn/
 
 
 
-# 无头浏览器
-
-★[初探 Headless Chrome](https://zhuanlan.zhihu.com/p/27100187)
-
-[Phantomjs、Selenium之后浪Puppeteer](https://zhuanlan.zhihu.com/p/137922030)
-
-[PhantomJs](https://www.jianshu.com/p/80e984ef94d3)
-
-
-
 # 视频
 
 WebRTC
@@ -987,7 +1005,21 @@ Cmd + ,   打开设置
 
 Cmd + P  打开最近使用的文件
 
+Cmd + Shift + P 打开命令面板
+
+Ctrl + ` 打开终端
+
 Cmd + B 打开和关闭侧栏
+
+Ctrl + J 合并上下行
+
+Ctrl + / 添加关闭行注释
+
+Shift + Alt + A 块区域注释
+
+Alt + Shfit + 箭头 复制行
+
+Alt + 上下键 移动行
 
 Cmd + Alt + 上箭头/下箭头 块选择 
 
@@ -999,10 +1031,6 @@ Cmd + K + S 显示快捷键列表
 
 Cmd + K + M 快捷键方案
 
-Ctrl + J 合并上下行
-
-Alt + Shfit + 箭头 复制行
-
 Ctrl + F 搜索
 
 Ctrl + ALT + F 替换
@@ -1012,10 +1040,6 @@ Ctrl + Shift + F 在项目内搜索
 Ctrl + Shift + [ 折叠区域代码
 
 Ctrl + Shift + ] 展开区域代码
-
-Ctrl + / 添加关闭行注释
-
-Shift + Alt + A 块区域注释
 
 ## 命令
 
