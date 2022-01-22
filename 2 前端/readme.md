@@ -1102,7 +1102,7 @@ Semi
 - JavaScript (ES6) code snippets
 - Import Cost 这个扩展简直惊艳到我了，之前写代码的时候很少有关注导入包的大小。只有在后期优化的时候才考虑这些问题。但是这个插件可以在你导入包的时候就提示这个包有多大。
 - Auto Rename Tag 在 VSCode 中输入一半的标签会自动帮忙补全另一半，但是如果我后期想修改的话需要就需要两边都要改了，插件可以很好的解决这个问题。
-- GitLens 可以增强 VSCode 内置 Git 的功能。
+- GitLens 可以增强 VSCode 内置 Git 的功能，显示某行代码最近由谁修改了。
 
 [从零开始配置vscode](https://zhuanlan.zhihu.com/p/79612479)
 
