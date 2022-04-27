@@ -200,10 +200,6 @@ Next.js
 
 [React 学习路线图 - 2018版](https://zhuanlan.zhihu.com/p/39744174)
 
-[全栈 React + GraphQL 教程（一） - 众成翻译](http://www.zcfy.cc/article/full-stack-react-graphql-tutorial-apollo-graphql-4341.html?t=new)
-
-[GraphQL 技术栈揭秘 - 众成翻译](http://www.zcfy.cc/article/the-graphql-stack-how-everything-fits-together-apollo-graphql-4549.html?t=new)
-
 [React 教程_React实战教程_深度讲解React-慕课网](https://www.imooc.com/topic/reactnative)
 
 [Docker 安装 Nginx | 菜鸟教程](http://www.runoob.com/docker/docker-install-nginx.html)
