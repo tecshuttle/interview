@@ -72,6 +72,15 @@ for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
 }
 ```
 
+## 定义数组及打印
+
+```java
+double[] container = {1, 2, 3};
+System.out.println(Arrays.toString(container));
+```
+
+
+
 # 原理
 
 ## SOA
