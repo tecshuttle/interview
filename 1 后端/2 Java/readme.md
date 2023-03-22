@@ -79,6 +79,19 @@ double[] container = {1, 2, 3};
 System.out.println(Arrays.toString(container));
 ```
 
+## 定义带键名数据结构
+
+```json
+import com.alibaba.fastjson.JSON;
+
+List<Map<String, Object>> containers = new ArrayList<>();
+containers.add(Map.of("container", List.of(1.0, 2.0, 3.0), "rate", 0.85));
+containers.add(Map.of("container", List.of(2.0, 2.0, 3.0), "rate", 0.86));
+containers.add(Map.of("container", List.of(3.0, 2.0, 3.0), "rate", 0.87));
+
+return JSON.toJSONString(containers);
+```
+
 
 
 # 原理
