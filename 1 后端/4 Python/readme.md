@@ -118,6 +118,38 @@ matplotlib单挑MATLAB的话，那就是钢铁侠单挑灭霸的场面。
 
 
 
+
+
+# 爬虫
+
+python爬虫教程从0到1https://github.com/wistbean/learn_python3_spider
+
+
+
+Playwright: 比 Puppeteer 更好用的浏览器自动化工具
+
+https://zhuanlan.zhihu.com/p/347213089
+
+```bash
+$ pip install playwright       #安装playwright
+$ python -m playwright install #安装内置浏览器
+$ playwright -V                #验证
+```
+
+
+
+从 Puppeteer 到 Playwright（译）
+
+https://juejin.cn/post/7036369729778368526
+
+
+
+开源爬虫神器，Playwright vs Puppeteer 对比，你应该选择哪个？
+
+https://zhuanlan.zhihu.com/p/455590173
+
+
+
 # 数据分析
 
 [★PRML为何是机器学习的经典书籍中的经典？](https://www.zhihu.com/question/35992297/answer/67009652)
