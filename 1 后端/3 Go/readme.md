@@ -34,6 +34,18 @@
 
 [论golang Timer Reset方法使用的正确姿势](http://tonybai.com/2016/12/21/how-to-use-timer-reset-in-golang-correctly/)
 
+
+
+# 爬虫
+
+Go 爬虫之 colly 从入门到不放弃指南 https://zhuanlan.zhihu.com/p/76629605
+
+[Go 福利小爬虫 爬取今日头条美女图](https://www.qichengzx.com/2016/12/14/toutiao-images-spider-by-golang.html)
+
+[Go语言爬虫](http://legendtkl.com/2015/09/13/go-crawl/)
+
+
+
 # 资料
 
 [astaxie/build-web-application-with-golang: A golang ebook intro how to build a web with golang](https://github.com/astaxie/build-web-application-with-golang)
@@ -45,8 +57,6 @@
 [go test - GO 命令教程](http://wiki.jikexueyuan.com/project/go-command-tutorial/0.7.html)
 
 [Go Testing Toolbox](https://nathany.com/go-testing-toolbox/)
-
-[Go 福利小爬虫 爬取今日头条美女图](https://www.qichengzx.com/2016/12/14/toutiao-images-spider-by-golang.html)
 
 [Go 语言开源发布 8 周年，成 2017 年增长最快语言](https://www.oschina.net/news/90502/go-8-years-old?from=20171112)
 
@@ -61,8 +71,6 @@
 [golang几种post方式](https://studygolang.com/articles/4383)
 
 [Go的50度灰：Golang新开发者要注意的陷阱和常见错误](http://colobu.com/2015/09/07/gotchas-and-common-mistakes-in-go-golang/#)
-
-[Go语言爬虫](http://legendtkl.com/2015/09/13/go-crawl/)
 
 [Go语言视频教程](http://www.imooc.com/course/list?c=Go)
 
